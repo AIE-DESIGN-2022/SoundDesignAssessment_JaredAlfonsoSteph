@@ -9,44 +9,86 @@ public class CameraManager : MonoBehaviour
     public CinemachineVirtualCamera gardenCamera;
     public CinemachineVirtualCamera mixingStationCamera;
 
-    private bool isShopCounter;
-    private bool isGarden;
-    private bool isMixingStation;
-    private CinemachineVirtualCamera nextCamera;
-    private CinemachineVirtualCamera previousCamera;
+    public bool isShopCounter;
+    public bool isGarden;
+    public bool isMixingStation;
+  //  public CinemachineVirtualCamera nextCamera;
+  //  public CinemachineVirtualCamera previousCamera;
+  //  public CinemachineVirtualCamera currentCamera;
+
+    
+
     // Start is called before the first frame update
     void Start()
     {
-        shopCounterCamera.enabled = true;
-        gardenCamera.enabled = false;
-        mixingStationCamera.enabled = false;
 
+        // // currentCamera = shopCounterCamera;
+        // nextCamera = mixingStationCamera;
+        // previousCamera = gardenCamera;
+
+        isShopCounter = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        mixingStationCamera.enabled = isMixingStation;
+        gardenCamera.enabled = isGarden;
+        shopCounterCamera.enabled = isShopCounter;
+        
+        if (isGarden)
         {
-            nextCamera.enabled = true;
 
-            if (isGarden)
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                nextCamera = shopCounterCamera;
-                previousCamera = mixingStationCamera;
+                isShopCounter = true;
+                isGarden = false;
+
+                isMixingStation = false;
             }
-
-            if (isShopCounter)
+            if (Input.GetKeyDown(KeyCode.D))
             {
-                nextCamera = mixingStationCamera;
-                previousCamera = gardenCamera;
-            }
+                isMixingStation = true;
+                isGarden = false;
 
-            if (isMixingStation)
-            {
-                nextCamera = gardenCamera;
-                previousCamera = shopCounterCamera;
+                isShopCounter = false;
             }
         }
+
+        if (isShopCounter)
+        {
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                isMixingStation = true;
+                isGarden = false;
+                isShopCounter = false;
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                isGarden = true;
+                isShopCounter = false;
+                isMixingStation = false;
+            }
+        }
+
+        if (isMixingStation)
+        {
+
+            if (Input.GetKeyDown(KeyCode.A))
+            {
+                isGarden = true;
+                isMixingStation = false;
+
+                isShopCounter = false;
+            }
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                isShopCounter = true;
+                isMixingStation = false;
+
+                isGarden = false;
+            }
+        }
+
     }
 }
