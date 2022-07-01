@@ -6980,6 +6980,75 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &968077204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+  m_PrefabInstance: {fileID: 1956568167}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9a81e733e6cab4b9202f00bf175d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1007087281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1007087283}
+  - component: {fileID: 1007087282}
+  m_Layer: 0
+  m_Name: CauldronManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1007087282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007087281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73595846d8ebb9644a00bebd236b187d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderGenerator: {fileID: 968077204}
+  heightWanted: 0
+  heightAdded: 0
+  eyeColourWanted: 
+  eyeColourAdded: 
+  hairColourWanted: 
+  hairColourAdded: 
+  personalityOneWanted: 
+  personalityOneAdded: 
+  personalityOneAmountWanted: 0
+  personalityOneAmountAdded: 0
+  personalityTwoWanted: 
+  personalityTwoAdded: 
+  personalityTwoAmountWanted: 0
+  personalityTwoAmountAdded: 0
+--- !u!4 &1007087283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007087281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8103944, y: -1.4744914, z: 4.1917877}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020807994
 GameObject:
   m_ObjectHideFlags: 0
@@ -11873,6 +11942,42 @@ PrefabInstance:
       propertyPath: personalityTwoText
       value: 
       objectReference: {fileID: 526564314}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: heights.Array.data[0]
+      value: really tall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: heights.Array.data[1]
+      value: a little tall
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: heights.Array.data[2]
+      value: average height
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: heights.Array.data[3]
+      value: a little short
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: heights.Array.data[4]
+      value: really short
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: energyLevel.Array.data[0]
+      value: very energetic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: energyLevel.Array.data[1]
+      value: a little energetic
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: energyLevel.Array.data[2]
+      value: a little lazy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: energyLevel.Array.data[3]
+      value: very lazy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
 --- !u!43 &1965538213
