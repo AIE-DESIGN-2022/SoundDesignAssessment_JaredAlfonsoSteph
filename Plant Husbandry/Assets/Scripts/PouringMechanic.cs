@@ -7,11 +7,16 @@ public class PouringMechanic : MonoBehaviour
 {
     public Slider beaker;
     public float beakerFull;
+    public Image beakerCover;
+    bool pouring;
+    public Animator beakerAnimator;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        beakerCover.gameObject.SetActive(false);
+        beaker.value = 0;
+        pouring = true;
     }
 
     // Update is called once per frame
@@ -19,15 +24,19 @@ public class PouringMechanic : MonoBehaviour
     {
         beakerFull = beaker.value;
         
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && pouring == true)
         {
             beaker.value += 0.2f;
         }
 
         else if (Input.GetMouseButtonUp(0))
         {
-            Debug.Log("let go");
+            beakerCover.gameObject.SetActive(true);
+            pouring=false;
+            beakerAnimator.SetTrigger("Pouring");
         }
+
+        
 
 
     }
