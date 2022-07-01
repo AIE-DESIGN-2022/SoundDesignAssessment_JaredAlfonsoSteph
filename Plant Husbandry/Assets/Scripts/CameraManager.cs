@@ -5,90 +5,98 @@ using Cinemachine;
 
 public class CameraManager : MonoBehaviour
 {
-    public CinemachineVirtualCamera shopCounterCamera;
-    public CinemachineVirtualCamera gardenCamera;
-    public CinemachineVirtualCamera mixingStationCamera;
+    [Header("CameraOrders")]
+    public int currentCamera;
+    public int previousCamera;
+    public int nextCamera;
 
-    public bool isShopCounter;
-    public bool isGarden;
-    public bool isMixingStation;
-  //  public CinemachineVirtualCamera nextCamera;
-  //  public CinemachineVirtualCamera previousCamera;
-  //  public CinemachineVirtualCamera currentCamera;
+    public CinemachineVirtualCamera[] cameras;
 
-    
+    public int totalCameras;
 
-    // Start is called before the first frame update
+ 
     void Start()
     {
 
-        // // currentCamera = shopCounterCamera;
-        // nextCamera = mixingStationCamera;
-        // previousCamera = gardenCamera;
+        //settin gcamera values
+        currentCamera = 0;
+        previousCamera = totalCameras;
+        nextCamera = 1;
 
-        isShopCounter = true;
+
+
+        //ensuring current camera is active
+        cameras[previousCamera].enabled = false;
+        cameras[nextCamera].enabled = false;
+
+        cameras[currentCamera].enabled = true;
+
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        mixingStationCamera.enabled = isMixingStation;
-        gardenCamera.enabled = isGarden;
-        shopCounterCamera.enabled = isShopCounter;
-        
-        if (isGarden)
+        cameras[currentCamera].enabled = true;
+        cameras[previousCamera].enabled = false;
+
+        //movement to right
+        if (Input.GetKeyDown(KeyCode.D))
         {
+            previousCamera = currentCamera;
+            currentCamera++;
+            nextCamera++;
 
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                isShopCounter = true;
-                isGarden = false;
+            ChangeCameraNumbers();
 
-                isMixingStation = false;
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                isMixingStation = true;
-                isGarden = false;
 
-                isShopCounter = false;
-            }
+        }
+        //movement to left
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            nextCamera = currentCamera;
+            currentCamera--;
+            previousCamera--;
+
+            ChangeCameraNumbers();
+        }      
+
+    }
+
+    //makes ssure camera order doesn;'t break
+    private void ChangeCameraNumbers() 
+    {
+
+        if (currentCamera > totalCameras)
+        {
+            currentCamera = 0;
+
+        }
+        if (previousCamera > totalCameras)
+        {
+            previousCamera = 0;
+
+        }
+        if (nextCamera > totalCameras)
+        {
+            nextCamera = 0;
+
         }
 
-        if (isShopCounter)
+
+        if (currentCamera < 0)
         {
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                isMixingStation = true;
-                isGarden = false;
-                isShopCounter = false;
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                isGarden = true;
-                isShopCounter = false;
-                isMixingStation = false;
-            }
+            currentCamera = totalCameras;
+
         }
 
-        if (isMixingStation)
+        if (previousCamera < 0)
         {
-
-            if (Input.GetKeyDown(KeyCode.A))
-            {
-                isGarden = true;
-                isMixingStation = false;
-
-                isShopCounter = false;
-            }
-            if (Input.GetKeyDown(KeyCode.D))
-            {
-                isShopCounter = true;
-                isMixingStation = false;
-
-                isGarden = false;
-            }
+            previousCamera = totalCameras;
         }
 
+        if (nextCamera < 0)
+        {
+            nextCamera = totalCameras;
+        }
     }
 }
