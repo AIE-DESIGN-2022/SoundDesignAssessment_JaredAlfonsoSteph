@@ -1,23 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CustomerOrderGenerator : MonoBehaviour
 {
-    public string[] heights = new string[] { "Really Tall", "A Little Tall", "Average Height", "A Little Short", "Really Short" };
+    public string[] heights = new string[] { "really tall", "a little tall", "average height", "a little short", "really short" };
     public string currentHeight;
     int heightNumber;
 
-    public string[] hairColour = new string[] { "Brown", "Black", "Blonde", "Orange", "Blue" };
+    public string[] hairColour = new string[] { "brown", "black", "blonde", "orange", "blue" };
     public string currentHairColour;
     int hairColourNumber;
 
-    public string[] eyeColour = new string[] { "Brown", "Green", "Blue", "Grey", "Red" };
+    public string[] eyeColour = new string[] { "brown", "green", "blue", "grey", "red" };
     public string currentEyeColour;
     int eyeColourNumber;
 
-    public string[] personalityTraits = new string[] { "Energetic", "Kind", "Openminded", "Extraversion" };
-    public string[] currentPersonalityTrait;
+    public string[] personalityTraits = new string[] { "energetic", "kind", "openminded", "extraversion" };
+    public string currentPersonalityTrait1;
+    public string currentPersonalityTrait2;
 
     public string[] energyLevel = new string[] {"very energetic", "a little energetic", "a little lazy", "very lazy"};
 
@@ -26,13 +28,14 @@ public class CustomerOrderGenerator : MonoBehaviour
     public string[] openmindedLevel = new string[] {"very openminded", "a little openminded", "neutral minded", "a little closeminded", "very closeminded"};
     public string[] extraversionLevel = new string[] { "very extroverted", "a little extroverted", "an ambivert", "a little introverted", "very introverted" };
 
-
+    public TextMeshProUGUI customerOrderText;
 
 
     // Start is called before the first frame update
     void Start()
     {
         GenerateOrder();
+        GenerateCustomerText();
     }
 
     // Update is called once per frame
@@ -54,5 +57,10 @@ public class CustomerOrderGenerator : MonoBehaviour
         eyeColourNumber = Random.Range(0, eyeColour.Length);
         currentEyeColour = eyeColour[eyeColourNumber];
         Debug.Log(currentEyeColour);
+    }
+
+    public void GenerateCustomerText()
+    {
+        customerOrderText.text = "Hi! I'm looking for someone who is " + currentHeight + " with " + currentHairColour + " hair and " + currentEyeColour + " eyes  and a ####### personality.";
     }
 }

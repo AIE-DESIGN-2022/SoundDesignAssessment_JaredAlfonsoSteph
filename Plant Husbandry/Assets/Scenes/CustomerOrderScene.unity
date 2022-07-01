@@ -1826,31 +1826,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heights:
-  - Really Tall
-  - A Little Tall
-  - Average Height
-  - A Little Short
-  - Really Short
+  - really tall
+  - a little tall
+  - average height
+  - a little short
+  - really short
   currentHeight: 
   hairColour:
-  - Brown
-  - Black
-  - Blonde
-  - Orange
-  - Blue
+  - brown
+  - black
+  - blonde
+  - orange
+  - blue
   currentHairColour: 
   eyeColour:
-  - Brown
-  - Green
-  - Blue
-  - Grey
-  - Red
+  - brown
+  - green
+  - blue
+  - grey
+  - red
   currentEyeColour: 
   personalityTraits:
-  - Energetic
-  - Kind
-  - Openminded
-  - Extraversion
+  - energetic
+  - kind
+  - openminded
+  - extraversion
   currentPersonalityTrait: []
   energyLevel:
   - very energetic
@@ -1874,6 +1874,7 @@ MonoBehaviour:
   - an ambivert
   - a little introverted
   - very introverted
+  customerOrderText: {fileID: 536363946}
 --- !u!4 &1856511125
 Transform:
   m_ObjectHideFlags: 0
