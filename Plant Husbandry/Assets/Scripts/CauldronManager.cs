@@ -6,22 +6,26 @@ public class CauldronManager : MonoBehaviour
 {
     public CustomerOrderGenerator orderGenerator;
     
+    [Header("Height")]
     public float heightWanted;
     public float heightAdded;
 
-
+    [Header("Eyes")]
     public string eyeColourWanted;
     public string eyeColourAdded;
 
+    [Header("Hair")]
     public string hairColourWanted;
     public string hairColourAdded;
 
+    [Header("Personality One")]
     public string personalityOneWanted;
     public string personalityOneAdded;
 
     public float personalityOneAmountWanted;
     public float personalityOneAmountAdded;
 
+    [Header("Personality two")]
     public string personalityTwoWanted;
     public string personalityTwoAdded;
 
