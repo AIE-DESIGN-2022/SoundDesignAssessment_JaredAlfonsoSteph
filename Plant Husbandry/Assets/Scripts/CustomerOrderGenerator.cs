@@ -54,6 +54,14 @@ public class CustomerOrderGenerator : MonoBehaviour
 
     public TextMeshProUGUI customerOrderText;
 
+    [Header("OrderTicketUI")]
+    public TextMeshProUGUI heightText;
+    public TextMeshProUGUI hairColourText;
+    public TextMeshProUGUI eyeColourText;
+    public TextMeshProUGUI personalityOneText;
+    public TextMeshProUGUI personalityTwoText;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -87,6 +95,14 @@ public class CustomerOrderGenerator : MonoBehaviour
     public void GenerateCustomerText()
     {
         customerOrderText.text = "Hi! I'm looking for someone who is " + currentHeight + " with " + currentHairColour + " hair and " + currentEyeColour + " eyes. I also want their personality to be " + currentPersonalityTraitOneLevel + " and " + currentPersonalityTraitTwoLevel + ".";
+
+        heightText.text = "- " + currentHeight;
+        hairColourText.text = "- " + currentHairColour;
+        eyeColourText.text = "- " + currentEyeColour;
+        personalityOneText.text = "- " + currentPersonalityTraitOneLevel;
+        personalityTwoText.text = "- " + currentPersonalityTraitTwoLevel;
+
+
     }
 
     public void GeneratePersonalityTraits()
