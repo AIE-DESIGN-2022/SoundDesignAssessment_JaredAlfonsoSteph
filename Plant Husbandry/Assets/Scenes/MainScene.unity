@@ -2822,6 +2822,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &547828923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7308110193774303064, guid: d9f3c1d8e05242441a125587c0614975, type: 3}
+  m_PrefabInstance: {fileID: 1250321092}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &556571206
 Mesh:
   m_ObjectHideFlags: 0
@@ -7025,6 +7030,7 @@ Transform:
   m_Children:
   - {fileID: 1007087283}
   - {fileID: 968077205}
+  - {fileID: 1182040407}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8132,6 +8138,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1182040406
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1182040407}
+  - component: {fileID: 1182040408}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1182040407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182040406}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 975892792}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1182040408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182040406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55041d481080adf4e8a41b2e22bec0ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraManager: {fileID: 1682096484}
+  customerOrderSpeech: {fileID: 547828923}
 --- !u!43 &1187653998
 Mesh:
   m_ObjectHideFlags: 0
@@ -10483,6 +10534,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1682096484 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3692585990240897209, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
+  m_PrefabInstance: {fileID: 3692585990386197967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d87f92345299a644bb23424061ac889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1727547463
 Mesh:
   m_ObjectHideFlags: 0
