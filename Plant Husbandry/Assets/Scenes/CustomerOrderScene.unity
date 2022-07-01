@@ -1796,6 +1796,98 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1856135882}
   m_CullTransparentMesh: 1
+--- !u!1 &1856511123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1856511125}
+  - component: {fileID: 1856511124}
+  m_Layer: 0
+  m_Name: CustomerOrderManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1856511124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856511123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9a81e733e6cab4b9202f00bf175d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heights:
+  - Really Tall
+  - A Little Tall
+  - Average Height
+  - A Little Short
+  - Really Short
+  currentHeight: 
+  hairColour:
+  - Brown
+  - Black
+  - Blonde
+  - Orange
+  - Blue
+  currentHairColour: 
+  eyeColour:
+  - Brown
+  - Green
+  - Blue
+  - Grey
+  - Red
+  currentEyeColour: 
+  personalityTraits:
+  - Energetic
+  - Kind
+  - Openminded
+  - Extraversion
+  currentPersonalityTrait: []
+  energyLevel:
+  - very energetic
+  - a little energetic
+  - a little lazy
+  - very lazy
+  kindLevel:
+  - very kind
+  - a little kind
+  - a little mean
+  - very mean
+  openmindedLevel:
+  - very openminded
+  - a little openminded
+  - neutral minded
+  - a little closeminded
+  - very closeminded
+  extraversionLevel:
+  - very extroverted
+  - a little extroverted
+  - an ambivert
+  - a little introverted
+  - very introverted
+--- !u!4 &1856511125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856511123}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.01727581, y: 1.9, z: 0.5567837}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1909332586
 GameObject:
   m_ObjectHideFlags: 0
