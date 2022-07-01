@@ -18,8 +18,10 @@ public class CustomerOrderGenerator : MonoBehaviour
     int eyeColourNumber;
 
     public string[] personalityTraits = new string[] { "energetic", "kind", "openminded", "extraversion" };
-    public string currentPersonalityTrait1;
-    public string currentPersonalityTrait2;
+    public string currentPersonalityTraitOne;
+    int personalityTraitOneNumber;
+    public string currentPersonalityTraitTwo;
+    int personalityTraitTwoNumber;
 
     public string[] energyLevel = new string[] {"very energetic", "a little energetic", "a little lazy", "very lazy"};
 
@@ -34,7 +36,8 @@ public class CustomerOrderGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenerateOrder();
+        GeneratePhysicalAttributes();
+        GeneratePersonalityTraits();
         GenerateCustomerText();
     }
 
@@ -44,23 +47,45 @@ public class CustomerOrderGenerator : MonoBehaviour
         
     }
 
-    public void GenerateOrder()
+    public void GeneratePhysicalAttributes()
     {
         heightNumber = Random.Range (0, heights.Length);
         currentHeight = heights[heightNumber];
-        Debug.Log(currentHeight);
 
         hairColourNumber = Random.Range(0, hairColour.Length);
         currentHairColour = hairColour[hairColourNumber];
-        Debug.Log(currentHairColour);
 
         eyeColourNumber = Random.Range(0, eyeColour.Length);
         currentEyeColour = eyeColour[eyeColourNumber];
-        Debug.Log(currentEyeColour);
+
+
     }
 
     public void GenerateCustomerText()
     {
         customerOrderText.text = "Hi! I'm looking for someone who is " + currentHeight + " with " + currentHairColour + " hair and " + currentEyeColour + " eyes  and a ####### personality.";
     }
+
+    public void GeneratePersonalityTraits()
+    {
+        personalityTraitOneNumber = Random.Range(0, personalityTraits.Length);
+
+        personalityTraitTwoNumber = Random.Range(0, personalityTraits.Length);
+        
+
+        if (personalityTraitTwoNumber == personalityTraitOneNumber)
+        {
+            Debug.Log("they match");
+
+            GeneratePersonalityTraits();
+        }
+
+        currentPersonalityTraitOne = personalityTraits[personalityTraitOneNumber];
+
+        currentPersonalityTraitTwo = personalityTraits[personalityTraitTwoNumber];
+
+
+    }
+
+
 }
