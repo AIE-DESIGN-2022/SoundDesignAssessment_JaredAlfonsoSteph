@@ -1850,30 +1850,37 @@ MonoBehaviour:
   - energetic
   - kind
   - openminded
-  - extraversion
-  currentPersonalityTrait: []
+  - extroversion
+  currentPersonalityTraitOne: 
+  currentPersonalityTraitTwo: 
   energyLevel:
   - very energetic
   - a little energetic
   - a little lazy
   - very lazy
+  currentEnergyLevel: 
   kindLevel:
   - very kind
   - a little kind
   - a little mean
   - very mean
+  currentKindLevel: 
   openmindedLevel:
   - very openminded
   - a little openminded
   - neutral minded
   - a little closeminded
   - very closeminded
-  extraversionLevel:
+  currentOpenmindedLevel: 
+  extroversionLevel:
   - very extroverted
   - a little extroverted
   - an ambivert
   - a little introverted
   - very introverted
+  currentExtroversionLevel: 
+  currentPersonalityTraitOneLevel: 
+  currentPersonalityTraitTwoLevel: 
   customerOrderText: {fileID: 536363946}
 --- !u!4 &1856511125
 Transform:
