@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7946918927550432184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7946918927550432190}
+  - component: {fileID: 7946918927550432191}
+  m_Layer: 0
+  m_Name: CustomerOrderManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7946918927550432190
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7946918927550432184}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.01727581, y: 1.9, z: 0.5567837}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7946918927550432191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7946918927550432184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9a81e733e6cab4b9202f00bf175d87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heights:
+  - really tall
+  - a little tall
+  - average height
+  - a little short
+  - really short
+  currentHeight: 
+  hairColour:
+  - brown
+  - black
+  - blonde
+  - orange
+  - blue
+  currentHairColour: 
+  eyeColour:
+  - brown
+  - green
+  - blue
+  - grey
+  - red
+  currentEyeColour: 
+  personalityTraits:
+  - energetic
+  - kind
+  - openminded
+  - extroversion
+  currentPersonalityTraitOne: 
+  currentPersonalityTraitTwo: 
+  energyLevel:
+  - very energetic
+  - a little energetic
+  - a little lazy
+  - very lazy
+  currentEnergyLevel: 
+  kindLevel:
+  - very kind
+  - a little kind
+  - a little mean
+  - very mean
+  currentKindLevel: 
+  openmindedLevel:
+  - very openminded
+  - a little openminded
+  - neutral minded
+  - a little closeminded
+  - very closeminded
+  currentOpenmindedLevel: 
+  extroversionLevel:
+  - very extroverted
+  - a little extroverted
+  - an ambivert
+  - a little introverted
+  - very introverted
+  currentExtroversionLevel: 
+  currentPersonalityTraitOneLevel: 
+  currentPersonalityTraitTwoLevel: 
+  customerOrderText: {fileID: 0}
+  heightText: {fileID: 0}
+  hairColourText: {fileID: 0}
+  eyeColourText: {fileID: 0}
+  personalityOneText: {fileID: 0}
+  personalityTwoText: {fileID: 0}
