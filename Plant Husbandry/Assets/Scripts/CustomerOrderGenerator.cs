@@ -114,7 +114,7 @@ public class CustomerOrderGenerator : MonoBehaviour
 
         if (personalityTraitTwoNumber == personalityTraitOneNumber)
         {
-            Debug.Log("they match");
+            //Debug.Log("they match");
 
             GeneratePersonalityTraits();
         }
@@ -132,28 +132,28 @@ public class CustomerOrderGenerator : MonoBehaviour
         {
             energyLevelNumber = Random.Range(0, energyLevel.Length);
             currentPersonalityTraitOneLevel = energyLevel[energyLevelNumber];
-            Debug.Log("energy one");
+           // Debug.Log("energy one");
         }
         if (currentPersonalityTraitOne == "kind")
         {
             kindLevelNumber = Random.Range(0, kindLevel.Length);
             currentPersonalityTraitOneLevel = kindLevel[kindLevelNumber];
 
-            Debug.Log("kind one");
+           // Debug.Log("kind one");
         }
         if (currentPersonalityTraitOne == "openminded")
         {
             openmindedLevelNumber = Random.Range(0, openmindedLevel.Length);
             currentPersonalityTraitOneLevel = openmindedLevel[openmindedLevelNumber];
 
-            Debug.Log("openminded one");
+           // Debug.Log("openminded one");
         }
         if (currentPersonalityTraitOne == "extroversion")
         {
             extroversionLevelNumber = Random.Range(0, extroversionLevel.Length);
             currentPersonalityTraitOneLevel = extroversionLevel[extroversionLevelNumber];
 
-            Debug.Log("extroversion one");
+           // Debug.Log("extroversion one");
         }
 
         if (currentPersonalityTraitTwo == "energetic")
@@ -161,26 +161,26 @@ public class CustomerOrderGenerator : MonoBehaviour
             energyLevelNumber = Random.Range(0, energyLevel.Length);
             currentPersonalityTraitTwoLevel = energyLevel[energyLevelNumber];
 
-            Debug.Log("energetic two");
+           // Debug.Log("energetic two");
         }
         if (currentPersonalityTraitTwo == "kind")
         {
             kindLevelNumber = Random.Range(0, kindLevel.Length);
             currentPersonalityTraitTwoLevel = kindLevel[kindLevelNumber];
-            Debug.Log("kind two");
+          //  Debug.Log("kind two");
         }
         if (currentPersonalityTraitTwo == "openminded")
         {
             openmindedLevelNumber = Random.Range(0, openmindedLevel.Length);
             currentPersonalityTraitTwoLevel = openmindedLevel[openmindedLevelNumber];
-            Debug.Log("openminded two");
+           // Debug.Log("openminded two");
         }
         if (currentPersonalityTraitTwo == "extroversion")
         {
             extroversionLevelNumber = Random.Range(0, extroversionLevel.Length);
             currentPersonalityTraitTwoLevel = extroversionLevel[extroversionLevelNumber];
 
-            Debug.Log("extroversion two");
+            //Debug.Log("extroversion two");
         }
     }
 
