@@ -7920,6 +7920,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1308536640}
   mainCamera: {fileID: 811716824}
+  areaName: 
+  areaToPrint: 
+  areaNameText: {fileID: 0}
 --- !u!43 &1187653998
 Mesh:
   m_ObjectHideFlags: 0
@@ -8084,6 +8087,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1197141296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1167234262584116963, guid: d9f3c1d8e05242441a125587c0614975, type: 3}
+  m_PrefabInstance: {fileID: 1250321092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1204298157
 GameObject:
   m_ObjectHideFlags: 0
@@ -8359,10 +8373,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1545939026}
-    - target: {fileID: 1190884166, guid: d9f3c1d8e05242441a125587c0614975, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1833347507, guid: d9f3c1d8e05242441a125587c0614975, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -12539,6 +12549,10 @@ PrefabInstance:
     - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: heights.Array.data[4]
       value: really short
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: eyeColour.Array.data[3]
+      value: yellow
       objectReference: {fileID: 0}
     - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: energyLevel.Array.data[0]
@@ -23613,7 +23627,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1540185924191063443, guid: 967079e117937d949bbeb47df663075f, type: 3}
       propertyPath: m_Priority
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1540185924191063452, guid: 967079e117937d949bbeb47df663075f, type: 3}
       propertyPath: m_Name
@@ -23657,7 +23671,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1540185925164664534, guid: 967079e117937d949bbeb47df663075f, type: 3}
       propertyPath: m_Priority
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1540185925164664535, guid: 967079e117937d949bbeb47df663075f, type: 3}
       propertyPath: m_Name
@@ -31498,31 +31512,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.803394
+      value: 0.75360584
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5874915
+      value: -1.3724914
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.27621233
+      value: -1.3082123
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.5038197
+      value: 0.704783
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.024582291
+      value: 0.05727968
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.862433
+      value: 0.70478296
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.042079706
+      value: -0.05727968
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -39860,25 +39874,49 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1991979191}
     - target: {fileID: 4862680391979638871, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
+      propertyPath: areaName
+      value: Mixing Station
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862680391979638871, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1426092670}
+    - target: {fileID: 4862680391979638871, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
+      propertyPath: areaNameText
+      value: 
+      objectReference: {fileID: 1197141296}
     - target: {fileID: 4862680392496675175, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
       propertyPath: UI
       value: 
       objectReference: {fileID: 939425286}
     - target: {fileID: 4862680392496675175, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
+      propertyPath: areaName
+      value: Greenhouse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862680392496675175, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1426092670}
+    - target: {fileID: 4862680392496675175, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
+      propertyPath: areaNameText
+      value: 
+      objectReference: {fileID: 1197141296}
     - target: {fileID: 4862680393437765877, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
       propertyPath: UI
       value: 
       objectReference: {fileID: 1308536640}
     - target: {fileID: 4862680393437765877, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
+      propertyPath: areaName
+      value: Counter
+      objectReference: {fileID: 0}
+    - target: {fileID: 4862680393437765877, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1426092670}
+    - target: {fileID: 4862680393437765877, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
+      propertyPath: areaNameText
+      value: 
+      objectReference: {fileID: 1197141296}
     - target: {fileID: 4862680393834768512, guid: c9891a4f328960d4d9eae8b86b727523, type: 3}
       propertyPath: m_Name
       value: AreaTriggers

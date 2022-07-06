@@ -101,8 +101,8 @@ public class CustomerOrderGenerator : MonoBehaviour
         customerOrderText.text = "Hi! I'm looking for someone who is " + currentHeight + " with " + currentHairColour + " hair and " + currentEyeColour + " eyes. I also want their personality to be " + currentPersonalityTraitOneLevel + " and " + currentPersonalityTraitTwoLevel + ".";
 
         heightText.text = "- " + currentHeight;
-        hairColourText.text = "- " + currentHairColour;
-        eyeColourText.text = "- " + currentEyeColour;
+        hairColourText.text = "- " + currentHairColour + " hair";
+        eyeColourText.text = "- " + currentEyeColour + " eyes";
         personalityOneText.text = "- " + currentPersonalityTraitOneLevel;
         personalityTwoText.text = "- " + currentPersonalityTraitTwoLevel;
 
