@@ -30,7 +30,9 @@ public class PlantGrowTimer : MonoBehaviour
 
     public GameObject plantReadyButton;
 
-
+    public GameObject popUpUI;
+    public TextMeshProUGUI questionText;
+    public GameObject plantCharacter;
 
     // Start is called before the first frame update
     void Start()
@@ -100,5 +102,27 @@ public class PlantGrowTimer : MonoBehaviour
     {
         timerOn = true;
         fertilizerButton.SetActive(false);
+    }
+
+    public void SellPlant()
+    {
+        popUpUI.SetActive(true);
+        questionText.text = "Sell Plant-Husband";
+    }
+
+    public void YesSell()
+    {
+        //
+        plantCharacter.SetActive(false);
+        popUpUI.SetActive(false);
+
+        Debug.Log("Sell Plant");
+
+    }
+
+    public void NoSell()
+    {
+        //???
+        Debug.Log("No Sell Plant");
     }
 }
