@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
+    //Responsible for allowing/not allowing the player to press other jars.
+    public bool lockEyeSection;
     
     public Button greenJar;
     public Button redJar;
@@ -30,11 +32,13 @@ public class ButtonManager : MonoBehaviour
     public bool brownActive;    
     public bool greenActive;
 
-    public float eyeSelection;
+    public string eyeSelection;
 
     // Start is called before the first frame update
     void Start()
     {
+        lockEyeSection = true;
+        
         redActive = false;
         greyActive = false;
         blueActive = false;
@@ -76,10 +80,12 @@ public class ButtonManager : MonoBehaviour
 
     }
 
+    //public voids check if player can access other jars still, if they can it will bring the item from the jar forward and all other objects back.
     public void RedButtonClicked()
     {
         
-        
+        if(lockEyeSection == true)
+        {
             redActive = true;
             greyActive = false;
             blueActive = false;
@@ -87,13 +93,16 @@ public class ButtonManager : MonoBehaviour
             greenActive = false;
             redEyeAnim.SetTrigger("OnClick");
             redEyeAnim.SetBool("Return", false);
+        }
+            
 
 
     }
 
     public void GreyButtonClicked()
     {
-        
+        if (lockEyeSection == true)
+        {
             redActive = false;
             greyActive = true;
             blueActive = false;
@@ -101,13 +110,16 @@ public class ButtonManager : MonoBehaviour
             greenActive = false;
             greyEyeAnim.SetTrigger("OnClick");
             greyEyeAnim.SetBool("Return", false);
+        }
+        
 
 
     }
 
     public void BlueButtonClicked()
     {
-        
+        if (lockEyeSection == true)
+        {
             redActive = false;
             greyActive = false;
             blueActive = true;
@@ -115,13 +127,16 @@ public class ButtonManager : MonoBehaviour
             greenActive = false;
             blueEyeAnim.SetTrigger("OnClick");
             blueEyeAnim.SetBool("Return", false);
+        }
+        
 
 
     }
 
     public void BrownButtonClicked()
     {
-        
+        if (lockEyeSection == true)
+        {
             redActive = false;
             greyActive = false;
             blueActive = false;
@@ -129,13 +144,16 @@ public class ButtonManager : MonoBehaviour
             greenActive = false;
             brownEyeAnim.SetTrigger("OnClick");
             brownEyeAnim.SetBool("Return", false);
+        }
+        
 
 
     }
 
     public void GreenButtonClicked()
     {
-        
+        if (lockEyeSection == true)
+        {
             redActive = false;
             greyActive = false;
             blueActive = false;
@@ -143,6 +161,8 @@ public class ButtonManager : MonoBehaviour
             greenActive = true;
             greenEyeAnim.SetTrigger("OnClick");
             greenEyeAnim.SetBool("Return", false);
+        }
+        
 
 
     }
