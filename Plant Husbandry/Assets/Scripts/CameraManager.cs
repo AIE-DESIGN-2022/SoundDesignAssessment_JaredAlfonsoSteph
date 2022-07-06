@@ -14,6 +14,7 @@ public class CameraManager : MonoBehaviour
 
     public int totalCameras;
 
+    public AudioSource cameraMoveSound;
 
    // public string activeCamera;
 
@@ -46,7 +47,7 @@ public class CameraManager : MonoBehaviour
             currentCamera++;
             nextCamera++;
 
-
+            
 
             ChangeCameraNumbers();
 
@@ -77,6 +78,7 @@ public class CameraManager : MonoBehaviour
     //makes ssure camera order doesn;'t break
     private void ChangeCameraNumbers() 
     {
+        cameraMoveSound.Play();
 
         if (currentCamera > totalCameras)
         {
