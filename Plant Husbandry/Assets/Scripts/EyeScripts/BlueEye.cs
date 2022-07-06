@@ -5,6 +5,7 @@ using UnityEngine;
 public class BlueEye : MonoBehaviour
 {
     public GameObject buttonManager;
+    public Animator animator;
     
 
     // Start is called before the first frame update
@@ -22,6 +23,7 @@ public class BlueEye : MonoBehaviour
     {
         buttonManager.GetComponent<ButtonManager>().eyeSelection = "blue";
         buttonManager.GetComponent<ButtonManager>().lockEyeSection = false;
+        animator.SetTrigger("cauldron");
 
         Debug.Log("numba fie");
 

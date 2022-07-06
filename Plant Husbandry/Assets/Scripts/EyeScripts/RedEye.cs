@@ -6,7 +6,7 @@ public class RedEye : MonoBehaviour
 {
 
     public GameObject buttonManager;
-    
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class RedEye : MonoBehaviour
     {
         buttonManager.GetComponent<ButtonManager>().eyeSelection = "red";
         buttonManager.GetComponent<ButtonManager>().lockEyeSection = false;
-       
+        animator.SetTrigger("cauldron");
         Debug.Log("numba one");
 
     }

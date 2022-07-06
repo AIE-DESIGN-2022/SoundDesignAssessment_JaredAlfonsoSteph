@@ -5,7 +5,7 @@ using UnityEngine;
 public class GreyEye : MonoBehaviour
 {
     public GameObject buttonManager;
-  
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class GreyEye : MonoBehaviour
     {
         buttonManager.GetComponent<ButtonManager>().eyeSelection = "grey";
         buttonManager.GetComponent<ButtonManager>().lockEyeSection = false;
-       
+        animator.SetTrigger("cauldron");
         Debug.Log("numba tree");
 
     }
