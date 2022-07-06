@@ -14,16 +14,17 @@ public class CameraManager : MonoBehaviour
 
     public int totalCameras;
 
- 
+
+   // public string activeCamera;
+
     void Start()
     {
+        //activeCamera = ;
 
         //settin gcamera values
         currentCamera = 0;
         previousCamera = totalCameras;
         nextCamera = 1;
-
-
 
         //ensuring current camera is active
         cameras[previousCamera].enabled = false;
@@ -36,28 +37,39 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        cameras[currentCamera].enabled = true;
-        cameras[previousCamera].enabled = false;
+
 
         //movement to right
         if (Input.GetKeyDown(KeyCode.D))
         {
-            previousCamera = currentCamera;
+            previousCamera++;
             currentCamera++;
             nextCamera++;
 
+
+
             ChangeCameraNumbers();
+
+            cameras[currentCamera].enabled = true;
+            cameras[previousCamera].enabled = false;
+            cameras[nextCamera].enabled = false;
 
 
         }
         //movement to left
         if (Input.GetKeyDown(KeyCode.A))
         {
-            nextCamera = currentCamera;
+            nextCamera--;
             currentCamera--;
             previousCamera--;
 
+
+
             ChangeCameraNumbers();
+
+            cameras[currentCamera].enabled = true;
+            cameras[previousCamera].enabled = false;
+            cameras[nextCamera].enabled = false;
         }      
 
     }
