@@ -4,28 +4,39 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public CameraManager cameraManager;
 
-    public GameObject customerOrderSpeech;
-    public bool activeBlend;
-    //public bool IsBlending { get { return activeBlend != null; } }
+
+    public GameObject UI;
+    public GameObject mainCamera;
 
     // Start is called before the first frame update
     void Start()
     {
-        customerOrderSpeech.SetActive(false);
+        //customerOrderSpeech.SetActive(false);
+
+        UI.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (cameraManager.currentCamera == 0)
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+
+        if (other.tag == "MainCamera")
         {
-            customerOrderSpeech.SetActive(true);
+            UI.SetActive(true);
         }
-        else
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "MainCamera")
         {
-            customerOrderSpeech.SetActive(false);
+            UI.SetActive(false);
         }
     }
 }
