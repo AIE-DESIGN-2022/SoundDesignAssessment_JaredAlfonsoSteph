@@ -9,6 +9,7 @@ public class PouringMechanic : MonoBehaviour
     public Image beakerCover;
 
     public GameObject beakerImage;
+    public GameObject fillArea;
 
     public bool pouring;
 
@@ -22,6 +23,7 @@ public class PouringMechanic : MonoBehaviour
     {
         beakerImage.SetActive(false);
         beakerCover.gameObject.SetActive(false);
+        fillArea.gameObject.SetActive(false);
         beaker.value = 0;
         pouring = false;
         fillSpeed = 0.2f;
@@ -39,12 +41,14 @@ public class PouringMechanic : MonoBehaviour
             beaker.value += fillSpeed;
         }
 
-        else if (Input.GetMouseButtonUp(0) && pouring == true)
+        else if (Input.GetMouseButtonUp(0) && pouring == true && beaker.value >= 10)
         {
             //Once mouse button is lifted other half of the cup will appear and will play animation. It will also turn the pouring bool off so that the player can't fill it up anymore by clicking.
-            beakerCover.gameObject.SetActive(true);
+            BeakerCover();
             pouring = false;
-            beakerAnimator.SetTrigger("Pouring");
+            
+            Invoke("TurnOffJug", 2.5f);
+
         }
 
     }
@@ -53,12 +57,36 @@ public class PouringMechanic : MonoBehaviour
     {
 
         beakerImage.SetActive(true);
+        fillArea.gameObject.SetActive(true);
         Invoke("WaitForJug", 1f);
 
     }
     void WaitForJug()
     {
         pouring = true;
+    }
+
+    void TurnOffJug()
+    {
+        beakerImage.SetActive(false);
+        beakerCover.gameObject.SetActive(false);
+        fillArea.gameObject.SetActive(false);
+        
+    }
+    
+    void BeakerCover()
+    {
+        beakerCover.gameObject.SetActive(true);
+        beakerAnimator.SetTrigger("Pouring");
+    }
+
+    public void WrongChoice()
+    {
+        beakerCover.gameObject.SetActive(false);
+        beakerImage.SetActive(false);
+        
+        fillArea.gameObject.SetActive(false);
+        beaker.value = 0;
     }
 
 
