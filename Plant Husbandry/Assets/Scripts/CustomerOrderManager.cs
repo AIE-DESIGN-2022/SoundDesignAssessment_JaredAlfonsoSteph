@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CauldronManager : MonoBehaviour
+public class CustomerOrderManager : MonoBehaviour
 {
     public CustomerOrderGenerator orderGenerator;
     

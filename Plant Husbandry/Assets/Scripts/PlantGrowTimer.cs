@@ -26,7 +26,11 @@ public class PlantGrowTimer : MonoBehaviour
     public float timerPercentageStageThree;
     private float timeStageThree;
 
-    public GameObject plantButton;
+    public GameObject fertilizerButton;
+
+    public GameObject plantReadyButton;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +41,8 @@ public class PlantGrowTimer : MonoBehaviour
         PlantCharacter.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
         timerOn = false;
+
+        plantReadyButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -45,7 +51,7 @@ public class PlantGrowTimer : MonoBehaviour
         if (timerOn)
         {
             secondsLeft -= Time.deltaTime;
-            updateTimer(secondsLeft);
+            UpdateTimer(secondsLeft);
         }
        // else
         //{
@@ -77,9 +83,10 @@ public class PlantGrowTimer : MonoBehaviour
         {
             secondsLeft = 0;
             timerOn = false;
+            plantReadyButton.SetActive(true);
         }
     }
-    void updateTimer(float currentTime)
+    void UpdateTimer(float currentTime)
     {
         currentTime += 1;
 
@@ -92,6 +99,6 @@ public class PlantGrowTimer : MonoBehaviour
     public void StartTimer()
     {
         timerOn = true;
-        plantButton.SetActive(false);
+        fertilizerButton.SetActive(false);
     }
 }
