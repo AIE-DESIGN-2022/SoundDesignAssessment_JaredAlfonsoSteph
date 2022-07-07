@@ -7679,6 +7679,18 @@ MonoBehaviour:
   costToBurnText: {fileID: 4466180273556945987}
   moneyManager: {fileID: 0}
   noMoneyText: {fileID: 0}
+  blueEyeMaterial: {fileID: 2100000, guid: 9ba622170c89e3049900691f5d741d74, type: 2}
+  brownEyeMaterial: {fileID: 2100000, guid: ac771da8c813d354c983161ed195ccf7, type: 2}
+  defaultEyeMaterial: {fileID: 2100000, guid: 9234d109239616448b2c01541a8bd60c, type: 2}
+  greenEyeMaterial: {fileID: 2100000, guid: 0116a4a0eb2a219408962229fa018385, type: 2}
+  redEyeMaterial: {fileID: 2100000, guid: 116f2cf26d0a7054ab13e80f1ed0b966, type: 2}
+  yellowEyeMaterial: {fileID: 2100000, guid: 5397a92a656493349b34dd1d3b6516f7, type: 2}
+  blackHairMaterial: {fileID: 2100000, guid: 34491012df2aa4147b7cd029bed9b063, type: 2}
+  blondeHairMaterial: {fileID: 2100000, guid: 77d8e9f977a81b648adb552585b7180a, type: 2}
+  blueHairMaterial: {fileID: 2100000, guid: af011e37e9b9d06449dca51e49c23067, type: 2}
+  brownHairMaterial: {fileID: 2100000, guid: 941ea225bcdefe94b8c8e9df2ce4ced1, type: 2}
+  defaultHairMaterial: {fileID: 2100000, guid: 2a66995a77a3f214dac437fa953a61b1, type: 2}
+  orangeHairMaterial: {fileID: 2100000, guid: 2c5554de8bfc7c041858e4e1c4a32f16, type: 2}
 --- !u!1001 &1471279145645773199
 PrefabInstance:
   m_ObjectHideFlags: 0

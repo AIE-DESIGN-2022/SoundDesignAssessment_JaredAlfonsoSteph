@@ -20,7 +20,7 @@ public class GreyEye : MonoBehaviour
     }
     void OnMouseDown()
     {
-        buttonManager.GetComponent<ButtonManager>().eyeSelection = "grey";
+        buttonManager.GetComponent<ButtonManager>().eyeSelection = "yellow";
         buttonManager.GetComponent<ButtonManager>().lockEyeSection = false;
         animator.SetTrigger("cauldron");
         Debug.Log("numba tree");

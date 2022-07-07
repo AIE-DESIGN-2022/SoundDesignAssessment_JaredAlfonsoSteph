@@ -20,6 +20,8 @@ public class CustomerOrderManager : MonoBehaviour
     public string hairColourWanted;
     public string hairColourAdded;
 
+    public HairButtonManager hairButtonManager;
+
     [Header("Personality One")]
     public string personalityOneWanted;
     public string personalityOneAdded;
@@ -37,6 +39,11 @@ public class CustomerOrderManager : MonoBehaviour
     [Header("SuccessScore")]
     public int dateQuality;
     public int customerFinalPayment;
+
+    public PouringMechanic energeticBeakerFull;
+    public PouringMechanic openmindednessBeakerFull;
+    public PouringMechanic kindessBeakerFull;
+    public PouringMechanic extroversionBeakerFull;
 
     //float numberToCalculated;
 
@@ -60,6 +67,11 @@ public class CustomerOrderManager : MonoBehaviour
         HeightPercentageWanted(orderGenerator.heightNumber, orderGenerator.heights.Length);
         PersonalityOnePercentageWanted(orderGenerator.personalityTraitOneNumber, orderGenerator.personalityOneArrayLength);
         PersonalityTwoPercentageWanted(orderGenerator.personalityTraitTwoNumber, orderGenerator.personalityTwoArrayLength);
+
+
+        eyeColourAdded = eyeButtonManager.eyeSelection;
+
+        hairColourAdded = hairButtonManager.hairSelection;
 
         
     }
