@@ -350,7 +350,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7be0b0880ccd0b4aac615b1a6e08e57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hairButtonManager: {fileID: 0}
+  hairButtonManager: {fileID: 4121587195141791495}
   animator: {fileID: 4121587195654624458}
 --- !u!61 &4121587195654624456
 BoxCollider2D:
