@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class PouringMechanic : MonoBehaviour
 {
     public Slider beaker;
-    public Image beakerCover;
+   
 
     public GameObject beakerImage;
-    public GameObject fillArea;
+ 
 
     public bool pouring;
 
@@ -22,8 +22,7 @@ public class PouringMechanic : MonoBehaviour
     void Start()
     {
         beakerImage.SetActive(false);
-        beakerCover.gameObject.SetActive(false);
-        fillArea.gameObject.SetActive(false);
+       
         beaker.value = 0;
         pouring = false;
         fillSpeed = 0.2f;
@@ -57,7 +56,7 @@ public class PouringMechanic : MonoBehaviour
     {
 
         beakerImage.SetActive(true);
-        fillArea.gameObject.SetActive(true);
+       
         Invoke("WaitForJug", 1f);
 
     }
@@ -69,23 +68,24 @@ public class PouringMechanic : MonoBehaviour
     void TurnOffJug()
     {
         beakerImage.SetActive(false);
-        beakerCover.gameObject.SetActive(false);
-        fillArea.gameObject.SetActive(false);
+       
+     
         
     }
     
     void BeakerCover()
     {
-        beakerCover.gameObject.SetActive(true);
+        beakerImage.SetActive(false);
+        
         beakerAnimator.SetTrigger("Pouring");
     }
 
     public void WrongChoice()
     {
-        beakerCover.gameObject.SetActive(false);
+        
         beakerImage.SetActive(false);
         
-        fillArea.gameObject.SetActive(false);
+      
         beaker.value = 0;
     }
 
