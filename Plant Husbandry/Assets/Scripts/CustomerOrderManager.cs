@@ -14,6 +14,8 @@ public class CustomerOrderManager : MonoBehaviour
     public string eyeColourWanted;
     public string eyeColourAdded;
 
+    public ButtonManager eyeButtonManager;
+
     [Header("Hair")]
     public string hairColourWanted;
     public string hairColourAdded;
@@ -54,6 +56,8 @@ public class CustomerOrderManager : MonoBehaviour
         HeightPercentageWanted(orderGenerator.heightNumber, orderGenerator.heights.Length);
         PersonalityOnePercentageWanted(orderGenerator.personalityTraitOneNumber, orderGenerator.personalityOneArrayLength);
         PersonalityTwoPercentageWanted(orderGenerator.personalityTraitTwoNumber, orderGenerator.personalityTwoArrayLength);
+
+        
     }
 
     public void HeightPercentageWanted(int numberToCalculate, int arrayLength)
@@ -82,7 +86,7 @@ public class CustomerOrderManager : MonoBehaviour
             }
         }
 
-       
+
 
     }
 
@@ -122,7 +126,7 @@ public class CustomerOrderManager : MonoBehaviour
             }
             if (numberToCalculate == 1)
             {
-                personalityOneAmountWanted = 62.7f;
+                personalityOneAmountWanted = 62.5f;
             }
             if (numberToCalculate == 2)
             {
@@ -170,7 +174,7 @@ public class CustomerOrderManager : MonoBehaviour
             }
             if (numberToCalculate == 1)
             {
-                personalityTwoAmountWanted = 62.7f;
+                personalityTwoAmountWanted = 62.5f;
             }
             if (numberToCalculate == 2)
             {
@@ -181,6 +185,38 @@ public class CustomerOrderManager : MonoBehaviour
                 personalityTwoAmountWanted = 12.5f;
             }
         }
+
+    }
+
+    public void CompareWantedAdded()
+    {
+        if (heightAdded >= (heightWanted - 10) && heightAdded <= (heightWanted + 10))
+        {
+            Debug.Log("height is within range");
+        }
+
+
+        if (eyeColourAdded == eyeColourWanted)
+        {
+            Debug.Log("Right eye colour");
+        }
+
+        if (hairColourAdded == hairColourWanted)
+        {
+            Debug.Log("Right hair colour");
+        }
+
+        if (personalityOneAdded == personalityOneWanted)
+        {
+            Debug.Log("right personality one added");
+        }
+
+        if (personalityTwoAdded == personalityTwoWanted)
+        {
+            Debug.Log("right personality two added");
+        }
+
+       // if()
 
     }
 }

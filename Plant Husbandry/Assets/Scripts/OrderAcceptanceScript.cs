@@ -19,6 +19,7 @@ public class OrderAcceptanceScript : MonoBehaviour
         customerOrderText.SetActive(false);
         orderTicket.SetActive(false);
         orderTicketManager.SetActive(false);
+        //cutomerOrderManager.SetActive(false);
 
         //customerOrderGenerator = GameObject.Find("CustomerOrderGenerator");
     }
