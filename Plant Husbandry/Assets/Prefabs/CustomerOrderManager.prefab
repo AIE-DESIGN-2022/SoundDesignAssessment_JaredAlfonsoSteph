@@ -127,4 +127,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popUpUI: {fileID: 0}
   customerOrderText: {fileID: 0}
+  orderTicket: {fileID: 0}
+  orderTicketManager: {fileID: 0}
   customerOrderGenerator: {fileID: 7946918927550432191}
