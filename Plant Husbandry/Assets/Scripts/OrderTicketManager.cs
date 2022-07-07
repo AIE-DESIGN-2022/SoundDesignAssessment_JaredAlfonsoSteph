@@ -7,16 +7,12 @@ public class OrderTicketManager : MonoBehaviour
 {
     public GameObject orderTicketBackground;
     private bool orderTicketIsActive;
-     public CustomerNameGenerator customerNameGenerator;
-    public TextMeshProUGUI customerNameText;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         orderTicketIsActive = true;
 
-        customerNameText.text = "for " + customerNameGenerator.customerFirstName + " " + customerNameGenerator.customerLastName;
-        Debug.Log(customerNameGenerator.customerFirstName + customerNameGenerator.customerLastName);
+
     }
 
     // Update is called once per frame

@@ -15,6 +15,7 @@ public class CustomerNameGenerator : MonoBehaviour
     public int customerLastNameNumber;
 
     public TextMeshProUGUI customerNameText;
+    public TextMeshProUGUI customerOrderNameText;
 
     public string[] plantNames = new string[50];
     public string plantName;
@@ -44,6 +45,8 @@ public class CustomerNameGenerator : MonoBehaviour
         customerLastName = lastNames[customerLastNameNumber];
 
         customerNameText.text = customerFirstName + " " + customerLastName;
+
+        customerOrderNameText.text = "for " + customerFirstName + " " + customerLastName;
     }
 
     public void GeneratePlantName()
