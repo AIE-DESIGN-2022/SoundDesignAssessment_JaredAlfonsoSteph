@@ -5,7 +5,7 @@ using UnityEngine;
 public class GreenEye : MonoBehaviour
 {
     public GameObject buttonManager;
-    
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class GreenEye : MonoBehaviour
     {
         buttonManager.GetComponent<ButtonManager>().eyeSelection = "green";
         buttonManager.GetComponent<ButtonManager>().lockEyeSection = false;
-        
+        animator.SetTrigger("cauldron");
         Debug.Log("numba two");
 
     }

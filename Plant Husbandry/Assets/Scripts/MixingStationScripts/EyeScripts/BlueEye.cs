@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GreyEye : MonoBehaviour
+public class BlueEye : MonoBehaviour
 {
     public GameObject buttonManager;
-  
+    public Animator animator;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +21,11 @@ public class GreyEye : MonoBehaviour
     }
     void OnMouseDown()
     {
-        buttonManager.GetComponent<ButtonManager>().eyeSelection = "grey";
+        buttonManager.GetComponent<ButtonManager>().eyeSelection = "blue";
         buttonManager.GetComponent<ButtonManager>().lockEyeSection = false;
-       
-        Debug.Log("numba tree");
+        animator.SetTrigger("cauldron");
+
+        Debug.Log("numba fie");
 
     }
 }
