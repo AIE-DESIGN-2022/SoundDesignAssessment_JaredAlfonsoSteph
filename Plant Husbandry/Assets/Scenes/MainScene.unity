@@ -8413,6 +8413,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5371349243689999271, guid: d9f3c1d8e05242441a125587c0614975, type: 3}
+      propertyPath: m_Name
+      value: CustomerNameText
+      objectReference: {fileID: 0}
     - target: {fileID: 6107868303868566157, guid: d9f3c1d8e05242441a125587c0614975, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -9234,6 +9238,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1350974841 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5047115466252932884, guid: d9f3c1d8e05242441a125587c0614975, type: 3}
+  m_PrefabInstance: {fileID: 1250321092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!43 &1370940797
@@ -11251,6 +11266,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2436313931956145157, guid: d4ef74bd3c858cc4681cce9c2fb1c60f, type: 3}
   m_PrefabInstance: {fileID: 2436313930288828127}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1671906011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2436313931956145156, guid: d4ef74bd3c858cc4681cce9c2fb1c60f, type: 3}
+  m_PrefabInstance: {fileID: 2436313930288828127}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04ee86949c13855478347cc5ae0856e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1727547463
 Mesh:
   m_ObjectHideFlags: 0
@@ -12628,6 +12654,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1170720371}
     - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: customerNameText
+      value: 
+      objectReference: {fileID: 1350974841}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: customerOrderText
       value: 
       objectReference: {fileID: 1814283130}
@@ -12639,6 +12669,10 @@ PrefabInstance:
       propertyPath: personalityTwoText
       value: 
       objectReference: {fileID: 526564314}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: customerNameGenerator
+      value: 
+      objectReference: {fileID: 1671906011}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
 --- !u!114 &1981991491 stripped
@@ -31561,6 +31595,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: OrderTicketManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3809876687916567706, guid: c31877c063fa445488bafe43c5a18ed8, type: 3}
+      propertyPath: customerNameText
+      value: 
+      objectReference: {fileID: 1350974841}
+    - target: {fileID: 3809876687916567706, guid: c31877c063fa445488bafe43c5a18ed8, type: 3}
+      propertyPath: customerNameGenerator
+      value: 
+      objectReference: {fileID: 1671906011}
     - target: {fileID: 3809876687916567706, guid: c31877c063fa445488bafe43c5a18ed8, type: 3}
       propertyPath: orderTicketBackground
       value: 

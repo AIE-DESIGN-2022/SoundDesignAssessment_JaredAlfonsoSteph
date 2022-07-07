@@ -105,8 +105,10 @@ MonoBehaviour:
   personalityOneArrayLength: 0
   personalityTwoArrayLength: 0
   customerOrderText: {fileID: 0}
+  customerNameText: {fileID: 0}
   heightText: {fileID: 0}
   hairColourText: {fileID: 0}
   eyeColourText: {fileID: 0}
   personalityOneText: {fileID: 0}
   personalityTwoText: {fileID: 0}
+  customerNameGenerator: {fileID: 0}
