@@ -54,14 +54,14 @@ MonoBehaviour:
   - Gerard
   - Harvey
   - Brent
-  - Freddie
+  - Alfonso
   - Kerry
   - Daryl
   - Milton
   - Ted
-  - Dave
+  - Jared
   - Darryl
-  - Dana
+  - Stephanie
   - Robin
   - Charlie
   - Randolph
@@ -150,6 +150,7 @@ MonoBehaviour:
   customerLastName: 
   customerLastNameNumber: 0
   customerNameText: {fileID: 0}
+  customerOrderNameText: {fileID: 0}
   plantNames:
   - Basil
   - Alfalfa

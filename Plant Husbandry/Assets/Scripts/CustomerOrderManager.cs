@@ -14,6 +14,8 @@ public class CustomerOrderManager : MonoBehaviour
     public string eyeColourWanted;
     public string eyeColourAdded;
 
+    public ButtonManager eyeButtonManager;
+
     [Header("Hair")]
     public string hairColourWanted;
     public string hairColourAdded;
@@ -31,6 +33,10 @@ public class CustomerOrderManager : MonoBehaviour
 
     public float personalityTwoAmountWanted;
     public float personalityTwoAmountAdded;
+
+    [Header("SuccessScore")]
+    public int dateQuality;
+    public int customerFinalPayment;
 
     //float numberToCalculated;
 
@@ -54,6 +60,8 @@ public class CustomerOrderManager : MonoBehaviour
         HeightPercentageWanted(orderGenerator.heightNumber, orderGenerator.heights.Length);
         PersonalityOnePercentageWanted(orderGenerator.personalityTraitOneNumber, orderGenerator.personalityOneArrayLength);
         PersonalityTwoPercentageWanted(orderGenerator.personalityTraitTwoNumber, orderGenerator.personalityTwoArrayLength);
+
+        
     }
 
     public void HeightPercentageWanted(int numberToCalculate, int arrayLength)
@@ -82,7 +90,7 @@ public class CustomerOrderManager : MonoBehaviour
             }
         }
 
-       
+
 
     }
 
@@ -122,7 +130,7 @@ public class CustomerOrderManager : MonoBehaviour
             }
             if (numberToCalculate == 1)
             {
-                personalityOneAmountWanted = 62.7f;
+                personalityOneAmountWanted = 62.5f;
             }
             if (numberToCalculate == 2)
             {
@@ -170,7 +178,7 @@ public class CustomerOrderManager : MonoBehaviour
             }
             if (numberToCalculate == 1)
             {
-                personalityTwoAmountWanted = 62.7f;
+                personalityTwoAmountWanted = 62.5f;
             }
             if (numberToCalculate == 2)
             {
@@ -182,5 +190,125 @@ public class CustomerOrderManager : MonoBehaviour
             }
         }
 
+    }
+
+    public void CompareWantedAdded()
+    {
+        if (heightAdded >= (heightWanted - 10) && heightAdded <= (heightWanted + 10))
+        {
+            Debug.Log("height is within range");
+
+            dateQuality += 10;
+        }
+        else
+        {
+            Debug.Log("Wrongheigt");
+        }
+
+
+        if (eyeColourAdded == eyeColourWanted)
+        {
+            Debug.Log("Right eye colour");
+            dateQuality += 10;
+        }
+        else
+        {
+            Debug.Log("Wrong personality");
+
+        }
+
+        if (hairColourAdded == hairColourWanted)
+        {
+            Debug.Log("Right hair colour");
+            dateQuality += 10;
+        }
+        else
+        {
+            Debug.Log("Wrong hair");
+        }
+
+        if (personalityOneAdded == personalityOneWanted)
+        {
+            Debug.Log("right personality one added");
+            dateQuality += 15;
+
+            if (orderGenerator.personalityOneArrayLength == 5)
+            {
+                if (personalityOneAmountAdded >= (personalityOneAmountWanted - 10) && personalityOneAmountAdded <= (personalityOneAmountWanted + 10))
+                {
+                    Debug.Log("Right amout of personality one array length 5");
+                    dateQuality += 20;
+                }
+                else
+                {
+                    Debug.Log("Wrong amount of personality one array length 5");
+                }
+            }
+            else
+            {
+                if (personalityOneAmountAdded >= (personalityOneAmountWanted - 12.5) && personalityOneAmountAdded <= (personalityOneAmountWanted + 12.5))
+                {
+                    Debug.Log("Right amount of personality one array length 4");
+                    dateQuality += 20;
+                }
+                else
+                {
+                    Debug.Log("Wrong amount of personality one array length 4");
+                }
+            }
+
+            
+        }
+        else
+        {
+            Debug.Log("Wrong personality one");
+        }
+
+        if (personalityTwoAdded == personalityTwoWanted)
+        {
+            Debug.Log("right personality two added");
+
+            dateQuality += 15;
+
+            if (orderGenerator.personalityTwoArrayLength == 5)
+            {
+                if (personalityTwoAmountAdded >= (personalityTwoAmountWanted - 10) && personalityTwoAmountAdded <= (personalityTwoAmountWanted + 10))
+                {
+                    Debug.Log("Right amout of personality two array length 5");
+                    dateQuality += 20;
+                }
+                else
+                {
+                    Debug.Log("Wrong amount of personality two array length 5");
+                }
+            }
+            else
+            {
+                if (personalityTwoAmountAdded >= (personalityTwoAmountWanted - 12.5) && personalityTwoAmountAdded <= (personalityTwoAmountWanted + 12.5))
+                {
+                    Debug.Log("Right amount of personality two array length 4");
+                    dateQuality += 20;
+                }
+                else
+                {
+                    Debug.Log("Wrong amount of personality two array length 4");
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("Wrong personality two");
+        }
+
+       
+
+        //if()
+        // if()
+
+    }
+
+    public void CalculateReward()
+    {
+         customerFinalPayment = dateQuality * 10;
     }
 }
