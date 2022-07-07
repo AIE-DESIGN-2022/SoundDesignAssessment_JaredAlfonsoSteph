@@ -11,6 +11,8 @@ public class PlantGrowTimer : MonoBehaviour
     public float secondsLeft;
     public bool timerOn = true;
 
+    public float maxTime;
+
     public TextMeshProUGUI timerText;
 
     public float maxHeightAdded;
@@ -34,6 +36,15 @@ public class PlantGrowTimer : MonoBehaviour
     public TextMeshProUGUI questionText;
     public GameObject plantCharacter;
 
+    public TextMeshProUGUI costText;
+
+    public GameObject plantSeedButton;
+
+    public int costToPlant;
+    public int costToBurn;
+
+    public TextMeshProUGUI costToBurnText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +55,22 @@ public class PlantGrowTimer : MonoBehaviour
 
         timerOn = false;
 
+        plantSeedButton.SetActive(true);
+
         plantReadyButton.SetActive(false);
+
+        fertilizerButton.SetActive(false);
+
+        popUpUI.SetActive(false);
+
+        //costText.SetActive(false);
+
+        plantCharacter.SetActive(false);
+
+        costText.text = "- $" + costToPlant;
+
+        secondsLeft = maxTime;
+
     }
 
     // Update is called once per frame
@@ -54,30 +80,24 @@ public class PlantGrowTimer : MonoBehaviour
         {
             secondsLeft -= Time.deltaTime;
             UpdateTimer(secondsLeft);
-        }
-       // else
-        //{
-          //  Debug.Log("Plant is grown");
-         //   secondsLeft = 0;
-      //   //   timerOn = false;
-       // }
+        }     
 
         if(secondsLeft <= timeStageThree)
         {
-            Debug.Log("Stage Three");
+           // Debug.Log("Stage Three");
             PlantCharacter.transform.localScale = Vector3.Lerp(PlantCharacter.transform.localScale, new Vector3(1f, maxHeightAdded, 1f), Time.deltaTime * growTime);
 
         }   
         else if(secondsLeft <= timeStageTwo)
         {
-            Debug.Log("Stage Two");
+           // Debug.Log("Stage Two");
             PlantCharacter.transform.localScale = Vector3.Lerp(PlantCharacter.transform.localScale, new Vector3(0.6f, 0.6f, 0.6f), Time.deltaTime * growTime);
 
 
         }
         else if (secondsLeft <= timeStageOne)
         {
-            Debug.Log("Stage One");
+           // Debug.Log("Stage One");
             PlantCharacter.transform.localScale = Vector3.Lerp(PlantCharacter.transform.localScale, new Vector3(0.3f, 0.3f, 0.3f), Time.deltaTime * growTime);
         }
 
@@ -98,16 +118,22 @@ public class PlantGrowTimer : MonoBehaviour
         timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
     }
 
-    public void StartTimer()
+    public void AddFertilizer()
     {
         timerOn = true;
         fertilizerButton.SetActive(false);
+
+        costText.text = " ";
     }
 
     public void SellPlant()
     {
         popUpUI.SetActive(true);
         questionText.text = "Sell Plant-Husband";
+
+        costToBurnText.text = "- $" + costToBurn;
+
+        secondsLeft = maxTime;
     }
 
     public void YesSell()
@@ -118,11 +144,57 @@ public class PlantGrowTimer : MonoBehaviour
 
         Debug.Log("Sell Plant");
 
+        ResetPlantPot();
+
+
+
     }
 
     public void NoSell()
     {
         //???
         Debug.Log("No Sell Plant");
+
+        plantCharacter.SetActive(false);
+
+        //costText.text = "- $" + costToBurn;
+
+        ResetPlantPot();
+    }
+
+    public void ResetPlantPot()
+    {
+        timerOn = false;
+
+        plantSeedButton.SetActive(true);
+
+        plantReadyButton.SetActive(false);
+
+        fertilizerButton.SetActive(false);
+
+        popUpUI.SetActive(false);
+
+        //costText.SetActive(false);
+
+        plantCharacter.SetActive(false);
+
+        costText.text = "- $" + costToPlant;
+
+    }
+
+    public void PlantSeed()
+    {
+        AddFertilizer();
+
+        plantCharacter.SetActive(true);
+        fertilizerButton.SetActive(true);
+        plantSeedButton.SetActive(false);
+        PlantCharacter.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+
+        timerOn = false;
+
+        costText.text = " ";
+
+
     }
 }
