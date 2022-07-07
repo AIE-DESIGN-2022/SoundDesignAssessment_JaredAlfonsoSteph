@@ -16,6 +16,8 @@ public class CameraManager : MonoBehaviour
 
     public AudioSource cameraMoveSound;
 
+    public GameObject noMoneyText;
+
    // public string activeCamera;
 
     void Start()
@@ -47,7 +49,7 @@ public class CameraManager : MonoBehaviour
             currentCamera++;
             nextCamera++;
 
-            
+            noMoneyText.SetActive(false);
 
             ChangeCameraNumbers();
 
@@ -64,7 +66,7 @@ public class CameraManager : MonoBehaviour
             currentCamera--;
             previousCamera--;
 
-
+            noMoneyText.SetActive(false);
 
             ChangeCameraNumbers();
 

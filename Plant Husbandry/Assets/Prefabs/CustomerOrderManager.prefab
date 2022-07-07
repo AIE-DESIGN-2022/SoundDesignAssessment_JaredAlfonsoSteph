@@ -50,6 +50,7 @@ MonoBehaviour:
   - a little short
   - really short
   currentHeight: 
+  heightNumber: 0
   hairColour:
   - brown
   - black
@@ -61,7 +62,7 @@ MonoBehaviour:
   - brown
   - green
   - blue
-  - grey
+  - yellow
   - red
   currentEyeColour: 
   personalityTraits:
@@ -70,7 +71,9 @@ MonoBehaviour:
   - openminded
   - extroversion
   currentPersonalityTraitOne: 
+  personalityTraitOneNumber: 0
   currentPersonalityTraitTwo: 
+  personalityTraitTwoNumber: 0
   energyLevel:
   - very energetic
   - a little energetic
@@ -99,6 +102,8 @@ MonoBehaviour:
   currentExtroversionLevel: 
   currentPersonalityTraitOneLevel: 
   currentPersonalityTraitTwoLevel: 
+  personalityOneArrayLength: 0
+  personalityTwoArrayLength: 0
   customerOrderText: {fileID: 0}
   heightText: {fileID: 0}
   hairColourText: {fileID: 0}

@@ -45,6 +45,10 @@ public class PlantGrowTimer : MonoBehaviour
 
     public TextMeshProUGUI costToBurnText;
 
+    public MoneyManager moneyManager;
+
+    public GameObject noMoneyText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,6 +74,8 @@ public class PlantGrowTimer : MonoBehaviour
         costText.text = "- $" + costToPlant;
 
         secondsLeft = maxTime;
+
+        noMoneyText.SetActive(false);
 
     }
 
@@ -124,6 +130,8 @@ public class PlantGrowTimer : MonoBehaviour
         fertilizerButton.SetActive(false);
 
         costText.text = " ";
+
+        noMoneyText.SetActive(false);
     }
 
     public void SellPlant()
@@ -134,6 +142,8 @@ public class PlantGrowTimer : MonoBehaviour
         costToBurnText.text = "- $" + costToBurn;
 
         secondsLeft = maxTime;
+
+        noMoneyText.SetActive(false);
     }
 
     public void YesSell()
@@ -146,20 +156,35 @@ public class PlantGrowTimer : MonoBehaviour
 
         ResetPlantPot();
 
-
+        noMoneyText.SetActive(false);
 
     }
 
     public void NoSell()
     {
-        //???
-        Debug.Log("No Sell Plant");
 
-        plantCharacter.SetActive(false);
 
-        //costText.text = "- $" + costToBurn;
+        if ((moneyManager.currentMoney - costToBurn) < 0)
+        {
+            //you dont have enough money for that
+            Debug.Log("you don't have enough money for that");
+            noMoneyText.SetActive(true);
+        }
+        else
+        {
+            //???
+            Debug.Log("No Sell Plant");
 
-        ResetPlantPot();
+            plantCharacter.SetActive(false);
+
+            //costText.text = "- $" + costToBurn;
+
+            moneyManager.DecreaseMoney(costToBurn);
+
+            ResetPlantPot();
+
+            noMoneyText.SetActive(false);
+        }
     }
 
     public void ResetPlantPot()
@@ -179,21 +204,37 @@ public class PlantGrowTimer : MonoBehaviour
         plantCharacter.SetActive(false);
 
         costText.text = "- $" + costToPlant;
-
+        noMoneyText.SetActive(false);
     }
 
     public void PlantSeed()
     {
-        AddFertilizer();
+        
 
-        plantCharacter.SetActive(true);
-        fertilizerButton.SetActive(true);
-        plantSeedButton.SetActive(false);
-        PlantCharacter.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        if ((moneyManager.currentMoney - costToPlant) < 0)
+        {
+            //show warning text
+            Debug.Log("you don't have enough money for that");
+            noMoneyText.SetActive(true);
+        }
+        else
+        {
+            AddFertilizer();
 
-        timerOn = false;
+            plantCharacter.SetActive(true);
+            fertilizerButton.SetActive(true);
+            plantSeedButton.SetActive(false);
+            PlantCharacter.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
 
-        costText.text = " ";
+            timerOn = false;
+
+            costText.text = " ";
+
+            moneyManager.DecreaseMoney(costToPlant);
+
+            noMoneyText.SetActive(false);
+        }
+           
 
 
     }
