@@ -49,6 +49,22 @@ public class PlantGrowTimer : MonoBehaviour
 
     public GameObject noMoneyText;
 
+    [Header("EyeMaterials")]
+    public Material blueEyeMaterial;
+    public Material brownEyeMaterial;
+    public Material defaultEyeMaterial;
+    public Material greenEyeMaterial;
+    public Material redEyeMaterial;
+    public Material yellowEyeMaterial;
+
+    [Header("HairMaterials")]
+    public Material blackHairMaterial;
+    public Material blondeHairMaterial;
+    public Material blueHairMaterial;
+    public Material brownHairMaterial;
+    public Material defaultHairMaterial;
+    public Material orangeHairMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
