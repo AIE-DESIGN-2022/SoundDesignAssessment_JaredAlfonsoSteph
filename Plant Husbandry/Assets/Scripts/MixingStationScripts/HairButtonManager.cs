@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HairButtonManager : MonoBehaviour
 {
     //Responsible for allowing/not allowing the player to press other jars.
-    public bool lockEyeSection;
+    public bool lockHairSection;
 
     public Button blondeJar;
     public Button blackJar;
@@ -31,7 +31,7 @@ public class HairButtonManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lockEyeSection = true;
+        lockHairSection = true;
 
         blondeActive = false;
         orangeActive = false;
@@ -78,7 +78,7 @@ public class HairButtonManager : MonoBehaviour
     public void YellowButtonClicked()
     {
 
-        if (lockEyeSection == true)
+        if (lockHairSection == true)
         {
             blondeActive = true;
             orangeActive = false;
@@ -95,7 +95,7 @@ public class HairButtonManager : MonoBehaviour
 
     public void OrangeButtonClicked()
     {
-        if (lockEyeSection == true)
+        if (lockHairSection == true)
         {
             blondeActive = false;
             orangeActive = true;
@@ -112,7 +112,7 @@ public class HairButtonManager : MonoBehaviour
 
     public void BlueButtonClicked()
     {
-        if (lockEyeSection == true)
+        if (lockHairSection == true)
         {
             blondeActive = false;
             orangeActive = false;
@@ -129,7 +129,7 @@ public class HairButtonManager : MonoBehaviour
 
     public void BrownButtonClicked()
     {
-        if (lockEyeSection == true)
+        if (lockHairSection == true)
         {
             blondeActive = false;
             orangeActive = false;
@@ -146,7 +146,7 @@ public class HairButtonManager : MonoBehaviour
 
     public void BlackButtonClicked()
     {
-        if (lockEyeSection == true)
+        if (lockHairSection == true)
         {
             blondeActive = false;
             orangeActive = false;
