@@ -7633,7 +7633,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5955687370079595826}
-  m_LocalRotation: {x: -0, y: -0.86602443, z: -0, w: 0.5000017}
+  m_LocalRotation: {x: 0, y: -0.86602545, z: 0, w: 0.49999994}
   m_LocalPosition: {x: 0.856081, y: -0.68173337, z: -1.6255336}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -7644,7 +7644,7 @@ Transform:
   - {fileID: 5905444150695918498}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -120, z: 0}
 --- !u!114 &1915355111545800318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7658,8 +7658,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlantCharacter: {fileID: 2645907830143155664}
-  secondsLeft: 45
+  secondsLeft: 10
   timerOn: 1
+  maxTime: 10
   timerText: {fileID: 5131968627952603517}
   maxHeightAdded: 3
   growTime: 1
@@ -7676,6 +7677,8 @@ MonoBehaviour:
   costToPlant: 100
   costToBurn: 100
   costToBurnText: {fileID: 4466180273556945987}
+  moneyManager: {fileID: 0}
+  noMoneyText: {fileID: 0}
 --- !u!1001 &1471279145645773199
 PrefabInstance:
   m_ObjectHideFlags: 0
