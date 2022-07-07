@@ -36,6 +36,7 @@ public class CustomerOrderManager : MonoBehaviour
 
     [Header("SuccessScore")]
     public int dateQuality;
+    public int customerFinalPayment;
 
     //float numberToCalculated;
 
@@ -299,8 +300,15 @@ public class CustomerOrderManager : MonoBehaviour
             Debug.Log("Wrong personality two");
         }
 
+       
+
         //if()
         // if()
 
+    }
+
+    public void CalculateReward()
+    {
+         customerFinalPayment = dateQuality * 10;
     }
 }
