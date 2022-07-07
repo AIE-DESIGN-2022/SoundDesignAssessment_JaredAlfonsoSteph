@@ -45,12 +45,13 @@ public class CustomerOrderManager : MonoBehaviour
     public PouringMechanic kindessBeakerFull;
     public PouringMechanic extroversionBeakerFull;
 
+    public bool choosingPersonalityOne;
     //float numberToCalculated;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        choosingPersonalityOne = true;
     }
 
     // Update is called once per frame
@@ -73,6 +74,11 @@ public class CustomerOrderManager : MonoBehaviour
 
         hairColourAdded = hairButtonManager.hairSelection;
 
+        if (choosingPersonalityOne)
+        {
+
+        }
+        //personalityOneAdded = 
         
     }
 
