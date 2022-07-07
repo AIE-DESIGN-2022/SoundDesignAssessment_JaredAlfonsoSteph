@@ -71,16 +71,21 @@ public class CustomerOrderGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GeneratePhysicalAttributes();
-        GeneratePersonalityTraits();
-        GeneratePersonalityLevel();
-        GenerateCustomerText();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void GenerateOrder()
+    {
+        GeneratePhysicalAttributes();
+        GeneratePersonalityTraits();
+        GeneratePersonalityLevel();
+        GenerateCustomerText();
     }
 
     public void GeneratePhysicalAttributes()
