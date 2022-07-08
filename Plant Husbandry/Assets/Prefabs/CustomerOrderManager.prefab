@@ -106,6 +106,8 @@ MonoBehaviour:
   personalityOneArrayLength: 0
   personalityTwoArrayLength: 0
   customerOrderText: {fileID: 0}
+  orderNumberText: {fileID: 0}
+  orderNumber: 1
   customerNameText: {fileID: 0}
   heightText: {fileID: 0}
   hairColourText: {fileID: 0}
@@ -113,6 +115,7 @@ MonoBehaviour:
   personalityOneText: {fileID: 0}
   personalityTwoText: {fileID: 0}
   customerNameGenerator: {fileID: 0}
+  customerOrderManager: {fileID: 0}
 --- !u!114 &2401476028357593538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,3 +133,4 @@ MonoBehaviour:
   orderTicket: {fileID: 0}
   orderTicketManager: {fileID: 0}
   customerOrderGenerator: {fileID: 7946918927550432191}
+  customerNameGenerator: {fileID: 0}

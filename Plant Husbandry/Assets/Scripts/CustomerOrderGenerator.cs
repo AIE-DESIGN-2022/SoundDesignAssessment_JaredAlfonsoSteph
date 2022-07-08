@@ -59,6 +59,8 @@ public class CustomerOrderGenerator : MonoBehaviour
     public TextMeshProUGUI customerOrderText;
 
     [Header("OrderTicketUI")]
+    public TextMeshProUGUI orderNumberText;
+    public int orderNumber = 0 ;
     public TextMeshProUGUI customerNameText;
     public TextMeshProUGUI heightText;
     public TextMeshProUGUI hairColourText;
@@ -88,6 +90,8 @@ public class CustomerOrderGenerator : MonoBehaviour
         GeneratePersonalityTraits();
         GeneratePersonalityLevel();
         GenerateCustomerText();
+
+        orderNumber++;
     }
 
     public void GeneratePhysicalAttributes()
@@ -108,7 +112,7 @@ public class CustomerOrderGenerator : MonoBehaviour
     {
         customerOrderText.text = "Hi! I'm looking for someone who is " + currentHeight + " with " + currentHairColour + " hair and " + currentEyeColour + " eyes. I also want their personality to be " + currentPersonalityTraitOneLevel + " and " + currentPersonalityTraitTwoLevel + ".";
 
-        
+        orderNumberText.text = "Order No. " + orderNumber;
         heightText.text = "- " + currentHeight;
         hairColourText.text = "- " + currentHairColour + " hair";
         eyeColourText.text = "- " + currentEyeColour + " eyes";

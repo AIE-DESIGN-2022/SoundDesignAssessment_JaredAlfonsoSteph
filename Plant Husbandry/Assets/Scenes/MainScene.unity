@@ -1851,6 +1851,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &334351065 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 996928091793788740, guid: c1736a6fff4cc1840a5537344120f201, type: 3}
+  m_PrefabInstance: {fileID: 7547561634273952382}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &338510476
 Mesh:
   m_ObjectHideFlags: 0
@@ -11968,6 +11979,10 @@ PrefabInstance:
       propertyPath: hairColourText
       value: 
       objectReference: {fileID: 7308110193332521173}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: orderNumberText
+      value: 
+      objectReference: {fileID: 334351065}
     - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: customerNameText
       value: 
@@ -26771,6 +26786,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1252370506}
+    - target: {fileID: 996928091747005417, guid: c1736a6fff4cc1840a5537344120f201, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 996928091992909354, guid: c1736a6fff4cc1840a5537344120f201, type: 3}
       propertyPath: m_Name
       value: MainCanvas
