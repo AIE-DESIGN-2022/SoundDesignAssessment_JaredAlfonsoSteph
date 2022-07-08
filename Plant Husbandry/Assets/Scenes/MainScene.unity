@@ -17037,6 +17037,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 483936152}
     - target: {fileID: 6192954960267392589, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: fillSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192954960267392589, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
       propertyPath: beakerCover
       value: 
       objectReference: {fileID: 0}
@@ -17060,6 +17064,10 @@ PrefabInstance:
       propertyPath: fillArea
       value: 
       objectReference: {fileID: 1081740213}
+    - target: {fileID: 6192954960324929925, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: fillSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6192954960324929925, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
       propertyPath: beakerCover
       value: 
@@ -17197,6 +17205,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 160274358}
     - target: {fileID: 6192954961048695023, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: fillSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192954961048695023, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
       propertyPath: beakerCover
       value: 
       objectReference: {fileID: 0}
@@ -17299,6 +17311,10 @@ PrefabInstance:
     - target: {fileID: 6192954961696663569, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6192954961808580386, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: fillSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6192954961808580386, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
       propertyPath: beakerImage

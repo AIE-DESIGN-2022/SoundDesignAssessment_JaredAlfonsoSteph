@@ -25,7 +25,7 @@ public class PouringMechanic : MonoBehaviour
        
         beaker.value = 0;
         pouring = false;
-        fillSpeed = 0.2f;
+        fillSpeed = 10f;
 
     }
 
@@ -37,7 +37,7 @@ public class PouringMechanic : MonoBehaviour
         if (Input.GetMouseButton(0) && pouring == true)
         {
             //every frame that mouse button is held the value will go up by the value of fillSpeed.
-            beaker.value += fillSpeed;
+            beaker.value += fillSpeed * Time.deltaTime * 5;
 
             UpdateBeakerValue();
         }

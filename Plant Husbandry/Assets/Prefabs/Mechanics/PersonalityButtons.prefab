@@ -284,7 +284,7 @@ MonoBehaviour:
   pouring: 0
   beakerAnimator: {fileID: 2612332780445853824}
   beakerFull: 0
-  fillSpeed: 0.2
+  fillSpeed: 50
 --- !u!1 &2612332779731936537
 GameObject:
   m_ObjectHideFlags: 0
@@ -333,7 +333,7 @@ MonoBehaviour:
   pouring: 0
   beakerAnimator: {fileID: 2612332781510626667}
   beakerFull: 0
-  fillSpeed: 0.2
+  fillSpeed: 50
 --- !u!1 &2612332779735066406
 GameObject:
   m_ObjectHideFlags: 0
@@ -816,7 +816,7 @@ MonoBehaviour:
   pouring: 0
   beakerAnimator: {fileID: 2612332779949243976}
   beakerFull: 0
-  fillSpeed: 0.2
+  fillSpeed: 50
 --- !u!1 &2612332780995017542
 GameObject:
   m_ObjectHideFlags: 0
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   pouring: 0
   beakerAnimator: {fileID: 2612332781597642519}
   beakerFull: 0
-  fillSpeed: 0.2
+  fillSpeed: 50
 --- !u!1 &2612332781510626665
 GameObject:
   m_ObjectHideFlags: 0
