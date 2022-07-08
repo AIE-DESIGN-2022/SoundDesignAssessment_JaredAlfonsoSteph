@@ -7672,6 +7672,9 @@ MonoBehaviour:
   popUpUI: {fileID: 474027582690648484}
   questionText: {fileID: 6745582304081214645}
   plantCharacter: {fileID: 2645907830143155664}
+  plantCharacterEye1: {fileID: 8869845216857344524}
+  plantCharacterEye2: {fileID: 7694149717297287929}
+  plantCharacterHair: {fileID: 6457583282130712209}
   costText: {fileID: 5788745172699664413}
   plantSeedButton: {fileID: 6572609455980677013}
   costToPlant: 100
@@ -7691,6 +7694,7 @@ MonoBehaviour:
   brownHairMaterial: {fileID: 2100000, guid: 941ea225bcdefe94b8c8e9df2ce4ced1, type: 2}
   defaultHairMaterial: {fileID: 2100000, guid: 2a66995a77a3f214dac437fa953a61b1, type: 2}
   orangeHairMaterial: {fileID: 2100000, guid: 2c5554de8bfc7c041858e4e1c4a32f16, type: 2}
+  customerOrderManager: {fileID: 0}
 --- !u!1001 &1471279145645773199
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7760,6 +7764,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
+--- !u!23 &8869845216857344524 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8030777595246336899, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
+  m_PrefabInstance: {fileID: 1471279145645773199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2645907830143155668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3518208172734245979, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
@@ -7768,6 +7777,16 @@ Transform:
 --- !u!1 &2645907830143155664 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3518208172734245983, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
+  m_PrefabInstance: {fileID: 1471279145645773199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6457583282130712209 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5617951769449391902, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
+  m_PrefabInstance: {fileID: 1471279145645773199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &7694149717297287929 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9127693572064494454, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
   m_PrefabInstance: {fileID: 1471279145645773199}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7587905330924311669
