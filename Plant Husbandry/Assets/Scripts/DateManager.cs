@@ -93,5 +93,7 @@ public class DateManager : MonoBehaviour
         areaText.SetActive(true);
 
         orderAcceptance.OrderPopUp();
+
+
     }
 }

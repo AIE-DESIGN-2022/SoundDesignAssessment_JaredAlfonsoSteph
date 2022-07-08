@@ -160,4 +160,17 @@ public class HairButtonManager : MonoBehaviour
 
 
     }
+
+    public void ResetHairButtonManager()
+    {
+        lockHairSection = true;
+
+        blondeActive = false;
+        orangeActive = false;
+        blueActive = false;
+        brownActive = false;
+        blackActive = false;
+
+        hairSelection = "";
+    }
 }

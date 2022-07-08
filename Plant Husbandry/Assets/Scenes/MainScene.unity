@@ -11851,6 +11851,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7308110193455838008}
     - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: customerOrderManager
+      value: 
+      objectReference: {fileID: 359388161}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: customerNameGenerator
       value: 
       objectReference: {fileID: 1671906011}

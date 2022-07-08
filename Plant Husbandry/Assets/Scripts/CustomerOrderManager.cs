@@ -535,7 +535,18 @@ public class CustomerOrderManager : MonoBehaviour
 
     public void ResetOrderManager()
     {
+        hairButtonManager.ResetHairButtonManager();
+        eyeButtonManager.ResetEyeButtonManager();
+        ResetBeakerFillAmounts();
+
         choosingPersonalityOne = true;
+        choosingPersonalityTwo = false;
+
+        addedEyeColour = false;
+        addedHairColour = false;
+        addedPersonalityOne = false;
+        addedPersonalityTwo = false;
+        qualityCalculated = false;
 
         hasBeenReset = false;
 
@@ -562,5 +573,9 @@ public class CustomerOrderManager : MonoBehaviour
 
         dateQuality = 0;
         customerFinalPayment = 0;
+
+        
+
+
     }
 }

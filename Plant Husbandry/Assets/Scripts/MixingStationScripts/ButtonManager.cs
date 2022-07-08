@@ -166,4 +166,17 @@ public class ButtonManager : MonoBehaviour
 
 
     }
+
+    public void ResetEyeButtonManager()
+    {
+        lockEyeSection = true;
+
+        redActive = false;
+        greyActive = false;
+        blueActive = false;
+        brownActive = false;
+        greenActive = false;
+
+        eyeSelection = "";
+    }
 }
