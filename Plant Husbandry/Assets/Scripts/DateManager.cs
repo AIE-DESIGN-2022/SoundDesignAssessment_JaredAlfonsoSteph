@@ -83,6 +83,8 @@ public class DateManager : MonoBehaviour
             evaluationText.text = terribleQualityEvaluation;
             customerReviewQuoteText.text = terribleQualityReview + " - " + customerNameGenerator.customerFirstName + " " + customerNameGenerator.customerLastName;
         }
+
+
     }
 
     public void ExitDateReview()
