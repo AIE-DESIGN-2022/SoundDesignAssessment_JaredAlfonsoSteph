@@ -25,7 +25,7 @@ public class CustomerNameGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GenerateCustomerName();
+        //GenerateCustomerName();
     }
 
     // Update is called once per frame

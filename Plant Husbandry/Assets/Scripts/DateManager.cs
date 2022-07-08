@@ -8,6 +8,9 @@ public class DateManager : MonoBehaviour
     public CameraManager cameraManager;
     public CustomerOrderManager customerOrderManager;
     public CustomerNameGenerator customerNameGenerator;
+
+    public OrderAcceptanceScript orderAcceptance;
+
     [Header("UI")]
     public GameObject dateReviewUI;
     public TextMeshProUGUI evaluationText;
@@ -88,5 +91,7 @@ public class DateManager : MonoBehaviour
         dateReviewUI.SetActive(false);
 
         areaText.SetActive(true);
+
+        orderAcceptance.OrderPopUp();
     }
 }

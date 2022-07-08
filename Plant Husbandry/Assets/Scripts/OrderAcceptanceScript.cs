@@ -12,13 +12,13 @@ public class OrderAcceptanceScript : MonoBehaviour
 
     public CustomerOrderGenerator customerOrderGenerator;
 
+    public CustomerNameGenerator customerNameGenerator;
+
     // Start is called before the first frame update
     void Start()
     {
-        popUpUI.SetActive(true);
-        customerOrderText.SetActive(false);
-        orderTicket.SetActive(false);
-        orderTicketManager.SetActive(false);
+        OrderPopUp();
+        customerNameGenerator .GenerateCustomerName();
         //cutomerOrderManager.SetActive(false);
 
         //customerOrderGenerator = GameObject.Find("CustomerOrderGenerator");
@@ -30,6 +30,14 @@ public class OrderAcceptanceScript : MonoBehaviour
         
     }
 
+    public void OrderPopUp()
+    {
+        popUpUI.SetActive(true);
+        customerOrderText.SetActive(false);
+        orderTicket.SetActive(false);
+        orderTicketManager.SetActive(false);
+    }
+
     public void AcceptOrder()
     {
         popUpUI.SetActive(false);
@@ -38,6 +46,9 @@ public class OrderAcceptanceScript : MonoBehaviour
         orderTicketManager.SetActive(true);
 
         customerOrderGenerator.GenerateOrder();
+        customerNameGenerator.GenerateCustomerName();
 
     }
+
+
 }

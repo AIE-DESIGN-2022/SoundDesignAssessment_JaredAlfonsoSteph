@@ -11770,6 +11770,10 @@ PrefabInstance:
       propertyPath: orderTicketManager
       value: 
       objectReference: {fileID: 1600518822}
+    - target: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: customerNameGenerator
+      value: 
+      objectReference: {fileID: 1671906011}
     - target: {fileID: 7946918927550432184, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: m_Name
       value: CustomerOrderGenerator
@@ -17725,6 +17729,10 @@ PrefabInstance:
       propertyPath: evaluationText
       value: 
       objectReference: {fileID: 1457163024}
+    - target: {fileID: 1124228147252303511, guid: ba36b7dc614cfac4ea02b470bcb57f0c, type: 3}
+      propertyPath: orderAcceptance
+      value: 
+      objectReference: {fileID: 1265838714}
     - target: {fileID: 1124228147252303511, guid: ba36b7dc614cfac4ea02b470bcb57f0c, type: 3}
       propertyPath: customerOrderManager
       value: 
