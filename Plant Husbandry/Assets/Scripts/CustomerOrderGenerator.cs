@@ -67,6 +67,7 @@ public class CustomerOrderGenerator : MonoBehaviour
     public TextMeshProUGUI personalityTwoText;
 
     public CustomerNameGenerator customerNameGenerator;
+    public CustomerOrderManager customerOrderManager;
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +83,7 @@ public class CustomerOrderGenerator : MonoBehaviour
 
     public void GenerateOrder()
     {
+        customerOrderManager.ResetOrderManager();
         GeneratePhysicalAttributes();
         GeneratePersonalityTraits();
         GeneratePersonalityLevel();

@@ -18,7 +18,7 @@ public class OrderAcceptanceScript : MonoBehaviour
     void Start()
     {
         OrderPopUp();
-        customerNameGenerator .GenerateCustomerName();
+        //customerNameGenerator .GenerateCustomerName();
         //cutomerOrderManager.SetActive(false);
 
         //customerOrderGenerator = GameObject.Find("CustomerOrderGenerator");

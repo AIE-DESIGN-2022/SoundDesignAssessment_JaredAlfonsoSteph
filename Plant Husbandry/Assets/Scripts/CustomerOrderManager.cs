@@ -532,4 +532,35 @@ public class CustomerOrderManager : MonoBehaviour
 
         hasBeenReset = true;
     }
+
+    public void ResetOrderManager()
+    {
+        choosingPersonalityOne = true;
+
+        hasBeenReset = false;
+
+        allIngredientsAdded = false;
+
+        heightWanted = 0;
+        heightAdded = 0;
+
+        eyeColourWanted = "";
+        eyeColourAdded = "";
+
+        hairColourWanted = "";
+        hairColourAdded = "";
+
+        personalityOneWanted = "";
+        personalityOneAdded = "";
+        personalityOneAmountWanted = 0;
+        personalityOneAmountAdded = 0;
+
+        personalityTwoWanted = "";
+        personalityTwoAdded = "";
+        personalityTwoAmountWanted = 0;
+        personalityTwoAmountAdded = 0;
+
+        dateQuality = 0;
+        customerFinalPayment = 0;
+    }
 }
