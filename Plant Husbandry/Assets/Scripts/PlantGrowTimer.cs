@@ -35,6 +35,9 @@ public class PlantGrowTimer : MonoBehaviour
     public GameObject popUpUI;
     public TextMeshProUGUI questionText;
     public GameObject plantCharacter;
+    public Renderer plantCharacterEye1;
+    public Renderer plantCharacterEye2;
+    public Renderer plantCharacterHair;
 
     public TextMeshProUGUI costText;
 
@@ -64,6 +67,9 @@ public class PlantGrowTimer : MonoBehaviour
     public Material brownHairMaterial;
     public Material defaultHairMaterial;
     public Material orangeHairMaterial;
+
+    public CustomerOrderManager customerOrderManager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -148,6 +154,12 @@ public class PlantGrowTimer : MonoBehaviour
         costText.text = " ";
 
         noMoneyText.SetActive(false);
+
+
+        SetHairEyeColour();
+
+
+        //plantCharacterEye1.material = 
     }
 
     public void SellPlant()
@@ -221,6 +233,8 @@ public class PlantGrowTimer : MonoBehaviour
 
         costText.text = "- $" + costToPlant;
         noMoneyText.SetActive(false);
+
+        ResetHairEyeColour();
     }
 
     public void PlantSeed()
@@ -235,7 +249,7 @@ public class PlantGrowTimer : MonoBehaviour
         }
         else
         {
-            AddFertilizer();
+            //AddFertilizer();
 
             plantCharacter.SetActive(true);
             fertilizerButton.SetActive(true);
@@ -249,9 +263,69 @@ public class PlantGrowTimer : MonoBehaviour
             moneyManager.DecreaseMoney(costToPlant);
 
             noMoneyText.SetActive(false);
+
+            
         }
            
 
 
+    }
+
+    public void SetHairEyeColour()
+    {
+        if (customerOrderManager.eyeColourAdded == "brown")
+        {
+            plantCharacterEye1.material = brownEyeMaterial;
+            plantCharacterEye2.material = brownEyeMaterial;
+        }
+        if (customerOrderManager.eyeColourAdded == "green")
+        {
+            plantCharacterEye1.material = greenEyeMaterial;
+            plantCharacterEye2.material = greenEyeMaterial;
+        }
+        if (customerOrderManager.eyeColourAdded == "blue")
+        {
+            plantCharacterEye1.material = blueEyeMaterial;
+            plantCharacterEye2.material = blueEyeMaterial;
+        }
+        if (customerOrderManager.eyeColourAdded == "yellow")
+        {
+            plantCharacterEye1.material = yellowEyeMaterial;
+            plantCharacterEye2.material = yellowEyeMaterial;
+        }
+        if (customerOrderManager.eyeColourAdded == "red")
+        {
+            plantCharacterEye1.material = redEyeMaterial;
+            plantCharacterEye2.material = redEyeMaterial;
+        }
+
+        if (customerOrderManager.hairColourAdded == "brown")
+        {
+            plantCharacterHair.material = brownHairMaterial;
+        }
+        if (customerOrderManager.hairColourAdded == "black")
+        {
+            plantCharacterHair.material = blackHairMaterial;
+        }
+        if (customerOrderManager.hairColourAdded == "blonde")
+        {
+            plantCharacterHair.material = blondeHairMaterial;
+        }
+        if (customerOrderManager.hairColourAdded == "orange")
+        {
+            plantCharacterHair.material = orangeHairMaterial;
+        }
+        if (customerOrderManager.hairColourAdded == "blue")
+        {
+            plantCharacterHair.material = blueHairMaterial;
+        }
+
+    }
+
+    public void ResetHairEyeColour()
+    {
+        plantCharacterEye1.material = defaultEyeMaterial;
+        plantCharacterEye2.material = defaultEyeMaterial;
+        plantCharacterHair.material = defaultHairMaterial;
     }
 }
