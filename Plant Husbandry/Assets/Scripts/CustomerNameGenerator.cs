@@ -47,6 +47,9 @@ public class CustomerNameGenerator : MonoBehaviour
         customerNameText.text = customerFirstName + " " + customerLastName;
 
         customerOrderNameText.text = "for " + customerFirstName + " " + customerLastName;
+
+        plantNameNumber = Random.Range(0, plantNames.Length);
+        plantName = plantNames[plantNameNumber];
     }
 
     public void GeneratePlantName()

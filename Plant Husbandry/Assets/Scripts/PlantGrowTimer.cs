@@ -69,6 +69,7 @@ public class PlantGrowTimer : MonoBehaviour
     public Material orangeHairMaterial;
 
     public CustomerOrderManager customerOrderManager;
+    public DateManager dateManager;
 
 
     // Start is called before the first frame update
@@ -185,6 +186,8 @@ public class PlantGrowTimer : MonoBehaviour
         ResetPlantPot();
 
         noMoneyText.SetActive(false);
+
+        dateManager.DateReview();
 
     }
 

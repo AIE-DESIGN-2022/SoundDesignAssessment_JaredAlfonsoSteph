@@ -18,6 +18,8 @@ public class CameraManager : MonoBehaviour
 
     public GameObject noMoneyText;
 
+    public CinemachineVirtualCamera dateCam;
+
    // public string activeCamera;
 
     void Start()
@@ -34,6 +36,8 @@ public class CameraManager : MonoBehaviour
         cameras[nextCamera].enabled = false;
 
         cameras[currentCamera].enabled = true;
+
+        //dateCam.enabled = false;
 
     }
 
@@ -114,5 +118,26 @@ public class CameraManager : MonoBehaviour
         {
             nextCamera = totalCameras;
         }
+    }
+
+    public void GoToDate()
+    {
+        dateCam.Priority = 12;
+        dateCam.enabled = true;
+    }
+
+    public void LeaveDate()
+    {
+        dateCam.Priority = 10;
+        dateCam.enabled = false;
+
+        ChangeCameraNumbers();
+
+        //currentCamera = 0;
+        cameras[currentCamera].enabled = true;
+        cameras[previousCamera].enabled = false;
+        cameras[nextCamera].enabled = false;
+
+        
     }
 }
