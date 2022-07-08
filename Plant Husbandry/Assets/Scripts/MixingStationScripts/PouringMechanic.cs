@@ -32,12 +32,14 @@ public class PouringMechanic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        beakerFull = beaker.value;
+        
 
         if (Input.GetMouseButton(0) && pouring == true)
         {
             //every frame that mouse button is held the value will go up by the value of fillSpeed.
             beaker.value += fillSpeed;
+
+            UpdateBeakerValue();
         }
 
         else if (Input.GetMouseButtonUp(0) && pouring == true && beaker.value >= 10)
@@ -47,6 +49,8 @@ public class PouringMechanic : MonoBehaviour
             pouring = false;
             
             Invoke("TurnOffJug", 2.5f);
+
+            UpdateBeakerValue();
 
         }
 
@@ -89,5 +93,9 @@ public class PouringMechanic : MonoBehaviour
         beaker.value = 0;
     }
 
+    public void UpdateBeakerValue()
+    {
+        beakerFull = beaker.value;
+    }
 
 }
