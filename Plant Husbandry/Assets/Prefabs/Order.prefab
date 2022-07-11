@@ -43,7 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 158b8355e20b77c409142841207627e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  number: 0
+  customerOrderGenerator: {fileID: 0}
   orderGenerator: {fileID: 0}
+  orderTicketManager: {fileID: 0}
+  ticketManager: {fileID: 0}
   orderFirstName: 
   orderLastName: 
   orderPlantName: 
@@ -53,7 +57,9 @@ MonoBehaviour:
   orderHairColour: 
   orderPersonalityOne: 
   orderPersonalityOneNumber: 0
-  orderPersonalityOneAmount: 0
   orderPersonalityTwo: 
   orderPersonalityTwoNumber: 0
-  orderPersonalityTwoAmount: 0
+  orderPersonalityOneLevel: 
+  orderPersonalityTwoLevel: 
+  orderPersonalityOneArrayLength: 0
+  orderPersonalityTwoArrayLength: 0

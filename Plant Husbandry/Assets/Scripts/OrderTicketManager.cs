@@ -38,7 +38,7 @@ public class OrderTicketManager : MonoBehaviour
     void Start()
     {
         //orderTicketIsActive = true;
-        UpdateOrderTicketText();
+        //UpdateOrderTicketText();
 
     }
 
@@ -61,7 +61,8 @@ public class OrderTicketManager : MonoBehaviour
         activeOrder = orderTickets[currentOrderTicket];
         order = activeOrder.GetComponent<Order>();
 
-        UpdateOrderTicketText();
+        totalOrderTickets = orderTickets.Count;
+        
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -85,6 +86,7 @@ public class OrderTicketManager : MonoBehaviour
         previousOrderTicket = totalOrderTickets;
         nextOrderTicket = 1;
 
+
         //UpdateOrderTicketText();
         //ensuring current camera is active
         //orderTickets[previousOrderTicket].enabled = false;
@@ -102,6 +104,8 @@ public class OrderTicketManager : MonoBehaviour
         
 
         ChangeOrderNumbers();
+
+        UpdateOrderTicketText();
 
         //UpdateOrderTicketText();
 
@@ -122,6 +126,7 @@ public class OrderTicketManager : MonoBehaviour
 
         ChangeOrderNumbers();
 
+        UpdateOrderTicketText();
         //UpdateOrderTicketText();
 
         //cameras[currentCamera].enabled = true;

@@ -116,6 +116,7 @@ public class CustomerOrderGenerator : MonoBehaviour
         orderNumber++;
 
         Instantiate(order);
+        order.name = "order"+ orderNumber;
         //orderTicketManager.orderTickets.Add(order);
     }
 

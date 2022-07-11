@@ -8,9 +8,11 @@ public class OrderAcceptanceScript : MonoBehaviour
     public GameObject popUpUI;
     public GameObject customerOrderText;
     public GameObject orderTicket;
-    public GameObject orderTicketManager;
+    public GameObject orderTicketManagerGO;
 
     public CustomerOrderGenerator customerOrderGenerator;
+
+    public OrderTicketManager orderTicketManager;
 
     //public CustomerNameGenerator customerNameGenerator;
 
@@ -35,19 +37,24 @@ public class OrderAcceptanceScript : MonoBehaviour
         popUpUI.SetActive(true);
         customerOrderText.SetActive(false);
         orderTicket.SetActive(false);
-        orderTicketManager.SetActive(false);
+        //orderTicketManagerGO.SetActive(false);
     }
 
     public void AcceptOrder()
     {
-        popUpUI.SetActive(false);
+        //popUpUI.SetActive(false);
         customerOrderText.SetActive(true);
         orderTicket.SetActive(true);
-        orderTicketManager.SetActive(true);
+        //orderTicketManagerGO.SetActive(true);
 
         customerOrderGenerator.GenerateOrder();
-        //GenerateCustomerName();
 
+        orderTicketManager.AddOrder();
+
+        Debug.Log("First order generate");
+        //GenerateCustomerName();
+       // customerOrderGenerator.GenerateOrder();
+       // Debug.Log("First order generate");
     }
 
 
