@@ -11,7 +11,7 @@ public class LookAt : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCamera = GameObject.Find("Main Camera");
+        mainCamera = GameObject.Find("MainCamera");
 
          mainCameraTransform = mainCamera.GetComponent<Transform>();
 
