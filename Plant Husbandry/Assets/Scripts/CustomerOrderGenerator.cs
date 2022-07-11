@@ -59,18 +59,18 @@ public class CustomerOrderGenerator : MonoBehaviour
     public TextMeshProUGUI customerOrderText;
 
     [Header("OrderTicketUI")]
-    public TextMeshProUGUI orderNumberText;
+    //public TextMeshProUGUI orderNumberText;
     public int orderNumber = 0 ;
     public TextMeshProUGUI speechCustomerNameText;
-    public TextMeshProUGUI customerOrderTicketNameText;
-    public TextMeshProUGUI heightText;
-    public TextMeshProUGUI hairColourText;
-    public TextMeshProUGUI eyeColourText;
-    public TextMeshProUGUI personalityOneText;
-    public TextMeshProUGUI personalityTwoText;
+    //public TextMeshProUGUI customerOrderTicketNameText;
+    //public TextMeshProUGUI heightText;
+    //public TextMeshProUGUI hairColourText;
+    //public TextMeshProUGUI eyeColourText;
+    //public TextMeshProUGUI personalityOneText;
+    //public TextMeshProUGUI personalityTwoText;
 
    // public CustomerNameGenerator customerNameGenerator;
-    public CustomerOrderManager customerOrderManager;
+    //public CustomerOrderManager customerOrderManager;
 
     [Header("CustomerNames")]
     public string[] firstNames = new string[50];
@@ -87,6 +87,10 @@ public class CustomerOrderGenerator : MonoBehaviour
     public string plantName;
     public int plantNameNumber;
 
+    [Header("ToInstantiate")]
+    public GameObject order;
+    public OrderTicketManager orderTicketManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -101,7 +105,7 @@ public class CustomerOrderGenerator : MonoBehaviour
 
     public void GenerateOrder()
     {
-        customerOrderManager.ResetOrderManager();
+        //customerOrderManager.ResetOrderManager();
         GeneratePhysicalAttributes();
         GeneratePersonalityTraits();
         GeneratePersonalityLevel();        
@@ -110,6 +114,9 @@ public class CustomerOrderGenerator : MonoBehaviour
         GenerateCustomerText();
 
         orderNumber++;
+
+        Instantiate(order);
+        //orderTicketManager.orderTickets.Add(order);
     }
 
     public void GeneratePhysicalAttributes()
@@ -129,16 +136,11 @@ public class CustomerOrderGenerator : MonoBehaviour
     {
         customerOrderText.text = "Hi! I'm looking for someone who is " + currentHeight + " with " + currentHairColour + " hair and " + currentEyeColour + " eyes. I also want their personality to be " + currentPersonalityTraitOneLevel + " and " + currentPersonalityTraitTwoLevel + ".";
 
-        orderNumberText.text = "Order No. " + orderNumber;
-        heightText.text = "- " + currentHeight;
-        hairColourText.text = "- " + currentHairColour + " hair";
-        eyeColourText.text = "- " + currentEyeColour + " eyes";
-        personalityOneText.text = "- " + currentPersonalityTraitOneLevel;
-        personalityTwoText.text = "- " + currentPersonalityTraitTwoLevel;
+       
 
         speechCustomerNameText.text = customerFirstName + " " + customerLastName;
 
-        customerOrderTicketNameText.text = "for " + customerFirstName + " " + customerLastName;
+        
 
     }
 

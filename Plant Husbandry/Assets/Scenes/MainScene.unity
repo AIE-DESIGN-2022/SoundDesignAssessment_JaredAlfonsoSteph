@@ -1110,7 +1110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.499939, y: 659}
+  m_AnchoredPosition: {x: -21.999939, y: 669}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.2, y: 2}
 --- !u!114 &227442253
@@ -5260,182 +5260,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &877631420 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7946918927550432184, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-  m_PrefabInstance: {fileID: 1956568167}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &877631421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877631420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ee86949c13855478347cc5ae0856e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstNames:
-  - Kelly
-  - Arnold
-  - Rex
-  - Lynn
-  - Herman
-  - Johnnie
-  - Stuart
-  - Gerard
-  - Harvey
-  - Brent
-  - Alfonso
-  - Kerry
-  - Daryl
-  - Milton
-  - Ted
-  - Jared
-  - Darryl
-  - Stephanie
-  - Robin
-  - Charlie
-  - Randolph
-  - Jimmie
-  - Leo
-  - Carlos
-  - Kirk
-  - Manuel
-  - Brad
-  - Lester
-  - Grace
-  - Doreen
-  - Sherri
-  - Patty
-  - Carrie
-  - Josephine
-  - Lillian
-  - Carole
-  - Roxanne
-  - Shelia
-  - Rachel
-  - Eva
-  - Mildred
-  - Veronica
-  - Shelley
-  - Dolores
-  - Marianne
-  - Holly
-  - Janis
-  - Monica
-  - Carmen
-  - Vanessa
-  customerFirstName: 
-  customerFirstNameNumber: 0
-  lastNames:
-  - Young
-  - Wright
-  - Wood
-  - Wilson
-  - Williamson
-  - Williams
-  - White
-  - Aitken
-  - Alexander
-  - Bell
-  - Black
-  - Boyle
-  - Brown
-  - Bruce
-  - Burns
-  - Cameron
-  - Campbell
-  - Christie
-  - Clark
-  - Craig
-  - Crawford
-  - Cunningham
-  - Davidson
-  - Dickson
-  - Docherty
-  - Donaldson
-  - Douglas
-  - Ferguson
-  - Findlay
-  - Fleming
-  - Forbes
-  - Fraser
-  - Gibson
-  - Graham
-  - Grant
-  - Gray
-  - Hamilton
-  - Henderson
-  - Hughes
-  - Hunter
-  - Jamieson
-  - Johnston
-  - King
-  - Macdonald
-  - Mackenzie
-  - Munro
-  - Murphy
-  - Murray
-  - Paterson
-  - Ross
-  customerLastName: 
-  customerLastNameNumber: 0
-  plantNames:
-  - Basil
-  - Alfalfa
-  - Arbor
-  - Ash
-  - Birch
-  - Cedar
-  - Ewan
-  - Forrest
-  - Hawthorne
-  - Herb
-  - Oleander
-  - Oliver
-  - Oren
-  - Reed
-  - Sorrel
-  - Taro
-  - Valerian
-  - Venom
-  - Wilder
-  - Aspen
-  - Clover
-  - Kaede
-  - Oakley
-  - Ren
-  - Rowan
-  - Rue
-  - Jaskier
-  - Ainsley
-  - Alder
-  - Hyacinth
-  - Huckleberry
-  - Jasper
-  - Wren
-  - Moss
-  - Florent
-  - Jarred
-  - Trevor
-  - Antonio
-  - Bud
-  - Fennel
-  - Caraway
-  - Coriander
-  - Dill
-  - Marjoram
-  - Brair
-  - Aster
-  - Hazel
-  - Juniper
-  - Acton
-  - Elm
-  plantName: 
-  plantNameNumber: 0
 --- !u!1 &882000587
 GameObject:
   m_ObjectHideFlags: 0
@@ -6143,7 +5967,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
   m_PrefabInstance: {fileID: 1956568167}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877631420}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba9a81e733e6cab4b9202f00bf175d87, type: 3}
@@ -7135,6 +6959,30 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 820605461}
+    - target: {fileID: 8727562340675088352, guid: f0e6277741833014d937eaded702ccaa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.565
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727562340675088352, guid: f0e6277741833014d937eaded702ccaa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.825
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727562340675088352, guid: f0e6277741833014d937eaded702ccaa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727562340675088352, guid: f0e6277741833014d937eaded702ccaa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.07686624
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727562340675088352, guid: f0e6277741833014d937eaded702ccaa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9970414
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727562340675088352, guid: f0e6277741833014d937eaded702ccaa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -171.183
+      objectReference: {fileID: 0}
     - target: {fileID: 8760633685491908272, guid: f0e6277741833014d937eaded702ccaa, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -8204,7 +8052,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
   m_PrefabInstance: {fileID: 1956568167}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877631420}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 090ec331affc17e4faf86e5bfb0accae, type: 3}
@@ -13382,10 +13230,6 @@ PrefabInstance:
       propertyPath: orderTicketManager
       value: 
       objectReference: {fileID: 1600518822}
-    - target: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: customerNameGenerator
-      value: 
-      objectReference: {fileID: 877631421}
     - target: {fileID: 7946918927550432184, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: m_Name
       value: CustomerOrderGenerator
@@ -13471,13 +13315,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 359388161}
     - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: customerNameGenerator
-      value: 
-      objectReference: {fileID: 877631421}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: customerOrderNameText
       value: 
       objectReference: {fileID: 7308110193930710380}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: speechCustomerNameText
+      value: 
+      objectReference: {fileID: 7308110193930710380}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: customerOrderTicketNameText
+      value: 
+      objectReference: {fileID: 5047115467167413712}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
 --- !u!4 &1984149816 stripped
@@ -15874,6 +15722,10 @@ PrefabInstance:
       propertyPath: customerNameGenerator
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1124228147252303511, guid: ba36b7dc614cfac4ea02b470bcb57f0c, type: 3}
+      propertyPath: customerOrderGenerator
+      value: 
+      objectReference: {fileID: 968077204}
     - target: {fileID: 1124228147252303511, guid: ba36b7dc614cfac4ea02b470bcb57f0c, type: 3}
       propertyPath: customerReviewQuoteText
       value: 

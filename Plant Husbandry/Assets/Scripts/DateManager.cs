@@ -7,9 +7,10 @@ public class DateManager : MonoBehaviour
 {
     public CameraManager cameraManager;
     public CustomerOrderManager customerOrderManager;
-    public CustomerNameGenerator customerNameGenerator;
+    public CustomerOrderGenerator customerOrderGenerator;
 
     public OrderAcceptanceScript orderAcceptance;
+
 
     [Header("UI")]
     public GameObject dateReviewUI;
@@ -78,7 +79,7 @@ public class DateManager : MonoBehaviour
 
         SetHairEyeColourDate();
 
-        dateReviewText.text = customerNameGenerator.customerFirstName + " and " + customerNameGenerator.plantName + " " + customerNameGenerator.customerLastName + " were " + customerOrderManager.dateQuality + "% compatible";
+        dateReviewText.text = customerOrderGenerator.customerFirstName + " and " + customerOrderGenerator.plantName + " " + customerOrderGenerator.customerLastName + " were " + customerOrderManager.dateQuality + "% compatible";
         amountPaidText.text = "+ $" + customerOrderManager.customerFinalPayment;
 
         areaText.SetActive(false);
@@ -88,28 +89,28 @@ public class DateManager : MonoBehaviour
         if (customerOrderManager.dateQuality <= 100 && customerOrderManager.dateQuality > 80)
         {
             evaluationText.text = bestQualityEvaluation;
-            customerReviewQuoteText.text = bestQualityReview + " - " + customerNameGenerator.customerFirstName + " " + customerNameGenerator.customerLastName;
+            customerReviewQuoteText.text = bestQualityReview + " - " + customerOrderGenerator.customerFirstName + " " + customerOrderGenerator.customerLastName;
 
         }
         if (customerOrderManager.dateQuality <= 80 && customerOrderManager.dateQuality > 60)
         {
             evaluationText.text = goodQualityEvaluation;
-            customerReviewQuoteText.text = goodQualityReview + " - " + customerNameGenerator.customerFirstName + " " + customerNameGenerator.customerLastName;
+            customerReviewQuoteText.text = goodQualityReview + " - " + customerOrderGenerator.customerFirstName + " " + customerOrderGenerator.customerLastName;
         }
         if (customerOrderManager.dateQuality <= 60 && customerOrderManager.dateQuality > 40)
         {
             evaluationText.text = okayQualityEvaluation;
-            customerReviewQuoteText.text = okayQualityReview + " - " + customerNameGenerator.customerFirstName + " " + customerNameGenerator.customerLastName;
+            customerReviewQuoteText.text = okayQualityReview + " - " + customerOrderGenerator.customerFirstName + " " + customerOrderGenerator.customerLastName;
         }
         if (customerOrderManager.dateQuality <= 40 && customerOrderManager.dateQuality > 20)
         {
             evaluationText.text = badQualityEvaluation;
-            customerReviewQuoteText.text = badQualityReview + " - " + customerNameGenerator.customerFirstName + " " + customerNameGenerator.customerLastName;
+            customerReviewQuoteText.text = badQualityReview + " - " + customerOrderGenerator.customerFirstName + " " + customerOrderGenerator.customerLastName;
         }
         if (customerOrderManager.dateQuality <= 20 && customerOrderManager.dateQuality >= 0)
         {
             evaluationText.text = terribleQualityEvaluation;
-            customerReviewQuoteText.text = terribleQualityReview + " - " + customerNameGenerator.customerFirstName + " " + customerNameGenerator.customerLastName;
+            customerReviewQuoteText.text = terribleQualityReview + " - " + customerOrderGenerator.customerFirstName + " " + customerOrderGenerator.customerLastName;
         }
 
 

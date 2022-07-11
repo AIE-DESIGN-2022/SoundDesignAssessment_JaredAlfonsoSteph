@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class CustomerOrderManager : MonoBehaviour
 {
+    public Order order;
     public CustomerOrderGenerator orderGenerator;
     
     [Header("Height")]
@@ -59,6 +62,11 @@ public class CustomerOrderManager : MonoBehaviour
     public bool addedPersonalityTwo;
 
     public bool qualityCalculated;
+
+    
+
+
+
     //float numberToCalculated;
 
     // Start is called before the first frame update
@@ -74,17 +82,17 @@ public class CustomerOrderManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        eyeColourWanted = orderGenerator.currentEyeColour;
-        hairColourWanted = orderGenerator.currentHairColour;
-        personalityOneWanted = orderGenerator.currentPersonalityTraitOne;
-        personalityTwoWanted = orderGenerator.currentPersonalityTraitTwo;
+        eyeColourWanted = order.orderEyeColour;
+        hairColourWanted = order.orderHairColour;
+        personalityOneWanted = order.orderPersonalityOne;
+        personalityTwoWanted = order.orderPersonalityTwo;
 
 
         //heightWanted = orderGenerator.heightNumber;
 
-        HeightPercentageWanted(orderGenerator.heightNumber, orderGenerator.heights.Length);
-        PersonalityOnePercentageWanted(orderGenerator.personalityTraitOneNumber, orderGenerator.personalityOneArrayLength);
-        PersonalityTwoPercentageWanted(orderGenerator.personalityTraitTwoNumber, orderGenerator.personalityTwoArrayLength);
+        HeightPercentageWanted(order.orderHeightNumber, orderGenerator.heights.Length);
+        PersonalityOnePercentageWanted(order.orderPersonalityOneNumber, orderGenerator.personalityOneArrayLength);
+        PersonalityTwoPercentageWanted(order.orderPersonalityOneNumber, orderGenerator.personalityTwoArrayLength);
 
 
         eyeColourAdded = eyeButtonManager.eyeSelection;
@@ -572,10 +580,8 @@ public class CustomerOrderManager : MonoBehaviour
         personalityTwoAmountAdded = 0;
 
         dateQuality = 0;
-        customerFinalPayment = 0;
-
-        
-
-
+        customerFinalPayment = 0;      
     }
+
+    
 }
