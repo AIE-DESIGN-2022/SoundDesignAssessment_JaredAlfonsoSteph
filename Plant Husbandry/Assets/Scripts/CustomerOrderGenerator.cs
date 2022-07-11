@@ -61,15 +61,31 @@ public class CustomerOrderGenerator : MonoBehaviour
     [Header("OrderTicketUI")]
     public TextMeshProUGUI orderNumberText;
     public int orderNumber = 0 ;
-    public TextMeshProUGUI customerNameText;
+    public TextMeshProUGUI speechCustomerNameText;
+    public TextMeshProUGUI customerOrderTicketNameText;
     public TextMeshProUGUI heightText;
     public TextMeshProUGUI hairColourText;
     public TextMeshProUGUI eyeColourText;
     public TextMeshProUGUI personalityOneText;
     public TextMeshProUGUI personalityTwoText;
 
-    public CustomerNameGenerator customerNameGenerator;
+   // public CustomerNameGenerator customerNameGenerator;
     public CustomerOrderManager customerOrderManager;
+
+    [Header("CustomerNames")]
+    public string[] firstNames = new string[50];
+    public string customerFirstName;
+    public int customerFirstNameNumber;
+
+    public string[] lastNames = new string[50];
+    public string customerLastName;
+    public int customerLastNameNumber;
+
+
+    [Header("PlantNames")]
+    public string[] plantNames = new string[50];
+    public string plantName;
+    public int plantNameNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -88,7 +104,9 @@ public class CustomerOrderGenerator : MonoBehaviour
         customerOrderManager.ResetOrderManager();
         GeneratePhysicalAttributes();
         GeneratePersonalityTraits();
-        GeneratePersonalityLevel();
+        GeneratePersonalityLevel();        
+        GenerateCustomerName();
+        GeneratePlantName();
         GenerateCustomerText();
 
         orderNumber++;
@@ -105,7 +123,6 @@ public class CustomerOrderGenerator : MonoBehaviour
         eyeColourNumber = Random.Range(0, eyeColour.Length);
         currentEyeColour = eyeColour[eyeColourNumber];
 
-
     }
 
     public void GenerateCustomerText()
@@ -118,8 +135,10 @@ public class CustomerOrderGenerator : MonoBehaviour
         eyeColourText.text = "- " + currentEyeColour + " eyes";
         personalityOneText.text = "- " + currentPersonalityTraitOneLevel;
         personalityTwoText.text = "- " + currentPersonalityTraitTwoLevel;
-        
 
+        speechCustomerNameText.text = customerFirstName + " " + customerLastName;
+
+        customerOrderTicketNameText.text = "for " + customerFirstName + " " + customerLastName;
 
     }
 
@@ -208,5 +227,19 @@ public class CustomerOrderGenerator : MonoBehaviour
         }
     }
 
+    public void GenerateCustomerName()
+    {
+        customerFirstNameNumber = Random.Range(0, firstNames.Length);
+        customerFirstName = firstNames[customerFirstNameNumber];
 
+        customerLastNameNumber = Random.Range(0, lastNames.Length);
+        customerLastName = lastNames[customerLastNameNumber];
+
+    }
+
+    public void GeneratePlantName()
+    {
+        plantNameNumber = Random.Range(0, plantNames.Length);
+        plantName = plantNames[plantNameNumber];
+    }
 }

@@ -12,7 +12,7 @@ public class OrderAcceptanceScript : MonoBehaviour
 
     public CustomerOrderGenerator customerOrderGenerator;
 
-    public CustomerNameGenerator customerNameGenerator;
+    //public CustomerNameGenerator customerNameGenerator;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +46,7 @@ public class OrderAcceptanceScript : MonoBehaviour
         orderTicketManager.SetActive(true);
 
         customerOrderGenerator.GenerateOrder();
-        customerNameGenerator.GenerateCustomerName();
+        //GenerateCustomerName();
 
     }
 
