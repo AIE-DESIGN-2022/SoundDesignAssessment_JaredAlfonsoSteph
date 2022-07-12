@@ -12,8 +12,8 @@ public class OrderTicketManager : MonoBehaviour
 
     [Header("OrderTicket")]
     public int currentOrderTicket;
-    public int previousOrderTicket;
-    public int nextOrderTicket;
+    //public int previousOrderTicket;
+    //public int nextOrderTicket;
 
     public int totalOrderTickets;
 
@@ -38,8 +38,8 @@ public class OrderTicketManager : MonoBehaviour
     void Start()
     {
         //orderTicketIsActive = true;
-        //UpdateOrderTicketText();
 
+        
     }
 
     public void UpdateOrderTicketText()
@@ -54,15 +54,49 @@ public class OrderTicketManager : MonoBehaviour
         personalityTwoText.text = "- " + order.orderPersonalityTwoLevel;
     }
    
+    //public void AddOrder()
+    //{
+        
+        //if (totalOrderTickets > 1)
+        //{
+            //currentOrderTicket = 0;
+          //  previousOrderTicket = currentOrderTicket - 1;
+           // nextOrderTicket = currentOrderTicket + 1;
+        //}
+       // else
+       // {
+        //    previousOrderTicket = 1;
+         //   nextOrderTicket = 1;
+        //}
+       
+
+        //ChangeOrderNumbers();
+    //}
 
     // Update is called once per frame
     void Update()
     {
-        activeOrder = orderTickets[currentOrderTicket];
-        order = activeOrder.GetComponent<Order>();
+        //if (orderNumberText.text == "Order No. 0")
+        //{
+        //  NextOrder();
+        // ChangeOrderNumbers();
+        // }
+
 
         totalOrderTickets = orderTickets.Count;
         
+
+        //if (orderTickets.Count == 0)
+        //{
+        // totalOrderTickets = orderTickets.Count;
+        //}
+        // else
+        // {
+
+
+        // }
+
+
 
         if (Input.GetKeyDown(KeyCode.Tab))
         {
@@ -82,56 +116,116 @@ public class OrderTicketManager : MonoBehaviour
 
     public void AddOrder()
     {
-        currentOrderTicket = 0;
-        previousOrderTicket = totalOrderTickets;
-        nextOrderTicket = 1;
 
+        
 
-        //UpdateOrderTicketText();
+        UpdateOrderTicketText();
         //ensuring current camera is active
         //orderTickets[previousOrderTicket].enabled = false;
         // orderTickets[nextOrderTicket].enabled = false;
 
-        //orderTickets[currentOrderTicket].enabled = true;
+
+
+        //if(currentOrderTicket < totalOrderTickets)
+        // {
+        //   currentOrderTicket = 0;
+        // }
+        // if (currentOrderTicket > totalOrderTickets)
+        // {
+        //  currentOrderTicket = 0;
+
+        // }
+        //if (currentOrderTicket < 0)
+        // {
+        //   currentOrderTicket = totalOrderTickets;
+
+        //}
+
+        //ChangeOrderNumbers();
     }
 
     public void NextOrder()
     {
-        previousOrderTicket++;
-        currentOrderTicket++;
-        nextOrderTicket++;
+        //previousOrderTicket++;
+
+        //nextOrderTicket++;
+
+        //if (currentOrderTicket < totalOrderTickets)
+        //{
+        //currentOrderTicket = 0;
 
         
 
-        ChangeOrderNumbers();
+        if (currentOrderTicket < totalOrderTickets)
+        {
+            currentOrderTicket++;
+
+            activeOrder = orderTickets[currentOrderTicket];
+            order = activeOrder.GetComponent<Order>();
+
+            //currentOrderTicket = 0;
+        }
+        if (currentOrderTicket >= totalOrderTickets)
+        {
+            //currentOrderTicket++;
+
+            currentOrderTicket = 0;
+
+            activeOrder = orderTickets[currentOrderTicket];
+            order = activeOrder.GetComponent<Order>();
+
+        }
+        if (currentOrderTicket < 0)
+        {
+            currentOrderTicket++;
+
+            currentOrderTicket = totalOrderTickets;
+
+            activeOrder = orderTickets[currentOrderTicket];
+            order = activeOrder.GetComponent<Order>();
+
+        }
+        if ( currentOrderTicket == totalOrderTickets)
+        {
+            Debug.Log("AAHH");
+
+            currentOrderTicket = 0;
+
+            activeOrder = orderTickets[currentOrderTicket];
+            order = activeOrder.GetComponent<Order>();
+        }
+        // }
+        // if (currentOrderTicket > totalOrderTickets)
+        //{
+        //   currentOrderTicket = 0;
+
+        //}
+        //if (currentOrderTicket < 0)
+        // {
+        // currentOrderTicket = totalOrderTickets;
+
+        //}
 
         UpdateOrderTicketText();
 
-        //UpdateOrderTicketText();
+        ChangeOrderNumbers();
 
-        //orderTickets[currentCamera].enabled = true;
-        //orderTickets[previousCamera].enabled = false;
-        //cameras[nextCamera].enabled = false;
     }
 
     public void PreviousOrder()
     {
-        nextOrderTicket--;
+        //nextOrderTicket--;
         currentOrderTicket--;
-        previousOrderTicket--;
+        //previousOrderTicket--;
 
-        //noMoneyText.SetActive(false);
+        activeOrder = orderTickets[currentOrderTicket];
+        order = activeOrder.GetComponent<Order>();
 
-        
+        UpdateOrderTicketText();
 
         ChangeOrderNumbers();
 
-        UpdateOrderTicketText();
-        //UpdateOrderTicketText();
 
-        //cameras[currentCamera].enabled = true;
-        //cameras[previousCamera].enabled = false;
-        // cameras[nextCamera].enabled = false;
     }
 
     public void ChangeOrderNumbers()
@@ -141,16 +235,16 @@ public class OrderTicketManager : MonoBehaviour
             currentOrderTicket = 0;
 
         }
-        if (previousOrderTicket > totalOrderTickets)
-        {
-            previousOrderTicket = 0;
+       // if (previousOrderTicket > totalOrderTickets)
+       // {
+        //    previousOrderTicket = 0;
 
-        }
-        if (nextOrderTicket > totalOrderTickets)
-        {
-            nextOrderTicket = 0;
+       // }
+       // if (nextOrderTicket > totalOrderTickets)
+       // {
+         //   nextOrderTicket = 0;
 
-        }
+       // }
 
 
         if (currentOrderTicket < 0)
@@ -159,14 +253,14 @@ public class OrderTicketManager : MonoBehaviour
 
         }
 
-        if (previousOrderTicket < 0)
-        {
-            previousOrderTicket = totalOrderTickets;
-        }
+       // if (previousOrderTicket < 0)
+        //{
+          //  previousOrderTicket = totalOrderTickets;
+       // }
 
-        if (nextOrderTicket < 0)
-        {
-            nextOrderTicket = totalOrderTickets;
-        }
-    }
+       // if (nextOrderTicket < 0)
+        //{
+        //    nextOrderTicket = totalOrderTickets;
+       // }
+    } 
 }

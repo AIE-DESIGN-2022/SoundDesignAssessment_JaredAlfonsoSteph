@@ -6,9 +6,17 @@ using TMPro;
 
 public class CustomerOrderManager : MonoBehaviour
 {
+    
+    public GameObject orderTicketManager;
+    public GameObject activeOrder;
     public Order order;
     public CustomerOrderGenerator orderGenerator;
-    
+
+    [Header("CustomerName")]
+    public string firstName;
+    public string lastName;
+    public string plantName;
+
     [Header("Height")]
     public float heightWanted;
     public float heightAdded;
@@ -72,6 +80,10 @@ public class CustomerOrderManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //orderTicketManager = GameObject.Find("OrderTicketManager");
+        
+        
+        
         choosingPersonalityOne = true;
 
         hasBeenReset = false;
@@ -82,6 +94,13 @@ public class CustomerOrderManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        activeOrder = orderTicketManager.GetComponent<OrderTicketManager>().activeOrder;
+        order = activeOrder.GetComponent<Order>();
+
+        firstName = order.orderFirstName;
+        lastName = order.orderLastName;
+        plantName = order.orderPlantName;
+        
         eyeColourWanted = order.orderEyeColour;
         hairColourWanted = order.orderHairColour;
         personalityOneWanted = order.orderPersonalityOne;

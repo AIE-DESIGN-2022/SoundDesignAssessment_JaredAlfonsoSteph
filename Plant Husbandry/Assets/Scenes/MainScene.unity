@@ -1110,7 +1110,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116.00012, y: 656.5}
+  m_AnchoredPosition: {x: 44.50006, y: 649}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.2, y: 2}
 --- !u!114 &227442253
@@ -1890,7 +1890,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7300969589301242259, guid: a439a7237505e0349a6cc8da4715f92c, type: 3}
   m_PrefabInstance: {fileID: 7300969590173730593}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 870327011}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73595846d8ebb9644a00bebd236b187d, type: 3}
@@ -5140,6 +5140,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &870327011 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7300969589301242256, guid: a439a7237505e0349a6cc8da4715f92c, type: 3}
+  m_PrefabInstance: {fileID: 7300969590173730593}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &883697654
 Mesh:
   m_ObjectHideFlags: 0
@@ -12860,6 +12865,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7308110192786551191}
     - target: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: orderManager
+      value: 
+      objectReference: {fileID: 870327011}
+    - target: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: orderManagerGO
+      value: 
+      objectReference: {fileID: 870327011}
+    - target: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: customerOrderText
       value: 
       objectReference: {fileID: 1320847050}
@@ -16039,7 +16052,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7300969589301242256, guid: a439a7237505e0349a6cc8da4715f92c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7300969589301242258, guid: a439a7237505e0349a6cc8da4715f92c, type: 3}
       propertyPath: m_RootOrder
@@ -16101,6 +16114,10 @@ PrefabInstance:
       propertyPath: kindessBeakerFull
       value: 
       objectReference: {fileID: 1081088456}
+    - target: {fileID: 7300969589301242259, guid: a439a7237505e0349a6cc8da4715f92c, type: 3}
+      propertyPath: orderTicketManager
+      value: 
+      objectReference: {fileID: 1600518822}
     - target: {fileID: 7300969589301242259, guid: a439a7237505e0349a6cc8da4715f92c, type: 3}
       propertyPath: energeticBeakerFull
       value: 
@@ -16259,7 +16276,7 @@ PrefabInstance:
     - target: {fileID: 1945755705, guid: c1736a6fff4cc1840a5537344120f201, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 3809876687916567706, guid: c31877c063fa445488bafe43c5a18ed8, type: 3}
+      objectReference: {fileID: 1600518823}
     - target: {fileID: 1945755705, guid: c1736a6fff4cc1840a5537344120f201, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2

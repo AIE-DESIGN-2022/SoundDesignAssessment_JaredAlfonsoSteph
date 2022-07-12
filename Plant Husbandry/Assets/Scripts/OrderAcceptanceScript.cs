@@ -14,6 +14,10 @@ public class OrderAcceptanceScript : MonoBehaviour
 
     public OrderTicketManager orderTicketManager;
 
+    public GameObject orderManagerGO;
+
+   // public Order
+
     //public CustomerNameGenerator customerNameGenerator;
 
     // Start is called before the first frame update
@@ -24,6 +28,9 @@ public class OrderAcceptanceScript : MonoBehaviour
         //cutomerOrderManager.SetActive(false);
 
         //customerOrderGenerator = GameObject.Find("CustomerOrderGenerator");
+
+        orderTicketManagerGO.SetActive(false);
+        orderManagerGO.SetActive(false);
     }
 
     // Update is called once per frame
@@ -37,24 +44,33 @@ public class OrderAcceptanceScript : MonoBehaviour
         popUpUI.SetActive(true);
         customerOrderText.SetActive(false);
         orderTicket.SetActive(false);
-        //orderTicketManagerGO.SetActive(false);
+        
     }
 
     public void AcceptOrder()
     {
         //popUpUI.SetActive(false);
-        customerOrderText.SetActive(true);
-        orderTicket.SetActive(true);
-        //orderTicketManagerGO.SetActive(true);
+       
+       
 
         customerOrderGenerator.GenerateOrder();
 
-        orderTicketManager.AddOrder();
+        //orderTicketManager.AddOrder();
+        orderTicketManagerGO.SetActive(true);
+
+       
+        //orderTicketManager.UpdateOrderTicketText();
+
+        customerOrderText.SetActive(true);
+        orderTicket.SetActive(true);
+        orderManagerGO.SetActive(true);
 
         Debug.Log("First order generate");
+
+        //orderTicketManager.UpdateOrderTicketText();
         //GenerateCustomerName();
-       // customerOrderGenerator.GenerateOrder();
-       // Debug.Log("First order generate");
+        // customerOrderGenerator.GenerateOrder();
+        // Debug.Log("First order generate");
     }
 
 

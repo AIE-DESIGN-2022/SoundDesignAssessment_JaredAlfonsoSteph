@@ -105,10 +105,12 @@ public class CustomerOrderGenerator : MonoBehaviour
 
     public void GenerateOrder()
     {
+        order.name = "order" + orderNumber; 
+
         //customerOrderManager.ResetOrderManager();
         GeneratePhysicalAttributes();
         GeneratePersonalityTraits();
-        GeneratePersonalityLevel();        
+        GeneratePersonalityLevel();       
         GenerateCustomerName();
         GeneratePlantName();
         GenerateCustomerText();
@@ -117,6 +119,12 @@ public class CustomerOrderGenerator : MonoBehaviour
 
         Instantiate(order);
         order.name = "order"+ orderNumber;
+
+        orderTicketManager.AddOrder();
+
+        //orderTicketManager.UpdateOrderTicketText();
+
+        //orderTicketManager.NextOrder();
         //orderTicketManager.orderTickets.Add(order);
     }
 
