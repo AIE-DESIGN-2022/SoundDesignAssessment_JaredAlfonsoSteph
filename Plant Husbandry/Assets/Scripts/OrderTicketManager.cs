@@ -263,4 +263,15 @@ public class OrderTicketManager : MonoBehaviour
         //    nextOrderTicket = totalOrderTickets;
        // }
     } 
+
+    public void CompleteOrder()
+    {
+        
+        orderTickets.RemoveAt(currentOrderTicket);
+
+        Destroy(activeOrder);
+
+        NextOrder();
+
+    }
 }

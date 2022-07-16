@@ -99,6 +99,9 @@ public class PlantGrowTimer : MonoBehaviour
 
     public float personalityTwoAmount;
 
+    public OrderAcceptanceScript orderAcceptance;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -202,6 +205,8 @@ public class PlantGrowTimer : MonoBehaviour
         //plantCharacterEye1.material = 
 
         customerOrderManager.ResetOrderManager();
+
+        orderAcceptance.OrderPopUp();
     }
 
     public void SellPlant()

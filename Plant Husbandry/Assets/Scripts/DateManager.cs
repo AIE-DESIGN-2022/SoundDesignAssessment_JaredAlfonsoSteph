@@ -10,6 +10,7 @@ public class DateManager : MonoBehaviour
     //public CustomerOrderGenerator customerOrderGenerator;
 
     public OrderAcceptanceScript orderAcceptance;
+    public OrderTicketManager ticketManager;
 
     public int thisDateQuality;
     public int thisCustomerFinalPayment;
@@ -130,8 +131,8 @@ public class DateManager : MonoBehaviour
 
         areaText.SetActive(true);
 
-        orderAcceptance.OrderPopUp();
-
+        //orderAcceptance.OrderPopUp();
+        ticketManager.CompleteOrder();
 
     }
 

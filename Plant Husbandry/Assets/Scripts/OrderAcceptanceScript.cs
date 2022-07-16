@@ -16,6 +16,8 @@ public class OrderAcceptanceScript : MonoBehaviour
 
     public GameObject orderManagerGO;
 
+    public float newOrderWaitTime;
+
    // public Order
 
     //public CustomerNameGenerator customerNameGenerator;
@@ -23,7 +25,7 @@ public class OrderAcceptanceScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        OrderPopUp();
+        //OrderPopUp();
         //customerNameGenerator .GenerateCustomerName();
         //cutomerOrderManager.SetActive(false);
 
@@ -31,6 +33,10 @@ public class OrderAcceptanceScript : MonoBehaviour
 
         orderTicketManagerGO.SetActive(false);
         orderManagerGO.SetActive(false);
+
+        OrderPopUp();
+
+        //StartCoroutine(OrderTimer());
     }
 
     // Update is called once per frame
@@ -49,7 +55,7 @@ public class OrderAcceptanceScript : MonoBehaviour
 
     public void AcceptOrder()
     {
-        //popUpUI.SetActive(false);
+        popUpUI.SetActive(false);
        
        
 
@@ -73,5 +79,12 @@ public class OrderAcceptanceScript : MonoBehaviour
         // Debug.Log("First order generate");
     }
 
+    //private IEnumerator OrderTimer()
+    //{
+       
 
+      //  yield return new WaitForSeconds(newOrderWaitTime);
+
+        // OrderPopUp();
+   // }
 }
