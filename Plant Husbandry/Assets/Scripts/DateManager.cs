@@ -6,11 +6,18 @@ using TMPro;
 public class DateManager : MonoBehaviour
 {
     public CameraManager cameraManager;
-    public CustomerOrderManager customerOrderManager;
-    public CustomerOrderGenerator customerOrderGenerator;
+    //public CustomerOrderManager customerOrderManager;
+    //public CustomerOrderGenerator customerOrderGenerator;
 
     public OrderAcceptanceScript orderAcceptance;
 
+    public int thisDateQuality;
+    public int thisCustomerFinalPayment;
+    public string thisFirstName;
+    public string thisLastName;
+    public string thisPlantName;
+    public string thisHairColour;
+    public string thisEyeColour;
 
     [Header("UI")]
     public GameObject dateReviewUI;
@@ -79,38 +86,38 @@ public class DateManager : MonoBehaviour
 
         SetHairEyeColourDate();
 
-        dateReviewText.text = customerOrderGenerator.customerFirstName + " and " + customerOrderGenerator.plantName + " " + customerOrderGenerator.customerLastName + " were " + customerOrderManager.dateQuality + "% compatible";
-        amountPaidText.text = "+ $" + customerOrderManager.customerFinalPayment;
+        dateReviewText.text = thisFirstName + " and " + thisPlantName + " " + thisLastName + " were " + thisDateQuality + "% compatible";
+        amountPaidText.text = "+ $" + thisCustomerFinalPayment;
 
         areaText.SetActive(false);
 
-        moneyManager.IncreaseMoney(customerOrderManager.customerFinalPayment);
+        moneyManager.IncreaseMoney(thisCustomerFinalPayment);
 
-        if (customerOrderManager.dateQuality <= 100 && customerOrderManager.dateQuality > 80)
+        if (thisDateQuality <= 100 && thisDateQuality > 80)
         {
             evaluationText.text = bestQualityEvaluation;
-            customerReviewQuoteText.text = bestQualityReview + " - " + customerOrderGenerator.customerFirstName + " " + customerOrderGenerator.customerLastName;
+            customerReviewQuoteText.text = bestQualityReview + " - " + thisFirstName + " " + thisLastName;
 
         }
-        if (customerOrderManager.dateQuality <= 80 && customerOrderManager.dateQuality > 60)
+        if (thisDateQuality <= 80 && thisDateQuality > 60)
         {
             evaluationText.text = goodQualityEvaluation;
-            customerReviewQuoteText.text = goodQualityReview + " - " + customerOrderGenerator.customerFirstName + " " + customerOrderGenerator.customerLastName;
+            customerReviewQuoteText.text = goodQualityReview + " - " + thisFirstName + " " + thisLastName;
         }
-        if (customerOrderManager.dateQuality <= 60 && customerOrderManager.dateQuality > 40)
+        if (thisDateQuality <= 60 && thisDateQuality > 40)
         {
             evaluationText.text = okayQualityEvaluation;
-            customerReviewQuoteText.text = okayQualityReview + " - " + customerOrderGenerator.customerFirstName + " " + customerOrderGenerator.customerLastName;
+            customerReviewQuoteText.text = okayQualityReview + " - " + thisFirstName + " " + thisLastName;
         }
-        if (customerOrderManager.dateQuality <= 40 && customerOrderManager.dateQuality > 20)
+        if (thisDateQuality <= 40 && thisDateQuality > 20)
         {
             evaluationText.text = badQualityEvaluation;
-            customerReviewQuoteText.text = badQualityReview + " - " + customerOrderGenerator.customerFirstName + " " + customerOrderGenerator.customerLastName;
+            customerReviewQuoteText.text = badQualityReview + " - " + thisFirstName + " " + thisLastName;
         }
-        if (customerOrderManager.dateQuality <= 20 && customerOrderManager.dateQuality >= 0)
+        if (thisDateQuality <= 20 && thisDateQuality >= 0)
         {
             evaluationText.text = terribleQualityEvaluation;
-            customerReviewQuoteText.text = terribleQualityReview + " - " + customerOrderGenerator.customerFirstName + " " + customerOrderGenerator.customerLastName;
+            customerReviewQuoteText.text = terribleQualityReview + " - " + thisFirstName + " " + thisLastName;
         }
 
 
@@ -130,49 +137,49 @@ public class DateManager : MonoBehaviour
 
     public void SetHairEyeColourDate()
     {
-        if (customerOrderManager.eyeColourAdded == "brown")
+        if (thisEyeColour == "brown")
         {
             plantCharacterEye1.material = brownEyeMaterial;
             plantCharacterEye2.material = brownEyeMaterial;
         }
-        if (customerOrderManager.eyeColourAdded == "green")
+        if (thisEyeColour == "green")
         {
             plantCharacterEye1.material = greenEyeMaterial;
             plantCharacterEye2.material = greenEyeMaterial;
         }
-        if (customerOrderManager.eyeColourAdded == "blue")
+        if (thisEyeColour == "blue")
         {
             plantCharacterEye1.material = blueEyeMaterial;
             plantCharacterEye2.material = blueEyeMaterial;
         }
-        if (customerOrderManager.eyeColourAdded == "yellow")
+        if (thisEyeColour == "yellow")
         {
             plantCharacterEye1.material = yellowEyeMaterial;
             plantCharacterEye2.material = yellowEyeMaterial;
         }
-        if (customerOrderManager.eyeColourAdded == "red")
+        if (thisEyeColour == "red")
         {
             plantCharacterEye1.material = redEyeMaterial;
             plantCharacterEye2.material = redEyeMaterial;
         }
 
-        if (customerOrderManager.hairColourAdded == "brown")
+        if (thisHairColour == "brown")
         {
             plantCharacterHair.material = brownHairMaterial;
         }
-        if (customerOrderManager.hairColourAdded == "black")
+        if (thisHairColour == "black")
         {
             plantCharacterHair.material = blackHairMaterial;
         }
-        if (customerOrderManager.hairColourAdded == "blonde")
+        if (thisHairColour == "blonde")
         {
             plantCharacterHair.material = blondeHairMaterial;
         }
-        if (customerOrderManager.hairColourAdded == "orange")
+        if (thisHairColour == "orange")
         {
             plantCharacterHair.material = orangeHairMaterial;
         }
-        if (customerOrderManager.hairColourAdded == "blue")
+        if (thisHairColour == "blue")
         {
             plantCharacterHair.material = blueHairMaterial;
         }

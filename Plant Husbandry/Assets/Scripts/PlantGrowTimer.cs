@@ -71,6 +71,33 @@ public class PlantGrowTimer : MonoBehaviour
     public CustomerOrderManager customerOrderManager;
     public DateManager dateManager;
 
+    [Header("SuccessScore")]
+    public int dateQuality;
+    public int customerFinalPayment;
+
+    //public TextMeshProUGUI sellPlantText;
+    public TextMeshProUGUI orderInfoText;
+
+    [Header("AddedPlantAttributes")]
+
+    public string firstName;
+    public string lastName;
+    public string plantName;
+
+    public float height;
+
+    public string eyeColour;
+
+    public string hairColour;
+
+
+    public string personalityOne;
+
+    public float personalityOneAmount;
+
+    public string personalityTwo;
+
+    public float personalityTwoAmount;
 
     // Start is called before the first frame update
     void Start()
@@ -136,6 +163,11 @@ public class PlantGrowTimer : MonoBehaviour
             timerOn = false;
             plantReadyButton.SetActive(true);
         }
+
+        if (popUpUI.activeInHierarchy == true)
+        {
+            orderInfoText.text = "Complete Order No. " + customerOrderManager.orderNumber + " for " + customerOrderManager.firstName + " " + customerOrderManager.lastName;
+        }
     }
     void UpdateTimer(float currentTime)
     {
@@ -159,8 +191,17 @@ public class PlantGrowTimer : MonoBehaviour
 
         SetHairEyeColour();
 
+        height = customerOrderManager.heightAdded;
+        eyeColour = customerOrderManager.eyeColourAdded;
+        hairColour = customerOrderManager.hairColourAdded;
+        personalityOne = customerOrderManager.personalityOneAdded;
+        personalityOneAmount = customerOrderManager.personalityOneAmountAdded;
+        personalityTwo = customerOrderManager.personalityTwoAdded;
+        personalityTwoAmount = customerOrderManager.personalityTwoAmountAdded;
 
         //plantCharacterEye1.material = 
+
+        customerOrderManager.ResetOrderManager();
     }
 
     public void SellPlant()
@@ -173,6 +214,8 @@ public class PlantGrowTimer : MonoBehaviour
         secondsLeft = maxTime;
 
         noMoneyText.SetActive(false);
+
+        
     }
 
     public void YesSell()
@@ -183,12 +226,29 @@ public class PlantGrowTimer : MonoBehaviour
 
         Debug.Log("Sell Plant");
 
-        ResetPlantPot();
+        //ResetPlantPot();
 
         noMoneyText.SetActive(false);
 
+        
+        CompareWantedAdded();
+        CalculateReward();
+
+        //dateManager.
+
+        //firstName = 
+
+        dateManager.thisDateQuality = dateQuality;
+        dateManager.thisCustomerFinalPayment = customerFinalPayment;
+        dateManager.thisFirstName = customerOrderManager.firstName;
+        dateManager.thisLastName = customerOrderManager.lastName;
+        dateManager.thisPlantName = customerOrderManager.plantName;
+        dateManager.thisHairColour = hairColour;
+        dateManager.thisEyeColour = eyeColour;
+
         dateManager.DateReview();
 
+        ResetPlantPot();
     }
 
     public void NoSell()
@@ -267,6 +327,7 @@ public class PlantGrowTimer : MonoBehaviour
 
             noMoneyText.SetActive(false);
 
+            //ResetHairEyeColour = 
             
         }
            
@@ -330,5 +391,129 @@ public class PlantGrowTimer : MonoBehaviour
         plantCharacterEye1.material = defaultEyeMaterial;
         plantCharacterEye2.material = defaultEyeMaterial;
         plantCharacterHair.material = defaultHairMaterial;
+    }
+
+    public void CompareWantedAdded()
+    {
+        //if(qualityCalculated == false)
+        //{
+        if (height >= (customerOrderManager.heightWanted - 10) && height <= (customerOrderManager.heightWanted + 10))
+        {
+            Debug.Log("height is within range");
+
+            dateQuality += 10;
+        }
+        else
+        {
+            Debug.Log("Wrongheigt");
+        }
+
+
+        if (eyeColour == customerOrderManager.eyeColourWanted)
+        {
+            Debug.Log("Right eye colour");
+            dateQuality += 10;
+        }
+        else
+        {
+            Debug.Log("Wrong personality");
+
+        }
+
+        if (hairColour == customerOrderManager.hairColourWanted)
+        {
+            Debug.Log("Right hair colour");
+            dateQuality += 10;
+        }
+        else
+        {
+            Debug.Log("Wrong hair");
+        }
+
+        if (personalityOne == customerOrderManager.personalityOneWanted)
+        {
+            Debug.Log("right personality one added");
+            dateQuality += 15;
+
+            if (customerOrderManager.orderGenerator.personalityOneArrayLength == 5)
+            {
+                if (personalityOneAmount >= (customerOrderManager.personalityOneAmountWanted - 10) && personalityOneAmount <= (customerOrderManager.personalityOneAmountWanted + 10))
+                {
+                    Debug.Log("Right amout of personality one array length 5");
+                    dateQuality += 20;
+                }
+                else
+                {
+                    Debug.Log("Wrong amount of personality one array length 5");
+                }
+            }
+            else
+            {
+                if (personalityOneAmount >= (customerOrderManager.personalityOneAmountWanted - 12.5) && personalityOneAmount <= (customerOrderManager.personalityOneAmountWanted + 12.5))
+                {
+                    Debug.Log("Right amount of personality one array length 4");
+                    dateQuality += 20;
+                }
+                else
+                {
+                    Debug.Log("Wrong amount of personality one array length 4");
+                }
+            }
+
+
+        }
+        else
+        {
+            Debug.Log("Wrong personality one");
+        }
+
+        if (personalityTwo == customerOrderManager.personalityTwoWanted)
+        {
+            Debug.Log("right personality two added");
+
+            dateQuality += 15;
+
+            if (customerOrderManager.orderGenerator.personalityTwoArrayLength == 5)
+            {
+                if (personalityTwoAmount >= (customerOrderManager.personalityTwoAmountWanted - 10) && personalityTwoAmount <= (customerOrderManager.personalityTwoAmountWanted + 10))
+                {
+                    Debug.Log("Right amout of personality two array length 5");
+                    dateQuality += 20;
+                }
+                else
+                {
+                    Debug.Log("Wrong amount of personality two array length 5");
+                }
+            }
+            else
+            {
+                if (personalityTwoAmount >= (customerOrderManager.personalityTwoAmountWanted - 12.5) && personalityTwoAmount <= (customerOrderManager.personalityTwoAmountWanted + 12.5))
+                {
+                    Debug.Log("Right amount of personality two array length 4");
+                    dateQuality += 20;
+                }
+                else
+                {
+                    Debug.Log("Wrong amount of personality two array length 4");
+                }
+            }
+        }
+        else
+        {
+            Debug.Log("Wrong personality two");
+        }
+        //}
+
+
+
+
+        //if()
+        // if()
+
+    }
+
+    public void CalculateReward()
+    {
+        customerFinalPayment = dateQuality * 10;
     }
 }

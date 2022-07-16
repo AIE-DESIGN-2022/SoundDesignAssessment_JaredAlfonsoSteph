@@ -12,6 +12,8 @@ public class CustomerOrderManager : MonoBehaviour
     public Order order;
     public CustomerOrderGenerator orderGenerator;
 
+    public int orderNumber;
+
     [Header("CustomerName")]
     public string firstName;
     public string lastName;
@@ -47,9 +49,7 @@ public class CustomerOrderManager : MonoBehaviour
     public float personalityTwoAmountWanted;
     public float personalityTwoAmountAdded;
 
-    [Header("SuccessScore")]
-    public int dateQuality;
-    public int customerFinalPayment;
+
 
     public PouringMechanic energeticBeakerFull;
     public PouringMechanic openmindednessBeakerFull;
@@ -97,6 +97,8 @@ public class CustomerOrderManager : MonoBehaviour
         activeOrder = orderTicketManager.GetComponent<OrderTicketManager>().activeOrder;
         order = activeOrder.GetComponent<Order>();
 
+        orderNumber = order.number;
+        
         firstName = order.orderFirstName;
         lastName = order.orderLastName;
         plantName = order.orderPlantName;
@@ -137,20 +139,12 @@ public class CustomerOrderManager : MonoBehaviour
             addedPersonalityTwo = true;
         }
 
-        if (addedEyeColour && addedHairColour && addedPersonalityTwo && addedPersonalityOne) 
+        //if (addedEyeColour && addedHairColour && addedPersonalityTwo && addedPersonalityOne) 
         //&& personalityOneAdded != null && personalityTwoAdded != null && choosingPersonalityOne == false && choosingPersonalityTwo == false)
-        {
-            if (qualityCalculated == false)
-            {
-                CompareWantedAdded();
-                qualityCalculated = true;
-            }
-            else
-            {
-                CalculateReward();
-            }
+        //{
             
-        }
+            
+       // }
 
 
         if (choosingPersonalityOne)
@@ -426,129 +420,7 @@ public class CustomerOrderManager : MonoBehaviour
 
     }
 
-    public void CompareWantedAdded()
-    {
-        //if(qualityCalculated == false)
-        //{
-            if (heightAdded >= (heightWanted - 10) && heightAdded <= (heightWanted + 10))
-            {
-                Debug.Log("height is within range");
 
-                dateQuality += 10;
-            }
-            else
-            {
-                Debug.Log("Wrongheigt");
-            }
-
-
-            if (eyeColourAdded == eyeColourWanted)
-            {
-                Debug.Log("Right eye colour");
-                dateQuality += 10;
-            }
-            else
-            {
-                Debug.Log("Wrong personality");
-
-            }
-
-            if (hairColourAdded == hairColourWanted)
-            {
-                Debug.Log("Right hair colour");
-                dateQuality += 10;
-            }
-            else
-            {
-                Debug.Log("Wrong hair");
-            }
-
-            if (personalityOneAdded == personalityOneWanted)
-            {
-                Debug.Log("right personality one added");
-                dateQuality += 15;
-
-                if (orderGenerator.personalityOneArrayLength == 5)
-                {
-                    if (personalityOneAmountAdded >= (personalityOneAmountWanted - 10) && personalityOneAmountAdded <= (personalityOneAmountWanted + 10))
-                    {
-                        Debug.Log("Right amout of personality one array length 5");
-                        dateQuality += 20;
-                    }
-                    else
-                    {
-                        Debug.Log("Wrong amount of personality one array length 5");
-                    }
-                }
-                else
-                {
-                    if (personalityOneAmountAdded >= (personalityOneAmountWanted - 12.5) && personalityOneAmountAdded <= (personalityOneAmountWanted + 12.5))
-                    {
-                        Debug.Log("Right amount of personality one array length 4");
-                        dateQuality += 20;
-                    }
-                    else
-                    {
-                        Debug.Log("Wrong amount of personality one array length 4");
-                    }
-                }
-
-
-            }
-            else
-            {
-                Debug.Log("Wrong personality one");
-            }
-
-            if (personalityTwoAdded == personalityTwoWanted)
-            {
-                Debug.Log("right personality two added");
-
-                dateQuality += 15;
-
-                if (orderGenerator.personalityTwoArrayLength == 5)
-                {
-                    if (personalityTwoAmountAdded >= (personalityTwoAmountWanted - 10) && personalityTwoAmountAdded <= (personalityTwoAmountWanted + 10))
-                    {
-                        Debug.Log("Right amout of personality two array length 5");
-                        dateQuality += 20;
-                    }
-                    else
-                    {
-                        Debug.Log("Wrong amount of personality two array length 5");
-                    }
-                }
-                else
-                {
-                    if (personalityTwoAmountAdded >= (personalityTwoAmountWanted - 12.5) && personalityTwoAmountAdded <= (personalityTwoAmountWanted + 12.5))
-                    {
-                        Debug.Log("Right amount of personality two array length 4");
-                        dateQuality += 20;
-                    }
-                    else
-                    {
-                        Debug.Log("Wrong amount of personality two array length 4");
-                    }
-                }
-            }
-            else
-            {
-                Debug.Log("Wrong personality two");
-            }
-        //}
-        
-
-
-
-        //if()
-        // if()
-        
-    }
-
-    public void CalculateReward()
-    {
-         customerFinalPayment = dateQuality * 10;
-    }
 
     public void ResetBeakerFillAmounts()
     {
@@ -579,27 +451,27 @@ public class CustomerOrderManager : MonoBehaviour
 
         allIngredientsAdded = false;
 
-        heightWanted = 0;
+        //heightWanted = 0;
         heightAdded = 0;
 
-        eyeColourWanted = "";
+        //eyeColourWanted = "";
         eyeColourAdded = "";
 
-        hairColourWanted = "";
+        //hairColourWanted = "";
         hairColourAdded = "";
 
-        personalityOneWanted = "";
+        //personalityOneWanted = "";
         personalityOneAdded = "";
-        personalityOneAmountWanted = 0;
+        //personalityOneAmountWanted = 0;
         personalityOneAmountAdded = 0;
 
-        personalityTwoWanted = "";
+        //personalityTwoWanted = "";
         personalityTwoAdded = "";
-        personalityTwoAmountWanted = 0;
+        //personalityTwoAmountWanted = 0;
         personalityTwoAmountAdded = 0;
 
-        dateQuality = 0;
-        customerFinalPayment = 0;      
+        //dateQuality = 0;
+        //customerFinalPayment = 0;      
     }
 
     
