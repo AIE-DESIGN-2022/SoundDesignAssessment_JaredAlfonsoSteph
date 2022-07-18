@@ -18,21 +18,13 @@ public class OrderAcceptanceScript : MonoBehaviour
 
     public float newOrderWaitTime;
 
-   // public Order
 
-    //public CustomerNameGenerator customerNameGenerator;
-
-    // Start is called before the first frame update
     void Start()
     {
-        //OrderPopUp();
-        //customerNameGenerator .GenerateCustomerName();
-        //cutomerOrderManager.SetActive(false);
+        orderTicket.SetActive(false);
 
-        //customerOrderGenerator = GameObject.Find("CustomerOrderGenerator");
-
-        orderTicketManagerGO.SetActive(false);
-        orderManagerGO.SetActive(false);
+        //orderTicketManagerGO.SetActive(false);
+        //orderManagerGO.SetActive(false);
 
         OrderPopUp();
 
@@ -49,34 +41,32 @@ public class OrderAcceptanceScript : MonoBehaviour
     {
         popUpUI.SetActive(true);
         customerOrderText.SetActive(false);
-        orderTicket.SetActive(false);
+        //orderTicket.SetActive(false);
         
     }
 
     public void AcceptOrder()
     {
-        popUpUI.SetActive(false);
-       
-       
-
-        customerOrderGenerator.GenerateOrder();
-
-        //orderTicketManager.AddOrder();
-        orderTicketManagerGO.SetActive(true);
-
-       
-        //orderTicketManager.UpdateOrderTicketText();
-
         customerOrderText.SetActive(true);
         orderTicket.SetActive(true);
-        orderManagerGO.SetActive(true);
+        //orderManagerGO.SetActive(true);
 
-        Debug.Log("First order generate");
+        //popUpUI.SetActive(false);
+            
+        customerOrderGenerator.GenerateOrder();
 
-        //orderTicketManager.UpdateOrderTicketText();
-        //GenerateCustomerName();
-        // customerOrderGenerator.GenerateOrder();
-        // Debug.Log("First order generate");
+        orderTicketManager.NextOrder();
+        //order
+
+        //orderTicketManagerGO.SetActive(true);
+
+        //orderTicketManager.activeOrder = orderTicketManager.orderTickets[orderTicketManager.currentOrderTicket - 1];
+
+        //orderTicketManager.NextOrder();
+
+        Debug.Log("order generate");
+
+
     }
 
     //private IEnumerator OrderTimer()

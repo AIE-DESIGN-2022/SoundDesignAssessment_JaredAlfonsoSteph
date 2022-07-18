@@ -8,7 +8,7 @@ public class CustomerOrderManager : MonoBehaviour
 {
     
     public GameObject orderTicketManager;
-    public GameObject activeOrder;
+    public GameObject activeOrder = null;
     public Order order;
     public CustomerOrderGenerator orderGenerator;
 
@@ -94,201 +94,217 @@ public class CustomerOrderManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        activeOrder = orderTicketManager.GetComponent<OrderTicketManager>().activeOrder;
-        order = activeOrder.GetComponent<Order>();
-
-        orderNumber = order.number;
-        
-        firstName = order.orderFirstName;
-        lastName = order.orderLastName;
-        plantName = order.orderPlantName;
-        
-        eyeColourWanted = order.orderEyeColour;
-        hairColourWanted = order.orderHairColour;
-        personalityOneWanted = order.orderPersonalityOne;
-        personalityTwoWanted = order.orderPersonalityTwo;
-
-
-        //heightWanted = orderGenerator.heightNumber;
-
-        HeightPercentageWanted(order.orderHeightNumber, orderGenerator.heights.Length);
-        PersonalityOnePercentageWanted(order.orderPersonalityOneNumber, orderGenerator.personalityOneArrayLength);
-        PersonalityTwoPercentageWanted(order.orderPersonalityOneNumber, orderGenerator.personalityTwoArrayLength);
-
-
-        eyeColourAdded = eyeButtonManager.eyeSelection;
-
-        if (eyeColourAdded != "")
+        if (orderTicketManager.GetComponent<OrderTicketManager>().totalOrderTickets > 0) 
         {
-            addedEyeColour = true;
-        }
+            orderTicketManager.GetComponent<OrderTicketManager>().activeOrder = orderTicketManager.GetComponent<OrderTicketManager>().orderTickets[orderTicketManager.GetComponent<OrderTicketManager>().currentOrderTicket];
+            activeOrder = orderTicketManager.GetComponent<OrderTicketManager>().activeOrder;
+            order = activeOrder.GetComponent<Order>();
 
-        hairColourAdded = hairButtonManager.hairSelection;
+            orderTicketManager.GetComponent<OrderTicketManager>().AddOrder();
 
-        if (hairColourAdded != "")
-        {
-            addedHairColour = true;
-        }
-
-        if(choosingPersonalityOne == false)
-        {
-            addedPersonalityOne = true;
-        }
-        if(choosingPersonalityOne == false && choosingPersonalityTwo == false)
-        {
-            addedPersonalityTwo = true;
-        }
-
-        //if (addedEyeColour && addedHairColour && addedPersonalityTwo && addedPersonalityOne) 
-        //&& personalityOneAdded != null && personalityTwoAdded != null && choosingPersonalityOne == false && choosingPersonalityTwo == false)
-        //{
-            
-            
-       // }
-
-
-        if (choosingPersonalityOne)
-        {
-            if(energeticBeakerFull.beakerFull > 0)
+            if(orderTicketManager.GetComponent<OrderTicketManager>().totalOrderTickets == 1)
             {
-                
-
-                if(energeticBeakerFull.pouring == false)
-                {
-                    personalityOneAdded = "energetic";
-                    personalityOneAmountAdded = energeticBeakerFull.beakerFull;
-
-                    
-                    choosingPersonalityOne = false;
-
-                    choosingPersonalityTwo = true;
-
-                    
-                }
-                //
-            }
-            if(openmindednessBeakerFull.beakerFull > 0)
-            {
-                
-                if (openmindednessBeakerFull.pouring == false)
-                {
-                    personalityOneAdded = "openminded";
-                    personalityOneAmountAdded = openmindednessBeakerFull.beakerFull;
-
-                    
-                    choosingPersonalityOne = false;
-
-                    choosingPersonalityTwo = true;
-
-                    
-                }
-            }
-            if(kindessBeakerFull.beakerFull > 0)
-            {
-                
-                if (kindessBeakerFull.pouring == false)
-                {
-                    personalityOneAdded = "kind";
-                    personalityOneAmountAdded = kindessBeakerFull.beakerFull;
-
-                    
-                    choosingPersonalityOne = false;
-
-                    choosingPersonalityTwo = true;
-
-                    
-                }
-            }
-            if(extroversionBeakerFull.beakerFull > 0)
-            {
-                
-                if (extroversionBeakerFull.pouring == false)
-                {
-                    personalityOneAdded = "extroversion";
-                    personalityOneAmountAdded = extroversionBeakerFull.beakerFull;
-
-                    
-                    choosingPersonalityOne = false;
-
-                    choosingPersonalityTwo = true;
-
-                    
-                }
+                orderTicketManager.GetComponent<OrderTicketManager>().NextOrder();
             }
 
-        }
-        if (choosingPersonalityTwo)
-        {
-            if (hasBeenReset == false)
+            //orderTicketManager.GetComponent<OrderTicketManager>().UpdateOrderTicketText();
+
+            //orderTicketManager.GetComponent<OrderTicketManager>().activeOrder = orderTicketManager.GetComponent<OrderTicketManager>().orderTickets[orderTicketManager.GetComponent<OrderTicketManager>().currentOrderTicket - 1];
+
+            orderNumber = order.number;
+
+            firstName = order.orderFirstName;
+            lastName = order.orderLastName;
+            plantName = order.orderPlantName;
+
+            eyeColourWanted = order.orderEyeColour;
+            hairColourWanted = order.orderHairColour;
+            personalityOneWanted = order.orderPersonalityOne;
+            personalityTwoWanted = order.orderPersonalityTwo;
+
+
+            //heightWanted = orderGenerator.heightNumber;
+
+            HeightPercentageWanted(order.orderHeightNumber, orderGenerator.heights.Length);
+            PersonalityOnePercentageWanted(order.orderPersonalityOneNumber, orderGenerator.personalityOneArrayLength);
+            PersonalityTwoPercentageWanted(order.orderPersonalityOneNumber, orderGenerator.personalityTwoArrayLength);
+
+
+            eyeColourAdded = eyeButtonManager.eyeSelection;
+
+            if (eyeColourAdded != "")
             {
-                ResetBeakerFillAmounts();
+                addedEyeColour = true;
             }
-            else
+
+            hairColourAdded = hairButtonManager.hairSelection;
+
+            if (hairColourAdded != "")
             {
+                addedHairColour = true;
+            }
+
+            if (choosingPersonalityOne == false)
+            {
+                addedPersonalityOne = true;
+            }
+            if (choosingPersonalityOne == false && choosingPersonalityTwo == false)
+            {
+                addedPersonalityTwo = true;
+            }
+
+            //if (addedEyeColour && addedHairColour && addedPersonalityTwo && addedPersonalityOne) 
+            //&& personalityOneAdded != null && personalityTwoAdded != null && choosingPersonalityOne == false && choosingPersonalityTwo == false)
+            //{
 
 
+            // }
+
+
+            if (choosingPersonalityOne)
+            {
                 if (energeticBeakerFull.beakerFull > 0)
                 {
 
 
                     if (energeticBeakerFull.pouring == false)
                     {
-                        personalityTwoAdded = "energetic";
-                        personalityTwoAmountAdded = energeticBeakerFull.beakerFull;
+                        personalityOneAdded = "energetic";
+                        personalityOneAmountAdded = energeticBeakerFull.beakerFull;
 
-                        choosingPersonalityTwo = false;
+
+                        choosingPersonalityOne = false;
+
+                        choosingPersonalityTwo = true;
+
+
                     }
-
-
+                    //
                 }
                 if (openmindednessBeakerFull.beakerFull > 0)
                 {
 
                     if (openmindednessBeakerFull.pouring == false)
                     {
-                        personalityTwoAdded = "openminded";
-                        personalityTwoAmountAdded = openmindednessBeakerFull.beakerFull;
+                        personalityOneAdded = "openminded";
+                        personalityOneAmountAdded = openmindednessBeakerFull.beakerFull;
 
-                        choosingPersonalityTwo = false;
+
+                        choosingPersonalityOne = false;
+
+                        choosingPersonalityTwo = true;
+
+
                     }
-
                 }
                 if (kindessBeakerFull.beakerFull > 0)
                 {
 
-
                     if (kindessBeakerFull.pouring == false)
                     {
-                        personalityTwoAdded = "kind";
-                        personalityTwoAmountAdded = kindessBeakerFull.beakerFull;
+                        personalityOneAdded = "kind";
+                        personalityOneAmountAdded = kindessBeakerFull.beakerFull;
 
-                        choosingPersonalityTwo = false;
+
+                        choosingPersonalityOne = false;
+
+                        choosingPersonalityTwo = true;
+
+
                     }
-
                 }
                 if (extroversionBeakerFull.beakerFull > 0)
                 {
 
                     if (extroversionBeakerFull.pouring == false)
                     {
-                        personalityTwoAdded = "extroversion";
+                        personalityOneAdded = "extroversion";
+                        personalityOneAmountAdded = extroversionBeakerFull.beakerFull;
 
-                        personalityTwoAmountAdded = extroversionBeakerFull.beakerFull;
-                        choosingPersonalityTwo = false;
+
+                        choosingPersonalityOne = false;
+
+                        choosingPersonalityTwo = true;
+
+
                     }
+                }
+
+            }
+            if (choosingPersonalityTwo)
+            {
+                if (hasBeenReset == false)
+                {
+                    ResetBeakerFillAmounts();
+                }
+                else
+                {
 
 
+                    if (energeticBeakerFull.beakerFull > 0)
+                    {
+
+
+                        if (energeticBeakerFull.pouring == false)
+                        {
+                            personalityTwoAdded = "energetic";
+                            personalityTwoAmountAdded = energeticBeakerFull.beakerFull;
+
+                            choosingPersonalityTwo = false;
+                        }
+
+
+                    }
+                    if (openmindednessBeakerFull.beakerFull > 0)
+                    {
+
+                        if (openmindednessBeakerFull.pouring == false)
+                        {
+                            personalityTwoAdded = "openminded";
+                            personalityTwoAmountAdded = openmindednessBeakerFull.beakerFull;
+
+                            choosingPersonalityTwo = false;
+                        }
+
+                    }
+                    if (kindessBeakerFull.beakerFull > 0)
+                    {
+
+
+                        if (kindessBeakerFull.pouring == false)
+                        {
+                            personalityTwoAdded = "kind";
+                            personalityTwoAmountAdded = kindessBeakerFull.beakerFull;
+
+                            choosingPersonalityTwo = false;
+                        }
+
+                    }
+                    if (extroversionBeakerFull.beakerFull > 0)
+                    {
+
+                        if (extroversionBeakerFull.pouring == false)
+                        {
+                            personalityTwoAdded = "extroversion";
+
+                            personalityTwoAmountAdded = extroversionBeakerFull.beakerFull;
+                            choosingPersonalityTwo = false;
+                        }
+
+
+                    }
                 }
             }
-        }
 
-        //heightAdded > 0 &&
+            //heightAdded > 0 &&
+
+            //else
+            //{
+            // CompareWantedAdded();
+            // }
+            //personalityOneAdded = 
+        }
         
-        //else
-       //{
-           // CompareWantedAdded();
-       // }
-        //personalityOneAdded = 
         
     }
 

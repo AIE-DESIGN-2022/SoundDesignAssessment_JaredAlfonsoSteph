@@ -118,14 +118,21 @@ public class CustomerOrderGenerator : MonoBehaviour
         orderNumber++;
 
         Instantiate(order);
-        order.name = "order"+ orderNumber;
+        //order.name = "order"+ orderNumber;
+        //orderTicketManager.activeOrder = orderTicketManager.orderTickets[orderTicketManager.currentOrderTicket];
+        
 
-        orderTicketManager.AddOrder();
+        
+
+
+        //orderTicketManager.AddOrder();
 
         //orderTicketManager.UpdateOrderTicketText();
 
         //orderTicketManager.NextOrder();
         //orderTicketManager.orderTickets.Add(order);
+
+
     }
 
     public void GeneratePhysicalAttributes()

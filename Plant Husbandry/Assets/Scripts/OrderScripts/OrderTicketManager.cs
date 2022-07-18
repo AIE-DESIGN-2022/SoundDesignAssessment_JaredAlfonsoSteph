@@ -32,14 +32,18 @@ public class OrderTicketManager : MonoBehaviour
 
     [Header("CurrentOrderTicket")]
 
-    public GameObject activeOrder;
+    public GameObject activeOrder = null;
     public Order order;
 
     void Start()
     {
-        //orderTicketIsActive = true;
+        //AddOrder();
 
-        
+        //activeOrder = orderTickets[currentOrderTicket];
+
+
+
+
     }
 
     public void UpdateOrderTicketText()
@@ -54,47 +58,22 @@ public class OrderTicketManager : MonoBehaviour
         personalityTwoText.text = "- " + order.orderPersonalityTwoLevel;
     }
    
-    //public void AddOrder()
-    //{
-        
-        //if (totalOrderTickets > 1)
-        //{
-            //currentOrderTicket = 0;
-          //  previousOrderTicket = currentOrderTicket - 1;
-           // nextOrderTicket = currentOrderTicket + 1;
-        //}
-       // else
-       // {
-        //    previousOrderTicket = 1;
-         //   nextOrderTicket = 1;
-        //}
-       
-
-        //ChangeOrderNumbers();
-    //}
-
-    // Update is called once per frame
+   
     void Update()
     {
-        //if (orderNumberText.text == "Order No. 0")
-        //{
-        //  NextOrder();
-        // ChangeOrderNumbers();
-        // }
 
-
-        totalOrderTickets = orderTickets.Count;
+        //order.name = "order";
         
 
-        //if (orderTickets.Count == 0)
-        //{
-        // totalOrderTickets = orderTickets.Count;
-        //}
-        // else
-        // {
+        if(orderTickets.Count > 0)
+        {
+            totalOrderTickets = orderTickets.Count;
 
+            //UpdateOrderTicketText();
+        }
+        
+        
 
-        // }
 
 
 
@@ -117,161 +96,77 @@ public class OrderTicketManager : MonoBehaviour
     public void AddOrder()
     {
 
-        
+        //activeOrder = orderTickets[currentOrderTicket];
 
         UpdateOrderTicketText();
-        //ensuring current camera is active
-        //orderTickets[previousOrderTicket].enabled = false;
-        // orderTickets[nextOrderTicket].enabled = false;
 
+        
 
-
-        //if(currentOrderTicket < totalOrderTickets)
-        // {
-        //   currentOrderTicket = 0;
-        // }
-        // if (currentOrderTicket > totalOrderTickets)
-        // {
-        //  currentOrderTicket = 0;
-
-        // }
-        //if (currentOrderTicket < 0)
-        // {
-        //   currentOrderTicket = totalOrderTickets;
-
-        //}
-
-        //ChangeOrderNumbers();
     }
 
     public void NextOrder()
     {
-        //previousOrderTicket++;
 
-        //nextOrderTicket++;
+        currentOrderTicket++;
 
-        //if (currentOrderTicket < totalOrderTickets)
-        //{
-        //currentOrderTicket = 0;
 
-        
-
-        if (currentOrderTicket < totalOrderTickets)
+        if (currentOrderTicket > totalOrderTickets -1)
         {
-            currentOrderTicket++;
-
-            activeOrder = orderTickets[currentOrderTicket];
-            order = activeOrder.GetComponent<Order>();
-
-            //currentOrderTicket = 0;
-        }
-        if (currentOrderTicket >= totalOrderTickets)
-        {
-            //currentOrderTicket++;
-
             currentOrderTicket = 0;
-
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();
-
         }
-        if (currentOrderTicket < 0)
+        else
         {
-            currentOrderTicket++;
-
-            currentOrderTicket = totalOrderTickets;
-
-            activeOrder = orderTickets[currentOrderTicket];
-            order = activeOrder.GetComponent<Order>();
-
-        }
-        if ( currentOrderTicket == totalOrderTickets)
-        {
-            Debug.Log("AAHH");
-
-            currentOrderTicket = 0;
-
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();
         }
-        // }
-        // if (currentOrderTicket > totalOrderTickets)
-        //{
-        //   currentOrderTicket = 0;
-
-        //}
-        //if (currentOrderTicket < 0)
-        // {
-        // currentOrderTicket = totalOrderTickets;
-
-        //}
 
         UpdateOrderTicketText();
 
-        ChangeOrderNumbers();
+
 
     }
 
     public void PreviousOrder()
     {
-        //nextOrderTicket--;
+
         currentOrderTicket--;
-        //previousOrderTicket--;
-
-        activeOrder = orderTickets[currentOrderTicket];
-        order = activeOrder.GetComponent<Order>();
-
-        UpdateOrderTicketText();
-
-        ChangeOrderNumbers();
-
-
-    }
-
-    public void ChangeOrderNumbers()
-    {
-        if (currentOrderTicket > totalOrderTickets)
-        {
-            currentOrderTicket = 0;
-
-        }
-       // if (previousOrderTicket > totalOrderTickets)
-       // {
-        //    previousOrderTicket = 0;
-
-       // }
-       // if (nextOrderTicket > totalOrderTickets)
-       // {
-         //   nextOrderTicket = 0;
-
-       // }
 
 
         if (currentOrderTicket < 0)
         {
-            currentOrderTicket = totalOrderTickets;
-
+            currentOrderTicket = orderTickets.Count - 1;
+            
+            activeOrder = orderTickets[currentOrderTicket];
+            order = activeOrder.GetComponent<Order>();
         }
+        else
+        {
+            activeOrder = orderTickets[currentOrderTicket];
+            order = activeOrder.GetComponent<Order>();
+        }
+        
+        
 
-       // if (previousOrderTicket < 0)
-        //{
-          //  previousOrderTicket = totalOrderTickets;
-       // }
+        UpdateOrderTicketText();
 
-       // if (nextOrderTicket < 0)
-        //{
-        //    nextOrderTicket = totalOrderTickets;
-       // }
-    } 
+        //ChangeOrderNumbers();
+
+
+    }
+
+   
 
     public void CompleteOrder()
     {
-        
+        NextOrder();
+
         orderTickets.RemoveAt(currentOrderTicket);
 
         Destroy(activeOrder);
 
-        NextOrder();
+       
 
     }
 }
