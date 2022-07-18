@@ -58,7 +58,17 @@ public class OrderTicketManager : MonoBehaviour
         personalityTwoText.text = "- " + order.orderPersonalityTwoLevel;
     }
    
-   
+    public void NoOrdersAvailable()
+    {
+        customerOrderTicketNameText.text = " ";
+
+        orderNumberText.text = "No Orders Available" ;
+        heightText.text = "accept a new order";
+        hairColourText.text = " ";
+        eyeColourText.text = " ";
+        personalityOneText.text = " ";
+        personalityTwoText.text = " ";
+    }
     void Update()
     {
 
@@ -160,13 +170,24 @@ public class OrderTicketManager : MonoBehaviour
 
     public void CompleteOrder()
     {
-        NextOrder();
-
         orderTickets.RemoveAt(currentOrderTicket);
 
         Destroy(activeOrder);
 
-       
+        totalOrderTickets = orderTickets.Count;
+
+        if (totalOrderTickets > 0)
+        {
+            NextOrder();
+        }
+        else
+        {
+            NoOrdersAvailable();
+        }
+
+        
+
+        
 
     }
 }

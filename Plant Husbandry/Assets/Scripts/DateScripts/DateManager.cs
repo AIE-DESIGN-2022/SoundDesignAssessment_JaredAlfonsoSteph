@@ -133,7 +133,8 @@ public class DateManager : MonoBehaviour
 
         //orderAcceptance.OrderPopUp();
         ticketManager.CompleteOrder();
-        ticketManager.NextOrder();
+       
+        
 
     }
 

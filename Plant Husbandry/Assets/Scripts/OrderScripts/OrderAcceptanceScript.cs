@@ -51,11 +51,11 @@ public class OrderAcceptanceScript : MonoBehaviour
         orderTicket.SetActive(true);
         //orderManagerGO.SetActive(true);
 
-        //popUpUI.SetActive(false);
+        popUpUI.SetActive(false);
             
         customerOrderGenerator.GenerateOrder();
 
-        orderTicketManager.NextOrder();
+        
         //order
 
         //orderTicketManagerGO.SetActive(true);
