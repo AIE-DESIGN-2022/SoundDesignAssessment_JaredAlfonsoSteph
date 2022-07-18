@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MoneyManager : MonoBehaviour
 {
@@ -30,6 +31,15 @@ public class MoneyManager : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+        if (currentMoney <= 0)
+        {
+            Debug.Log("Game Over");
+            SceneManager.LoadScene("LoseScene");
+        }
+    }
+
     public void IncreaseMoney(int moneyToAdd)
     {
         currentMoney += moneyToAdd;
@@ -40,4 +50,6 @@ public class MoneyManager : MonoBehaviour
     {
         playerMoneyAmountText.text = "$" + currentMoney;
     }
+
+    
 }
