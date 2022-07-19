@@ -20,6 +20,8 @@ public class CameraManager : MonoBehaviour
 
     public CinemachineVirtualCamera dateCam;
 
+    public GameObject customerWaiting;
+
    // public string activeCamera;
 
     void Start()
@@ -45,6 +47,10 @@ public class CameraManager : MonoBehaviour
     void Update()
     {
 
+        //if (currentCamera == 0)
+        //{
+           // customerWaiting.SetActive(false);
+       // }
 
         //movement to right
         if (Input.GetKeyDown(KeyCode.D))

@@ -71,9 +71,10 @@ public class CustomerOrderManager : MonoBehaviour
 
     public bool qualityCalculated;
 
-    
 
-
+    public Button cauldronEmpty;
+    public MoneyManager moneyManager;
+    public int emptyCauldronAmount;
 
     //float numberToCalculated;
 
@@ -94,6 +95,40 @@ public class CustomerOrderManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (addedEyeColour || addedHairColour || addedPersonalityTwo || addedPersonalityOne)
+        //&& personalityOneAdded != null && personalityTwoAdded != null && choosingPersonalityOne == false && choosingPersonalityTwo == false)
+        {
+            cauldronEmpty.interactable = true;
+
+        }
+        else
+        {
+            cauldronEmpty.interactable = false;
+        }
+
+        if (eyeColourAdded != "")
+        {
+            addedEyeColour = true;
+        }
+
+        hairColourAdded = hairButtonManager.hairSelection;
+
+        if (hairColourAdded != "")
+        {
+            addedHairColour = true;
+        }
+
+        if (choosingPersonalityOne == false)
+        {
+            addedPersonalityOne = true;
+        }
+        if (choosingPersonalityOne == false && choosingPersonalityTwo == false)
+        {
+            addedPersonalityTwo = true;
+        }
+
+        eyeColourAdded = eyeButtonManager.eyeSelection;
+
         if (orderTicketManager.GetComponent<OrderTicketManager>().totalOrderTickets > 0) 
         {
             orderTicketManager.GetComponent<OrderTicketManager>().activeOrder = orderTicketManager.GetComponent<OrderTicketManager>().orderTickets[orderTicketManager.GetComponent<OrderTicketManager>().currentOrderTicket];
@@ -130,35 +165,11 @@ public class CustomerOrderManager : MonoBehaviour
             PersonalityTwoPercentageWanted(order.orderPersonalityOneNumber, orderGenerator.personalityTwoArrayLength);
 
 
-            eyeColourAdded = eyeButtonManager.eyeSelection;
-
-            if (eyeColourAdded != "")
-            {
-                addedEyeColour = true;
-            }
-
-            hairColourAdded = hairButtonManager.hairSelection;
-
-            if (hairColourAdded != "")
-            {
-                addedHairColour = true;
-            }
-
-            if (choosingPersonalityOne == false)
-            {
-                addedPersonalityOne = true;
-            }
-            if (choosingPersonalityOne == false && choosingPersonalityTwo == false)
-            {
-                addedPersonalityTwo = true;
-            }
-
-            //if (addedEyeColour && addedHairColour && addedPersonalityTwo && addedPersonalityOne) 
-            //&& personalityOneAdded != null && personalityTwoAdded != null && choosingPersonalityOne == false && choosingPersonalityTwo == false)
-            //{
+            
 
 
-            // }
+
+
 
 
             if (choosingPersonalityOne)
@@ -490,5 +501,10 @@ public class CustomerOrderManager : MonoBehaviour
         //customerFinalPayment = 0;      
     }
 
+    public void EmptyCauldron()
+    {
+        ResetOrderManager();
+        moneyManager.DecreaseMoney(emptyCauldronAmount);
+    }
     
 }

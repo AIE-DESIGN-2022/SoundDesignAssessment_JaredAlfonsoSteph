@@ -9,6 +9,7 @@ public class OrderAcceptanceScript : MonoBehaviour
     public GameObject customerOrderText;
     public GameObject orderTicket;
     public GameObject orderTicketManagerGO;
+    public GameObject customerWaiting;
 
     public CustomerOrderGenerator customerOrderGenerator;
 
@@ -41,6 +42,8 @@ public class OrderAcceptanceScript : MonoBehaviour
     {
         popUpUI.SetActive(true);
         customerOrderText.SetActive(false);
+
+        customerWaiting.SetActive(true);
         //orderTicket.SetActive(false);
         
     }
@@ -50,6 +53,7 @@ public class OrderAcceptanceScript : MonoBehaviour
         customerOrderText.SetActive(true);
         orderTicket.SetActive(true);
         //orderManagerGO.SetActive(true);
+        customerWaiting.SetActive(false);
 
         popUpUI.SetActive(false);
             
