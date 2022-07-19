@@ -29,6 +29,9 @@ public class OrderTicketManager : MonoBehaviour
     public TextMeshProUGUI eyeColourText;
     public TextMeshProUGUI personalityOneText;
     public TextMeshProUGUI personalityTwoText;
+    public TextMeshProUGUI maxPaymentText;
+
+    public TextMeshProUGUI activeOrderIndicatorText;
 
     [Header("CurrentOrderTicket")]
 
@@ -41,7 +44,7 @@ public class OrderTicketManager : MonoBehaviour
 
         //activeOrder = orderTickets[currentOrderTicket];
 
-
+        
 
 
     }
@@ -56,6 +59,7 @@ public class OrderTicketManager : MonoBehaviour
         eyeColourText.text = "- " + order.orderEyeColour + " eyes";
         personalityOneText.text = "- " + order.orderPersonalityOneLevel;
         personalityTwoText.text = "- " + order.orderPersonalityTwoLevel;
+        maxPaymentText.text = "$1000";
     }
    
     public void NoOrdersAvailable()
@@ -68,18 +72,29 @@ public class OrderTicketManager : MonoBehaviour
         eyeColourText.text = " ";
         personalityOneText.text = " ";
         personalityTwoText.text = " ";
+        maxPaymentText.text = " ";
     }
     void Update()
     {
 
         //order.name = "order";
+
+
         
 
         if(orderTickets.Count > 0)
         {
             totalOrderTickets = orderTickets.Count;
 
+            activeOrderIndicatorText.text = (currentOrderTicket + 1) + " / " + totalOrderTickets;
+
             //UpdateOrderTicketText();
+        }
+        else
+        {
+            NoOrdersAvailable();
+
+            activeOrderIndicatorText.text = currentOrderTicket + " / " + totalOrderTickets;
         }
         
         
