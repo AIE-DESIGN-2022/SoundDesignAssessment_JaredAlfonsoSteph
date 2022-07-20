@@ -289,7 +289,19 @@ public class PlantGrowTimer : MonoBehaviour
         dateManager.DateReview();
 
         ResetPlantPot();
+        height = 0;
+        eyeColour = "";
+        hairColour = "";
+        personalityOne = "";
+        personalityOneAmount = 0;
+        personalityTwo = "";
+        personalityTwoAmount = 0;
+        dateQuality = 0;
+        customerFinalPayment = 0;
+
         potAudio.PotButtonClick();
+
+
     }
 
     public void NoSell()

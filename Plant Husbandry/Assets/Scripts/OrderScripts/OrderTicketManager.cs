@@ -40,6 +40,8 @@ public class OrderTicketManager : MonoBehaviour
 
     public AudioSource buttonClick;
 
+    public AudioRandomiser randomiser;
+
 
     void Start()
     {
@@ -111,11 +113,13 @@ public class OrderTicketManager : MonoBehaviour
             {
                 orderTicketIsActive=false;
                 orderTicketBackground.SetActive(false);
+                randomiser.PlayRandomised();
             }
             else
             {
                 orderTicketIsActive = true;
                 orderTicketBackground.SetActive(true);
+                randomiser.PlayRandomised();
             }
         }
 
@@ -148,12 +152,13 @@ public class OrderTicketManager : MonoBehaviour
         {
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();
+            
 
         }
 
         UpdateOrderTicketText();
 
-
+        randomiser.PlayRandomised();
 
     }
 
@@ -177,11 +182,12 @@ public class OrderTicketManager : MonoBehaviour
 
         }
 
-
+        randomiser.PlayRandomised();
 
         UpdateOrderTicketText();
 
         //ChangeOrderNumbers();
+        
 
 
     }

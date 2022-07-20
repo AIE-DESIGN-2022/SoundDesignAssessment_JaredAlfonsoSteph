@@ -20,7 +20,7 @@ public class OrderAcceptanceScript : MonoBehaviour
     public float newOrderWaitTime;
 
     public AudioSource newCustomerOrderBell;
-
+    public AudioSource orderTicketWriteAudio;
 
 
     void Start()
@@ -63,7 +63,7 @@ public class OrderAcceptanceScript : MonoBehaviour
         popUpUI.SetActive(false);
             
         customerOrderGenerator.GenerateOrder();
-
+        orderTicketWriteAudio.Play();
         
         //order
 
