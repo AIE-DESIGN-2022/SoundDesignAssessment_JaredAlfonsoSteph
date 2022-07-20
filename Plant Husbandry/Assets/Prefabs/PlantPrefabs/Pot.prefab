@@ -7529,7 +7529,7 @@ MonoBehaviour:
   timerOn: 1
   maxTime: 10
   timerText: {fileID: 5131968627952603517}
-  maxHeightAdded: 3
+  maxHeightAdded: 1
   growTime: 1
   timerPercentageStageOne: 85
   timerPercentageStageTwo: 50

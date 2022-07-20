@@ -242,6 +242,8 @@ public class PlantGrowTimer : MonoBehaviour
         orderAcceptance.OrderPopUp();
 
         potAudio.AddFertilizerAudio();
+
+        maxHeightAdded = (height * 2) / 100;
     }
 
     public void SellPlant()
