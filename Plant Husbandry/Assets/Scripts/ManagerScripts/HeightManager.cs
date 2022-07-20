@@ -16,12 +16,14 @@ public class HeightManager : MonoBehaviour
     public float heightSpeed;
     public float heightLimit;
 
+    private GameObject buttonObject;
+
 
     // Start is called before the first frame update
     void Start()
     {
         heightSlider.value = 0;
-        increasing = false;
+        
 
     }
 
@@ -38,10 +40,7 @@ public class HeightManager : MonoBehaviour
 
     }
 
-    void TurnOffHeight()
-    {
-        heightSliderParent.SetActive(false);
-    }
+    
 
     void IncreaseHeight()
     {
@@ -50,18 +49,24 @@ public class HeightManager : MonoBehaviour
             heightSelection += heightSpeed * Time.deltaTime * 5;
         }
 
-        else if (Input.GetMouseButtonUp(0))
+        else if (Input.GetMouseButtonUp(0) && heightSelection >= 2)
         {
-            increasing = false;
-            Invoke("TurnOffHeight", 2.5f);
+
+            Invoke("IncreasingFalse", 1f);
+            //increasing = false;
+            //Invoke("TurnOffHeight", 2.5f);
         }
     }
 
+    void TurnOffHeight()
+    {
+        heightSliderParent.SetActive(false);
+    }
     void ActiveCheck()
     {
         if (increasing == true)
         {
-            Invoke("TurnOn", 0.5f);
+            Invoke("TurnOn", 0.1f);
             
         }
 
@@ -80,10 +85,30 @@ public class HeightManager : MonoBehaviour
         }
     }
 
-    void TurnOn()
+    public void TurnOn()
     {
         heightSliderParent.SetActive(true);
+        
     }
 
+   public void IncreasingTrue(GameObject button)
+   {
+        //Invoke("TurnOn", 0.1f);
+        increasing = true;
+        buttonObject = button;
+        buttonObject.SetActive(false);
 
+    }
+
+   void IncreasingFalse()
+    {
+        increasing = false;
+    }
+
+    public void ResetHeightManager()
+    {
+        buttonObject.SetActive(true);
+        increasing = false;
+        heightSelection = 0;
+    }
 }

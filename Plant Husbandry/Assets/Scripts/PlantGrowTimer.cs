@@ -447,7 +447,7 @@ public class PlantGrowTimer : MonoBehaviour
     {
         //if(qualityCalculated == false)
         //{
-        if (height >= (customerOrderManager.heightWanted - 10) && height <= (customerOrderManager.heightWanted + 10))
+        if (height >= (customerOrderManager.heightWanted - 10) && height <= (customerOrderManager.heightWanted + 20))
         {
             Debug.Log("height is within range");
 

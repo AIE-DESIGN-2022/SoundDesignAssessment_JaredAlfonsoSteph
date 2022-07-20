@@ -23,6 +23,8 @@ public class CustomerOrderManager : MonoBehaviour
     public float heightWanted;
     public float heightAdded;
 
+    public HeightManager heightManager;
+
     [Header("Eyes")]
     public string eyeColourWanted;
     public string eyeColourAdded;
@@ -63,6 +65,7 @@ public class CustomerOrderManager : MonoBehaviour
 
     public bool allIngredientsAdded;
 
+    public bool addedHeight;
     public bool addedEyeColour;
 
     public bool addedHairColour;
@@ -97,7 +100,7 @@ public class CustomerOrderManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (addedEyeColour || addedHairColour || addedPersonalityTwo || addedPersonalityOne)
+        if (addedEyeColour || addedHairColour || addedPersonalityTwo || addedPersonalityOne || addedHeight)
         //&& personalityOneAdded != null && personalityTwoAdded != null && choosingPersonalityOne == false && choosingPersonalityTwo == false)
         {
             cauldronEmpty.interactable = true;
@@ -106,6 +109,11 @@ public class CustomerOrderManager : MonoBehaviour
         else
         {
             cauldronEmpty.interactable = false;
+        }
+
+        if (heightAdded != 0)
+        {
+            addedHeight = true;
         }
 
         if (eyeColourAdded != "")
@@ -131,6 +139,8 @@ public class CustomerOrderManager : MonoBehaviour
 
         eyeColourAdded = eyeButtonManager.eyeSelection;
 
+        heightAdded = heightManager.heightSelection;
+
         if (orderTicketManager.GetComponent<OrderTicketManager>().totalOrderTickets > 0) 
         {
             orderTicketManager.GetComponent<OrderTicketManager>().activeOrder = orderTicketManager.GetComponent<OrderTicketManager>().orderTickets[orderTicketManager.GetComponent<OrderTicketManager>().currentOrderTicket];
@@ -154,6 +164,7 @@ public class CustomerOrderManager : MonoBehaviour
             lastName = order.orderLastName;
             plantName = order.orderPlantName;
 
+            heightWanted = order.orderHeightNumber;
             eyeColourWanted = order.orderEyeColour;
             hairColourWanted = order.orderHairColour;
             personalityOneWanted = order.orderPersonalityOne;
@@ -466,10 +477,12 @@ public class CustomerOrderManager : MonoBehaviour
         hairButtonManager.ResetHairButtonManager();
         eyeButtonManager.ResetEyeButtonManager();
         ResetBeakerFillAmounts();
+        heightManager.ResetHeightManager();
 
         choosingPersonalityOne = true;
         choosingPersonalityTwo = false;
 
+        addedHeight = false;
         addedEyeColour = false;
         addedHairColour = false;
         addedPersonalityOne = false;
