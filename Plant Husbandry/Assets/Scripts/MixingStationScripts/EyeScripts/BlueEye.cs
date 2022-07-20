@@ -6,7 +6,7 @@ public class BlueEye : MonoBehaviour
 {
     public GameObject buttonManager;
     public Animator animator;
-    
+    public AudioRandomiser audioRandomiser;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +26,6 @@ public class BlueEye : MonoBehaviour
         animator.SetTrigger("cauldron");
 
         Debug.Log("numba fie");
-
+        audioRandomiser.PlayRandomised();
     }
 }
