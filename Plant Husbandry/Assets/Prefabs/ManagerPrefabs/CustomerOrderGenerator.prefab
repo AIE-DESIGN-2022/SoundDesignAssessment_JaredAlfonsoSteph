@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 7946918927550432190}
   - component: {fileID: 7946918927550432191}
   - component: {fileID: 2401476028357593538}
+  - component: {fileID: 2065576755360078727}
   m_Layer: 0
-  m_Name: CustomerOrderManager
+  m_Name: CustomerOrderGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,16 +107,8 @@ MonoBehaviour:
   personalityOneArrayLength: 0
   personalityTwoArrayLength: 0
   customerOrderText: {fileID: 0}
-  orderNumberText: {fileID: 0}
   orderNumber: 1
-  customerNameText: {fileID: 0}
-  customerOrderNameText: {fileID: 0}
-  heightText: {fileID: 0}
-  hairColourText: {fileID: 0}
-  eyeColourText: {fileID: 0}
-  personalityOneText: {fileID: 0}
-  personalityTwoText: {fileID: 0}
-  customerOrderManager: {fileID: 0}
+  speechCustomerNameText: {fileID: 0}
   firstNames:
   - Kelly
   - Arnold
@@ -275,6 +268,8 @@ MonoBehaviour:
   - Elm
   plantName: 
   plantNameNumber: 0
+  order: {fileID: 0}
+  orderTicketManager: {fileID: 0}
 --- !u!114 &2401476028357593538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +285,106 @@ MonoBehaviour:
   popUpUI: {fileID: 0}
   customerOrderText: {fileID: 0}
   orderTicket: {fileID: 0}
-  orderTicketManager: {fileID: 0}
+  orderTicketManagerGO: {fileID: 0}
+  customerWaiting: {fileID: 0}
   customerOrderGenerator: {fileID: 7946918927550432191}
-  customerNameGenerator: {fileID: 0}
+  orderTicketManager: {fileID: 0}
+  orderManagerGO: {fileID: 0}
+  newOrderWaitTime: 0
+  newCustomerOrderBell: {fileID: 2065576755360078727}
+--- !u!82 &2065576755360078727
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7946918927550432184}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e4f769101743e044d87541ac47d51a0d, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

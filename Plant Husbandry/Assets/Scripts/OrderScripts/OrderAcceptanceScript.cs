@@ -19,6 +19,9 @@ public class OrderAcceptanceScript : MonoBehaviour
 
     public float newOrderWaitTime;
 
+    public AudioSource newCustomerOrderBell;
+
+
 
     void Start()
     {
@@ -45,7 +48,9 @@ public class OrderAcceptanceScript : MonoBehaviour
 
         customerWaiting.SetActive(true);
         //orderTicket.SetActive(false);
-        
+        newCustomerOrderBell.Play();
+
+
     }
 
     public void AcceptOrder()
