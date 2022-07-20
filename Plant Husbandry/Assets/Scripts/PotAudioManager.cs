@@ -7,6 +7,7 @@ public class PotAudioManager : MonoBehaviour
     public AudioSource plantGrowAudio;
     public AudioSource plantReadyAudio;
     public AudioSource buttonClickAudio;
+    public AudioSource addFertilizerAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +32,10 @@ public class PotAudioManager : MonoBehaviour
     public void PotButtonClick()
     {
         buttonClickAudio.Play();
+    }
+
+    public void AddFertilizerAudio()
+    {
+        addFertilizerAudio.Play();
     }
 }

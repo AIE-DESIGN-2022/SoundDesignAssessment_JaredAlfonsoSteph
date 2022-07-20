@@ -241,7 +241,7 @@ public class PlantGrowTimer : MonoBehaviour
 
         orderAcceptance.OrderPopUp();
 
-        potAudio.PotButtonClick();
+        potAudio.AddFertilizerAudio();
     }
 
     public void SellPlant()
