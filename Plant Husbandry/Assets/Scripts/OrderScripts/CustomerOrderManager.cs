@@ -76,6 +76,8 @@ public class CustomerOrderManager : MonoBehaviour
     public MoneyManager moneyManager;
     public int emptyCauldronAmount;
 
+    public AudioSource buttonClick;
+
     //float numberToCalculated;
 
     // Start is called before the first frame update

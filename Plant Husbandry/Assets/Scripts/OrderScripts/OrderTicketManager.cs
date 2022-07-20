@@ -38,6 +38,9 @@ public class OrderTicketManager : MonoBehaviour
     public GameObject activeOrder = null;
     public Order order;
 
+    public AudioSource buttonClick;
+
+
     void Start()
     {
         //AddOrder();
@@ -145,6 +148,7 @@ public class OrderTicketManager : MonoBehaviour
         {
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();
+
         }
 
         UpdateOrderTicketText();
@@ -170,9 +174,10 @@ public class OrderTicketManager : MonoBehaviour
         {
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();
+
         }
-        
-        
+
+
 
         UpdateOrderTicketText();
 
@@ -181,7 +186,7 @@ public class OrderTicketManager : MonoBehaviour
 
     }
 
-   
+
 
     public void CompleteOrder()
     {
