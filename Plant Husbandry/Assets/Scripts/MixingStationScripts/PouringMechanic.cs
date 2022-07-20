@@ -18,6 +18,9 @@ public class PouringMechanic : MonoBehaviour
     public float beakerFull;
     public float fillSpeed;
 
+    public AudioSource jarFillUpSound;
+    bool soundPlaying;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +35,7 @@ public class PouringMechanic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
         if (Input.GetMouseButton(0) && pouring == true)
         {
@@ -40,6 +43,14 @@ public class PouringMechanic : MonoBehaviour
             beaker.value += fillSpeed * Time.deltaTime * 5;
 
             UpdateBeakerValue();
+            
+            if (!soundPlaying)
+            {
+                soundPlaying = true;
+                jarFillUpSound.Play();
+            }
+
+
         }
 
         else if (Input.GetMouseButtonUp(0) && pouring == true && beaker.value >= 10)
@@ -51,6 +62,9 @@ public class PouringMechanic : MonoBehaviour
             Invoke("TurnOffJug", 2.5f);
 
             UpdateBeakerValue();
+
+            jarFillUpSound.Stop();
+            soundPlaying = false;
 
         }
 
