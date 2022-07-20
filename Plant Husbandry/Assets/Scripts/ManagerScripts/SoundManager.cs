@@ -5,7 +5,9 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource buttonClick;
-   // public AudioSource ;
+    // public AudioSource ;
+    public AudioRandomiser audioCustomerRandomiser;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,5 +24,9 @@ public class SoundManager : MonoBehaviour
     {
         buttonClick.Play();
 
+    }
+    public void PlayCustomerTalking()
+    {
+        audioCustomerRandomiser.PlayRandomised();
     }
 }
