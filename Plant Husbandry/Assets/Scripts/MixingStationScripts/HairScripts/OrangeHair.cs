@@ -7,6 +7,7 @@ public class OrangeHair : MonoBehaviour
 
     public GameObject hairButtonManager;
     public Animator animator;
+    public AudioRandomiser randomiser;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +25,7 @@ public class OrangeHair : MonoBehaviour
         hairButtonManager.GetComponent<HairButtonManager>().hairSelection = "orange";
         hairButtonManager.GetComponent<HairButtonManager>().lockHairSection = false;
         animator.SetTrigger("cauldron");
-
+        randomiser.PlayRandomised();
         Debug.Log("orange");
 
     }
