@@ -114,12 +114,14 @@ public class OrderTicketManager : MonoBehaviour
                 orderTicketIsActive=false;
                 orderTicketBackground.SetActive(false);
                 randomiser.PlayRandomised();
+                Debug.Log("playing1");
             }
             else
             {
                 orderTicketIsActive = true;
                 orderTicketBackground.SetActive(true);
                 randomiser.PlayRandomised();
+                Debug.Log("playing2");
             }
         }
 
@@ -147,18 +149,19 @@ public class OrderTicketManager : MonoBehaviour
             currentOrderTicket = 0;
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();
+            randomiser.PlayRandomised();
         }
         else
         {
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();
-            
+            randomiser.PlayRandomised();
 
         }
 
         UpdateOrderTicketText();
 
-        randomiser.PlayRandomised();
+       
 
     }
 
@@ -174,15 +177,16 @@ public class OrderTicketManager : MonoBehaviour
             
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();
+            randomiser.PlayRandomised();
         }
         else
         {
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();
-
+            randomiser.PlayRandomised();
         }
 
-        randomiser.PlayRandomised();
+        
 
         UpdateOrderTicketText();
 
