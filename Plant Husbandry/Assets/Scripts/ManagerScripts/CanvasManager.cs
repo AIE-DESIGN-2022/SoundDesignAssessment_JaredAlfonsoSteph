@@ -8,7 +8,8 @@ public class CanvasManager : MonoBehaviour
 
     public bool canvasActive;
 
-    public GameObject mixingStationCanvas;
+   
+    public GameObject mixingStationMechanics;
     public GameObject pot1;
     public GameObject pot2;
     public GameObject pot3;
@@ -24,7 +25,8 @@ public class CanvasManager : MonoBehaviour
     {
         if(canvasActive == true)
         {
-            mixingStationCanvas.SetActive(true);
+           
+            mixingStationMechanics.SetActive(true);
             pot1.SetActive(true);
             pot2.SetActive(true);
             pot3.SetActive(true);
@@ -32,7 +34,8 @@ public class CanvasManager : MonoBehaviour
 
         else if(canvasActive == false)
         {
-            mixingStationCanvas.SetActive(false);
+         
+            mixingStationMechanics.SetActive(false);
             pot1.SetActive(false);
             pot2.SetActive(false);
             pot3.SetActive(false);
