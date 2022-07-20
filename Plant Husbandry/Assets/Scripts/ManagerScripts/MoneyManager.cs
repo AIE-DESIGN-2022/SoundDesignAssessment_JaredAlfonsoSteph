@@ -8,6 +8,8 @@ public class MoneyManager : MonoBehaviour
 {
     public int currentMoney;
     public TextMeshProUGUI playerMoneyAmountText;
+    public AudioSource spendMoneySound;
+    public AudioSource earnMoneySound;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,7 @@ public class MoneyManager : MonoBehaviour
             currentMoney -= moneyToTake;
             UpdateMoneyText();
      
-        
+        spendMoneySound.Play();
 
 
     }
@@ -43,6 +45,7 @@ public class MoneyManager : MonoBehaviour
     public void IncreaseMoney(int moneyToAdd)
     {
         currentMoney += moneyToAdd;
+        earnMoneySound.Play();
         UpdateMoneyText();
     }
 
