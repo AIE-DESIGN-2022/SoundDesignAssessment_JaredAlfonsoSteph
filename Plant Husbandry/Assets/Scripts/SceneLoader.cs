@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public AudioSource buttonClick;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +20,17 @@ public class SceneLoader : MonoBehaviour
 
     public void PlayGame()
     {
+        buttonClick.Play();
         SceneManager.LoadScene("MainScene");
+        buttonClick.Play();
     }
 
     public void QuitGame()
     {
+        buttonClick.Play();
         Debug.Log("QuitGame");
         Application.Quit();
     }
+
+   
 }
