@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource buttonClick;
     // public AudioSource ;
     public AudioRandomiser audioCustomerRandomiser;
+    public AudioRandomiser JarPickupAudioRamdomiser;
 
 
     // Start is called before the first frame update
@@ -28,5 +29,9 @@ public class SoundManager : MonoBehaviour
     public void PlayCustomerTalking()
     {
         audioCustomerRandomiser.PlayRandomised();
+    }
+    public void PlayJarPickupAudio()
+    {
+        JarPickupAudioRamdomiser.PlayRandomised();
     }
 }
