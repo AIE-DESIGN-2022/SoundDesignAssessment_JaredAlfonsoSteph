@@ -287,6 +287,7 @@ public class PlantGrowTimer : MonoBehaviour
         dateManager.thisPlantName = customerOrderManager.plantName;
         dateManager.thisHairColour = hairColour;
         dateManager.thisEyeColour = eyeColour;
+        dateManager.thisHeight = maxHeightAdded;
 
         dateManager.DateReview();
 

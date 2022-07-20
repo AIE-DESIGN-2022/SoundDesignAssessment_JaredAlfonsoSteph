@@ -19,6 +19,7 @@ public class DateManager : MonoBehaviour
     public string thisPlantName;
     public string thisHairColour;
     public string thisEyeColour;
+    public float thisHeight;
 
     [Header("UI")]
     public GameObject dateReviewUI;
@@ -67,7 +68,7 @@ public class DateManager : MonoBehaviour
     public Renderer plantCharacterEye2;
     public Renderer plantCharacterHair;
 
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -187,5 +188,6 @@ public class DateManager : MonoBehaviour
             plantCharacterHair.material = blueHairMaterial;
         }
 
+        plantCharacter.transform.localScale = new Vector3(thisHeight, thisHeight, thisHeight);
     }
 }
