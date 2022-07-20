@@ -100,6 +100,12 @@ public class PlantGrowTimer : MonoBehaviour
     public float personalityTwoAmount;
 
     public OrderAcceptanceScript orderAcceptance;
+    public PotAudioManager potAudio;
+
+    private bool stageOneSoundPlayed;
+    private bool stageTwoSoundPlayed;
+    private bool stageThreeSoundPlayed;
+    private bool plantReadySoundPlayed;
     
 
     // Start is called before the first frame update
@@ -143,28 +149,55 @@ public class PlantGrowTimer : MonoBehaviour
 
         if(secondsLeft <= timeStageThree)
         {
-           // Debug.Log("Stage Three");
+            // Debug.Log("Stage Three");
+
             PlantCharacter.transform.localScale = Vector3.Lerp(PlantCharacter.transform.localScale, new Vector3(1f, maxHeightAdded, 1f), Time.deltaTime * growTime);
+            if (!stageOneSoundPlayed)
+            {
+                potAudio.PlantGrowAudio();
+                stageOneSoundPlayed = true;
+            }
+            
 
         }   
         else if(secondsLeft <= timeStageTwo)
         {
-           // Debug.Log("Stage Two");
+            // Debug.Log("Stage Two");
+            if (!stageTwoSoundPlayed)
+            {
+                potAudio.PlantGrowAudio();
+                stageTwoSoundPlayed = true;
+            }
             PlantCharacter.transform.localScale = Vector3.Lerp(PlantCharacter.transform.localScale, new Vector3(0.6f, 0.6f, 0.6f), Time.deltaTime * growTime);
-
+            
 
         }
         else if (secondsLeft <= timeStageOne)
         {
-           // Debug.Log("Stage One");
+            // Debug.Log("Stage One");
+            if (!stageThreeSoundPlayed)
+            {
+                potAudio.PlantGrowAudio();
+                stageThreeSoundPlayed = true;
+            }
             PlantCharacter.transform.localScale = Vector3.Lerp(PlantCharacter.transform.localScale, new Vector3(0.3f, 0.3f, 0.3f), Time.deltaTime * growTime);
+            
         }
+
+        
 
         if(secondsLeft <= 0)
         {
             secondsLeft = 0;
             timerOn = false;
             plantReadyButton.SetActive(true);
+
+            if (!plantReadySoundPlayed)
+            {
+                potAudio.PlantReadyAudio();
+                plantReadySoundPlayed = true;
+            }
+           
         }
 
         if (popUpUI.activeInHierarchy == true)
@@ -207,6 +240,8 @@ public class PlantGrowTimer : MonoBehaviour
         customerOrderManager.ResetOrderManager();
 
         orderAcceptance.OrderPopUp();
+
+        potAudio.PotButtonClick();
     }
 
     public void SellPlant()
@@ -219,8 +254,8 @@ public class PlantGrowTimer : MonoBehaviour
         secondsLeft = maxTime;
 
         noMoneyText.SetActive(false);
+        potAudio.PotButtonClick();
 
-        
     }
 
     public void YesSell()
@@ -254,6 +289,7 @@ public class PlantGrowTimer : MonoBehaviour
         dateManager.DateReview();
 
         ResetPlantPot();
+        potAudio.PotButtonClick();
     }
 
     public void NoSell()
@@ -280,7 +316,11 @@ public class PlantGrowTimer : MonoBehaviour
             ResetPlantPot();
 
             noMoneyText.SetActive(false);
+
+            potAudio.PotButtonClick();
         }
+
+       
     }
 
     public void ResetPlantPot()
@@ -303,6 +343,11 @@ public class PlantGrowTimer : MonoBehaviour
         noMoneyText.SetActive(false);
 
         ResetHairEyeColour();
+
+        stageOneSoundPlayed = false;
+        stageTwoSoundPlayed = false;
+        stageThreeSoundPlayed = false;
+        plantReadySoundPlayed = false;
     }
 
     public void PlantSeed()
@@ -333,7 +378,7 @@ public class PlantGrowTimer : MonoBehaviour
             noMoneyText.SetActive(false);
 
             //ResetHairEyeColour = 
-            
+            potAudio.PotButtonClick();
         }
            
 
