@@ -16,8 +16,10 @@ public class HeightManagerGrabbable : MonoBehaviour
 
     
     public float heightSelection;
-    
-    
+
+    public AudioSource HightMoveSound;
+
+
     // Start is called before the first frame update
     void Start()
     {
