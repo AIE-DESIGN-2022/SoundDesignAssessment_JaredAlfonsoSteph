@@ -23,7 +23,7 @@ public class CustomerOrderManager : MonoBehaviour
     public float heightWanted;
     public float heightAdded;
 
-    public HeightManager heightManager;
+    public HeightManagerGrabbable heightManager;
 
     [Header("Eyes")]
     public string eyeColourWanted;
