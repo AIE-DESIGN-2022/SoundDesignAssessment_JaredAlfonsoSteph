@@ -55,38 +55,56 @@ public class CameraManager : MonoBehaviour
         //movement to right
         if (Input.GetKeyDown(KeyCode.D))
         {
-            previousCamera++;
-            currentCamera++;
-            nextCamera++;
-
-            noMoneyText.SetActive(false);
-
-            ChangeCameraNumbers();
-
-            cameras[currentCamera].enabled = true;
-            cameras[previousCamera].enabled = false;
-            cameras[nextCamera].enabled = false;
+            NextCamera();
 
 
         }
         //movement to left
         if (Input.GetKeyDown(KeyCode.A))
         {
-            nextCamera--;
-            currentCamera--;
-            previousCamera--;
-
-            noMoneyText.SetActive(false);
-
-            ChangeCameraNumbers();
-
-            cameras[currentCamera].enabled = true;
-            cameras[previousCamera].enabled = false;
-            cameras[nextCamera].enabled = false;
+            PreviousCamera();
         }      
 
     }
 
+    public void NextCamera()
+    {
+        previousCamera++;
+        currentCamera++;
+        nextCamera++;
+
+        if (noMoneyText != null)
+        {
+            noMoneyText.SetActive(false);
+        }
+        
+
+        ChangeCameraNumbers();
+
+        cameras[currentCamera].enabled = true;
+        cameras[previousCamera].enabled = false;
+        cameras[nextCamera].enabled = false;
+    }
+
+    public void PreviousCamera()
+    {
+        nextCamera--;
+        currentCamera--;
+        previousCamera--;
+
+        
+
+        if (noMoneyText != null)
+        {
+            noMoneyText.SetActive(false);
+        }
+
+        ChangeCameraNumbers();
+
+        cameras[currentCamera].enabled = true;
+        cameras[previousCamera].enabled = false;
+        cameras[nextCamera].enabled = false;
+    }
     //makes ssure camera order doesn;'t break
     private void ChangeCameraNumbers() 
     {
