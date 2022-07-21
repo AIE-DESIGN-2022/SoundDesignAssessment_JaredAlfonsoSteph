@@ -7536,6 +7536,7 @@ MonoBehaviour:
   timerPercentageStageThree: 25
   fertilizerButton: {fileID: 8487195467104968655}
   plantReadyButton: {fileID: 6976175896957027292}
+  plantTimerText: {fileID: 2845149996496683676}
   popUpUI: {fileID: 474027582690648484}
   questionText: {fileID: 6745582304081214645}
   plantCharacter: {fileID: 2645907830143155664}
@@ -7546,7 +7547,7 @@ MonoBehaviour:
   plantSeedButton: {fileID: 6572609455980677013}
   costToPlant: 100
   costToBurn: 100
-  costToBurnText: {fileID: 6104252136294361142}
+  costToBurnText: {fileID: 3187604831256656696}
   moneyManager: {fileID: 0}
   noMoneyText: {fileID: 0}
   blueEyeMaterial: {fileID: 2100000, guid: 9ba622170c89e3049900691f5d741d74, type: 2}
@@ -8092,6 +8093,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3518208172734245979, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
   m_PrefabInstance: {fileID: 1471279145645773199}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &7694149717297287929 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 9127693572064494454, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
+  m_PrefabInstance: {fileID: 1471279145645773199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &8869845216857344524 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 8030777595246336899, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
@@ -8100,11 +8106,6 @@ MeshRenderer:
 --- !u!23 &6457583282130712209 stripped
 MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 5617951769449391902, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
-  m_PrefabInstance: {fileID: 1471279145645773199}
-  m_PrefabAsset: {fileID: 0}
---- !u!23 &7694149717297287929 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 9127693572064494454, guid: f2582034491f2cb46853d9f9fa68fc18, type: 3}
   m_PrefabInstance: {fileID: 1471279145645773199}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7587905330924311669
@@ -8314,9 +8315,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5713776642499092565, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1915355111545800318}
+    - target: {fileID: 5713776642499092565, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DestroyPlant
+      objectReference: {fileID: 0}
     - target: {fileID: 7256206874782138430, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
       propertyPath: m_Name
       value: PlantTimerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8522026996808853644, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
@@ -8325,12 +8338,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4087576968309649367, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
   m_PrefabInstance: {fileID: 7587905330924311669}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2845149996496683676 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5634468686131287785, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
+  m_PrefabInstance: {fileID: 7587905330924311669}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5131968627952603517 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3347808349979215112, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
   m_PrefabInstance: {fileID: 7587905330924311669}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2845149996496683676}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -8367,9 +8385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6104252136294361142 stripped
+--- !u!114 &2084458123665462755 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4466180273556945987, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8476016583289373078, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
   m_PrefabInstance: {fileID: 7587905330924311669}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -8389,9 +8407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2084458123665462755 stripped
+--- !u!114 &3187604831256656696 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8476016583289373078, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
+  m_CorrespondingSourceObject: {fileID: 5003782888938172237, guid: 40bb9357360cf1c41813add6ec69cbf4, type: 3}
   m_PrefabInstance: {fileID: 7587905330924311669}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
