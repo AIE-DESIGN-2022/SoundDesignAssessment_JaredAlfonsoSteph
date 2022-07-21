@@ -44,10 +44,10 @@ AudioSource:
   m_GameObject: {fileID: 1235722677826268686}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5591178064286161913, guid: 6db0dfefcb5c3794da9d446ef25fb976, type: 2}
   m_audioClip: {fileID: 8300000, guid: 1c6d44f6a5bc6cc4a98199c881250059, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.244
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -140,7 +140,7 @@ AudioSource:
   m_GameObject: {fileID: 1235722677826268686}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5390794508531399634, guid: 6db0dfefcb5c3794da9d446ef25fb976, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3bb6592de4e4add479abab841a907ed9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -242,6 +242,7 @@ MonoBehaviour:
   buttonClick: {fileID: 1150349357756049704}
   audioCustomerRandomiser: {fileID: 0}
   JarPickupAudioRamdomiser: {fileID: 0}
+  BellSound: {fileID: 0}
 --- !u!82 &6644931100466889897
 AudioSource:
   m_ObjectHideFlags: 0
@@ -251,7 +252,7 @@ AudioSource:
   m_GameObject: {fileID: 1235722677826268686}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1029169762368554512, guid: 6db0dfefcb5c3794da9d446ef25fb976, type: 2}
   m_audioClip: {fileID: 8300000, guid: 35e0a528c578a024dbdc98a0b22062b0, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -347,10 +348,10 @@ AudioSource:
   m_GameObject: {fileID: 1235722677826268686}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5059214466671014301, guid: 6db0dfefcb5c3794da9d446ef25fb976, type: 2}
   m_audioClip: {fileID: 8300000, guid: c4c66d82e8fed2345a79695536cbd30a, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 1
   m_Pitch: 1
   Loop: 0
   Mute: 0

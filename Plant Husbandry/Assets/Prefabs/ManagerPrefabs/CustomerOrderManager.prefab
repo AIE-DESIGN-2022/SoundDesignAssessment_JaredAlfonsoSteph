@@ -54,6 +54,7 @@ MonoBehaviour:
   plantName: 
   heightWanted: 0
   heightAdded: 0
+  heightManager: {fileID: 0}
   eyeColourWanted: 
   eyeColourAdded: 
   eyeButtonManager: {fileID: 0}
@@ -76,6 +77,7 @@ MonoBehaviour:
   choosingPersonalityTwo: 0
   hasBeenReset: 0
   allIngredientsAdded: 0
+  addedHeight: 0
   addedEyeColour: 0
   addedHairColour: 0
   addedPersonalityOne: 0
@@ -94,7 +96,7 @@ AudioSource:
   m_GameObject: {fileID: 5579776824429110090}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 5390794508531399634, guid: 6db0dfefcb5c3794da9d446ef25fb976, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3bb6592de4e4add479abab841a907ed9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
