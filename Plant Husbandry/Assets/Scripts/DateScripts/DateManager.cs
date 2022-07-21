@@ -188,6 +188,8 @@ public class DateManager : MonoBehaviour
             plantCharacterHair.material = blueHairMaterial;
         }
 
-        plantCharacter.transform.localScale = new Vector3(thisHeight, thisHeight, thisHeight);
+
+
+        plantCharacter.transform.localScale = new Vector3(1, thisHeight, 1);
     }
 }
