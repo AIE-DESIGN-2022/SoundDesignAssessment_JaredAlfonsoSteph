@@ -949,7 +949,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1980, y: 488}
+  m_AnchoredPosition: {x: -1978, y: 484}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.2, y: 2}
 --- !u!114 &227442253
@@ -14094,6 +14094,14 @@ PrefabInstance:
       propertyPath: customerOrderNameText
       value: 
       objectReference: {fileID: 7308110193930710380}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: heights.Array.data[1]
+      value: above average height
+      objectReference: {fileID: 0}
+    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
+      propertyPath: heights.Array.data[3]
+      value: below average height
+      objectReference: {fileID: 0}
     - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: speechCustomerNameText
       value: 
