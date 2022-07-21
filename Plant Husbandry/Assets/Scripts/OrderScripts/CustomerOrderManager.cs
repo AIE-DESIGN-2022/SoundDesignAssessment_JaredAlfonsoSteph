@@ -81,6 +81,15 @@ public class CustomerOrderManager : MonoBehaviour
 
     public AudioSource buttonClick;
 
+    public TextMeshProUGUI cauldronChecklistText;
+
+
+    private bool hairChecklist;
+    private bool eyeChecklist;
+    private bool personalityChecklistOne;
+    private bool personalityChecklistTwo;
+    private bool heightChecklist;
+
     //float numberToCalculated;
 
     // Start is called before the first frame update
@@ -95,6 +104,8 @@ public class CustomerOrderManager : MonoBehaviour
         hasBeenReset = false;
 
         allIngredientsAdded = false;
+
+        cauldronChecklistText.text = "";
     }
 
     // Update is called once per frame
@@ -105,20 +116,39 @@ public class CustomerOrderManager : MonoBehaviour
         {
             cauldronEmpty.interactable = true;
 
+
+
         }
         else
         {
             cauldronEmpty.interactable = false;
+
         }
 
         if (heightAdded != 0)
         {
             addedHeight = true;
+            //cauldronChecklistText.text = cauldronChecklistText.text + n/ + " Growth Substance";
+
+            if (!heightChecklist)
+            {
+                cauldronChecklistText.text += "\n - Growth Substance";
+                heightChecklist = true;
+            }
         }
 
         if (eyeColourAdded != "")
         {
             addedEyeColour = true;
+
+            
+
+            if (!eyeChecklist)
+            {
+                cauldronChecklistText.text += "\n - Eyes";
+                eyeChecklist = true;
+            }
+            
         }
 
         hairColourAdded = hairButtonManager.hairSelection;
@@ -126,15 +156,37 @@ public class CustomerOrderManager : MonoBehaviour
         if (hairColourAdded != "")
         {
             addedHairColour = true;
+
+            if (!hairChecklist)
+            {
+                cauldronChecklistText.text += "\n - Hair";
+                hairChecklist = true;
+            }
+
+            //cauldronChecklistText.text = cauldronChecklistText.text + "n/ + Hair";
         }
 
         if (choosingPersonalityOne == false)
         {
             addedPersonalityOne = true;
+            //cauldronChecklistText.text = cauldronChecklistText.text + "n/ + Personality Serum";
+
+            if (!personalityChecklistOne)
+            {
+                cauldronChecklistText.text += "\n - Personality Serum +1";
+                personalityChecklistOne = true;
+            }
         }
         if (choosingPersonalityOne == false && choosingPersonalityTwo == false)
         {
             addedPersonalityTwo = true;
+            //cauldronChecklistText.text = cauldronChecklistText.text + "n/ + Personality Serum";
+
+            if (!personalityChecklistTwo)
+            {
+                cauldronChecklistText.text += "\n - Personality Serum +1";
+                personalityChecklistTwo = true;
+            }
         }
 
         eyeColourAdded = eyeButtonManager.eyeSelection;
@@ -513,8 +565,16 @@ public class CustomerOrderManager : MonoBehaviour
         personalityTwoAmountAdded = 0;
 
         //dateQuality = 0;
-        //customerFinalPayment = 0;      
-    }
+        //customerFinalPayment = 0;
+        //
+        cauldronChecklistText.text = " ";
+
+        hairChecklist = false;
+eyeChecklist =false; 
+ personalityChecklistOne = false;
+ personalityChecklistTwo =false;
+  heightChecklist = false;
+}
 
     public void EmptyCauldron()
     {

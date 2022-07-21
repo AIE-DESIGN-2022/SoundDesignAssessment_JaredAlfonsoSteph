@@ -72,8 +72,8 @@ public class OrderTicketManager : MonoBehaviour
         customerOrderTicketNameText.text = " ";
 
         orderNumberText.text = "No Orders Available" ;
-        heightText.text = "accept a new order";
-        hairColourText.text = " ";
+        heightText.text = " ";
+        hairColourText.text = "accept a new order ";
         eyeColourText.text = " ";
         personalityOneText.text = " ";
         personalityTwoText.text = " ";
@@ -173,7 +173,15 @@ public class OrderTicketManager : MonoBehaviour
 
         if (currentOrderTicket < 0)
         {
-            currentOrderTicket = orderTickets.Count - 1;
+            if (orderTickets.Count == 0)
+            {
+                currentOrderTicket = 0;
+            }
+            else
+            {
+                currentOrderTicket = orderTickets.Count - 1;
+            }
+            
             
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();

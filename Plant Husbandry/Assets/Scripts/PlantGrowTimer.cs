@@ -29,6 +29,7 @@ public class PlantGrowTimer : MonoBehaviour
     private float timeStageThree;
 
     public GameObject fertilizerButton;
+    public Button fertilizerButtonComponent;
 
     public GameObject plantReadyButton;
 
@@ -138,11 +139,27 @@ public class PlantGrowTimer : MonoBehaviour
 
         noMoneyText.SetActive(false);
 
+        fertilizerButtonComponent = fertilizerButton.GetComponent<Button>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (fertilizerButton.activeInHierarchy == true)
+        {
+            if (customerOrderManager.addedEyeColour || customerOrderManager.addedHairColour || customerOrderManager.addedPersonalityTwo || customerOrderManager.addedPersonalityOne || customerOrderManager.addedHeight)
+            {
+                
+                fertilizerButtonComponent.interactable = true;
+            }
+            else
+            {
+                fertilizerButtonComponent.interactable = false;
+            }
+        }
+        
+
         if (timerOn)
         {
             secondsLeft -= Time.deltaTime;
@@ -220,12 +237,14 @@ public class PlantGrowTimer : MonoBehaviour
     public void AddFertilizer()
     {
         timerOn = true;
+        
         fertilizerButton.SetActive(false);
 
         costText.text = " ";
 
         noMoneyText.SetActive(false);
 
+        plantTimerText.SetActive(true);
 
         SetHairEyeColour();
 
@@ -413,6 +432,10 @@ public class PlantGrowTimer : MonoBehaviour
 
             //ResetHairEyeColour = 
             potAudio.PotButtonClick();
+
+            plantTimerText.SetActive(false);
+
+
         }
            
 
