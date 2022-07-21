@@ -72,8 +72,8 @@ public class OrderTicketManager : MonoBehaviour
         customerOrderTicketNameText.text = " ";
 
         orderNumberText.text = "No Orders Available" ;
-        heightText.text = "accept a new order";
-        hairColourText.text = " ";
+        heightText.text = " ";
+        hairColourText.text = "accept a new order ";
         eyeColourText.text = " ";
         personalityOneText.text = " ";
         personalityTwoText.text = " ";
