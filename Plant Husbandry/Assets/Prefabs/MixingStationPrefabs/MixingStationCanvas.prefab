@@ -500,6 +500,7 @@ MonoBehaviour:
   heightSliderParent: {fileID: 6404864384193580557}
   sliderActive: 0
   heightSelection: 0
+  HightMoveSound: {fileID: 0}
 --- !u!1 &4279056050586751415
 GameObject:
   m_ObjectHideFlags: 0

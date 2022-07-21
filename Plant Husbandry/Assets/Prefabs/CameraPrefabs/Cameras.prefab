@@ -142,7 +142,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 12
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -817,31 +817,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.01
+      value: 1.446
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.06
+      value: -2.061
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3
+      value: 1.895
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.704783
+      value: 0.9961947
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.05727968
+      value: 0.08715578
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.70478296
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.05727968
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3692585990240897211, guid: 47cc2bd5a9e48d14cbbf19b595262976, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
