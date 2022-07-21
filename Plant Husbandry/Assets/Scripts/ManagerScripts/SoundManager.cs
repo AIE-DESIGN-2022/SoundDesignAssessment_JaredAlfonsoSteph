@@ -10,6 +10,10 @@ public class SoundManager : MonoBehaviour
     public AudioRandomiser JarPickupAudioRamdomiser;
     public AudioSource BellSound;
 
+    public AudioSource HightSelectSound;
+    public AudioSource HightConfirmationSound;
+    public AudioSource HightMoveSound;
+
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +34,22 @@ public class SoundManager : MonoBehaviour
     public void PlayBell()
     {
         BellSound.Play();
+
+    }
+    public void PlayHightMove()
+    {
+        HightMoveSound.Play();
+
+    }
+
+    public void PlayHightConfirmation()
+    {
+        HightConfirmationSound.Play();
+
+    }
+    public void PlayHightSelect()
+    {
+        HightSelectSound.Play();
 
     }
     public void PlayCustomerTalking()
