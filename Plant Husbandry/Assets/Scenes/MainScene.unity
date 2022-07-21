@@ -949,7 +949,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1976, y: 491}
+  m_AnchoredPosition: {x: -1980, y: 488}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.2, y: 2}
 --- !u!114 &227442253
@@ -15457,6 +15457,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1021814256}
     m_Modifications:
+    - target: {fileID: 532649214, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: header
+      value: Mindedness
+      objectReference: {fileID: 0}
     - target: {fileID: 600599727725538374, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -16837,6 +16841,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1741074346}
+    - target: {fileID: 2718180514043949749, guid: c1736a6fff4cc1840a5537344120f201, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2906351257982331114, guid: c1736a6fff4cc1840a5537344120f201, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
