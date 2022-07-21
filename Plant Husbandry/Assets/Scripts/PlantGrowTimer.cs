@@ -349,7 +349,9 @@ public class PlantGrowTimer : MonoBehaviour
 
             noMoneyText.SetActive(false);
 
-            
+            potAudio.PotButtonClick();
+
+
         }
     }
 
