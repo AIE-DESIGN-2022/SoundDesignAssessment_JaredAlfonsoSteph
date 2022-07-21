@@ -32,5 +32,9 @@ public class SceneLoader : MonoBehaviour
         Application.Quit();
     }
 
-   
+    public void StartScene()
+    {
+        buttonClick.Play();
+        SceneManager.LoadScene("StartScene");
+    }
 }
