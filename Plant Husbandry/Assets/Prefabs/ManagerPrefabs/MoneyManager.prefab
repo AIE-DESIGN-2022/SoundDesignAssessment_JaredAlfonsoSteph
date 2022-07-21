@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 618ab59ca3f7f5346b1f7645bd3dcff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMoney: 10000
+  currentMoney: 300
   playerMoneyAmountText: {fileID: 0}
   spendMoneySound: {fileID: 9202660560171692820}
   earnMoneySound: {fileID: 6337833990213722880}

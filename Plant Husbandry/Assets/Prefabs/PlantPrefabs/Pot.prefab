@@ -7525,9 +7525,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PlantCharacter: {fileID: 2645907830143155664}
-  secondsLeft: 10
+  secondsLeft: 45
   timerOn: 1
-  maxTime: 10
+  maxTime: 45
   timerText: {fileID: 5131968627952603517}
   maxHeightAdded: 1
   growTime: 1
