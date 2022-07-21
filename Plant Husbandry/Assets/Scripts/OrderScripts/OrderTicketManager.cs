@@ -173,7 +173,15 @@ public class OrderTicketManager : MonoBehaviour
 
         if (currentOrderTicket < 0)
         {
-            currentOrderTicket = orderTickets.Count - 1;
+            if (orderTickets.Count == 0)
+            {
+                currentOrderTicket = 0;
+            }
+            else
+            {
+                currentOrderTicket = orderTickets.Count - 1;
+            }
+            
             
             activeOrder = orderTickets[currentOrderTicket];
             order = activeOrder.GetComponent<Order>();
