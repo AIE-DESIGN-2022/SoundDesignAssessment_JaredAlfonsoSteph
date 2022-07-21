@@ -949,7 +949,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1974, y: 475}
+  m_AnchoredPosition: {x: -1978, y: 481}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.2, y: 2}
 --- !u!114 &227442253
@@ -10507,15 +10507,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: fe14f5ea09fd5bc42942b26bcb1d78c5, type: 2}
+  m_sharedMaterial: {fileID: -780947231544631859, guid: fe14f5ea09fd5bc42942b26bcb1d78c5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10538,7 +10538,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -15470,9 +15470,69 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1021814256}
     m_Modifications:
+    - target: {fileID: 6808198, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click and hold, release to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 233924695, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click jar to select, click hair to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 420454826, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click jar to select, click hair to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 504349055, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click jar to select, click hair to confirm
+      objectReference: {fileID: 0}
     - target: {fileID: 532649214, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
       propertyPath: header
       value: Mindedness
+      objectReference: {fileID: 0}
+    - target: {fileID: 532649214, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click and hold, release to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 541056011, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click jar to select, click eyeball to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 721422369, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click and hold, release to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 763074067, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click and drag to adjust height
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051486950, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click jar to select, click eyeball to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1257074202, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click jar to select, click eyeball to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1286553681, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click jar to select, click eyeball to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1313438474, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click jar to select, click hair to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1477056830, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click jar to select, click eyeball to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1522521227, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click jar to select, click hair to confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 1927067129, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
+      propertyPath: content
+      value: Click and hold, release to confirm
       objectReference: {fileID: 0}
     - target: {fileID: 600599727725538374, guid: 68bb274336a35bd45add9ce5fd4fd377, type: 3}
       propertyPath: m_Pivot.x
