@@ -32,6 +32,8 @@ public class PlantGrowTimer : MonoBehaviour
 
     public GameObject plantReadyButton;
 
+    public GameObject plantTimerText;
+
     public GameObject popUpUI;
     public TextMeshProUGUI questionText;
     public GameObject plantCharacter;
@@ -258,6 +260,10 @@ public class PlantGrowTimer : MonoBehaviour
         noMoneyText.SetActive(false);
         potAudio.PotButtonClick();
 
+        plantReadyButton.SetActive(false);
+
+        plantTimerText.SetActive(false);
+
     }
 
     public void YesSell()
@@ -310,7 +316,18 @@ public class PlantGrowTimer : MonoBehaviour
     public void NoSell()
     {
 
+        Debug.Log("noSellplant");
 
+        potAudio.PotButtonClick();
+
+        popUpUI.SetActive(false);
+
+        plantReadyButton.SetActive(true);
+
+    }
+
+    public void DestroyPlant()
+    {
         if ((moneyManager.currentMoney - costToBurn) < 0)
         {
             //you dont have enough money for that
@@ -320,7 +337,7 @@ public class PlantGrowTimer : MonoBehaviour
         else
         {
             //???
-            Debug.Log("No Sell Plant");
+            Debug.Log("BURNN");
 
             plantCharacter.SetActive(false);
 
@@ -333,9 +350,9 @@ public class PlantGrowTimer : MonoBehaviour
             noMoneyText.SetActive(false);
 
             potAudio.PotButtonClick();
-        }
 
-       
+
+        }
     }
 
     public void ResetPlantPot()
@@ -343,6 +360,8 @@ public class PlantGrowTimer : MonoBehaviour
         timerOn = false;
 
         plantSeedButton.SetActive(true);
+
+        plantTimerText.SetActive(true);
 
         plantReadyButton.SetActive(false);
 
