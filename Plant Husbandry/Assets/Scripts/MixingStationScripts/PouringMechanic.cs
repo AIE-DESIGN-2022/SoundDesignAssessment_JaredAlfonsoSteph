@@ -86,6 +86,9 @@ public class PouringMechanic : MonoBehaviour
     void TurnOffJug()
     {
         beakerImage.SetActive(false);
+
+        //new turns.ALFONSO LINE
+        beaker.value = 0;
        
      
         

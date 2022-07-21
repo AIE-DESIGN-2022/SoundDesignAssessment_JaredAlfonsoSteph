@@ -521,6 +521,12 @@ public class CustomerOrderManager : MonoBehaviour
         kindessBeakerFull.beakerFull = 0;
         extroversionBeakerFull.beakerFull = 0;
 
+        //new line added. Turns the actual value of the slider back to 0. ALFONSO LINE
+        energeticBeakerFull.beaker.value = 0;
+        openmindednessBeakerFull.beaker.value = 0;
+        kindessBeakerFull.beaker.value = 0;
+        extroversionBeakerFull.beaker.value = 0;
+
         hasBeenReset = true;
     }
 
