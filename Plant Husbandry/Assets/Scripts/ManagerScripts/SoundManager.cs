@@ -13,6 +13,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource HightSelectSound;
     public AudioSource HightConfirmationSound;
     public AudioSource HightMoveSound;
+    public AudioSource PlantIncinerationSound;
 
 
     // Start is called before the first frame update
@@ -36,6 +37,13 @@ public class SoundManager : MonoBehaviour
         BellSound.Play();
 
     }
+
+    public void PlayPlantIncineration()
+    {
+        PlantIncinerationSound.Play();
+
+    }
+
     public void PlayHightMove()
     {
         HightMoveSound.Play();
