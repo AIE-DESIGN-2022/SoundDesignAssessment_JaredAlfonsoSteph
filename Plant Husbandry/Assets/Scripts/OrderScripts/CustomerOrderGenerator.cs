@@ -13,12 +13,12 @@ public class CustomerOrderGenerator : MonoBehaviour
     [Header("Hair")]
     public string[] hairColour = new string[] { "brown", "black", "blonde", "orange", "blue" };
     public string currentHairColour;
-    int hairColourNumber;
+    public int hairColourNumber;
 
     [Header("Eyes")]
     public string[] eyeColour = new string[] { "brown", "green", "blue", "grey", "red" };
     public string currentEyeColour;
-    int eyeColourNumber;
+    public int eyeColourNumber;
 
     [Header("PersonalityTraits")]
     public string[] personalityTraits = new string[] { "energetic", "kind", "openminded", "extroversion" };
@@ -30,22 +30,22 @@ public class CustomerOrderGenerator : MonoBehaviour
     [Header("energy")]
     public string[] energyLevel = new string[] {"very energetic", "a little energetic", "a little lazy", "very lazy"};
     public string currentEnergyLevel;
-    int energyLevelNumber;
+    public int energyLevelNumber;
 
     [Header("Kind")]
     public string[] kindLevel = new string[] {"very kind", "a little kind", "a little mean", "very mean" };
     public string currentKindLevel;
-    int kindLevelNumber;
+    public int kindLevelNumber;
 
     [Header("Openminded")]
     public string[] openmindedLevel = new string[] {"very openminded", "a little openminded", "neutral minded", "a little closeminded", "very closeminded"};
     public string currentOpenmindedLevel;
-    int openmindedLevelNumber;
+    public int openmindedLevelNumber;
 
     [Header("Extroversion")]
     public string[] extroversionLevel = new string[] { "very extroverted", "a little extroverted", "an ambivert", "a little introverted", "very introverted" };
     public string currentExtroversionLevel;
-    int extroversionLevelNumber;
+    public int extroversionLevelNumber;
 
     [Header("Personality Output")]
     public string currentPersonalityTraitOneLevel;
@@ -55,6 +55,9 @@ public class CustomerOrderGenerator : MonoBehaviour
     public int personalityOneArrayLength;
 
     public int personalityTwoArrayLength;
+
+    public int personalityOneLevel;
+    public int personalityTwoLevel;
 
     public TextMeshProUGUI customerOrderText;
 
@@ -188,6 +191,8 @@ public class CustomerOrderGenerator : MonoBehaviour
             energyLevelNumber = Random.Range(0, energyLevel.Length);
             currentPersonalityTraitOneLevel = energyLevel[energyLevelNumber];
             personalityOneArrayLength = energyLevel.Length;
+            personalityOneLevel = energyLevelNumber;
+
            // Debug.Log("energy one");
         }
         if (currentPersonalityTraitOne == "kind")
@@ -195,6 +200,7 @@ public class CustomerOrderGenerator : MonoBehaviour
             kindLevelNumber = Random.Range(0, kindLevel.Length);
             currentPersonalityTraitOneLevel = kindLevel[kindLevelNumber];
             personalityOneArrayLength = kindLevel.Length;
+            personalityOneLevel = kindLevelNumber;
 
             // Debug.Log("kind one");
         }
@@ -203,6 +209,7 @@ public class CustomerOrderGenerator : MonoBehaviour
             openmindedLevelNumber = Random.Range(0, openmindedLevel.Length);
             currentPersonalityTraitOneLevel = openmindedLevel[openmindedLevelNumber];
             personalityOneArrayLength = openmindedLevel.Length;
+            personalityOneLevel = openmindedLevelNumber;
             // Debug.Log("openminded one");
         }
         if (currentPersonalityTraitOne == "extroversion")
@@ -210,7 +217,7 @@ public class CustomerOrderGenerator : MonoBehaviour
             extroversionLevelNumber = Random.Range(0, extroversionLevel.Length);
             currentPersonalityTraitOneLevel = extroversionLevel[extroversionLevelNumber];
             personalityOneArrayLength = extroversionLevel.Length;
-
+            personalityOneLevel = extroversionLevelNumber;
             // Debug.Log("extroversion one");
         }
 
@@ -219,6 +226,7 @@ public class CustomerOrderGenerator : MonoBehaviour
             energyLevelNumber = Random.Range(0, energyLevel.Length);
             currentPersonalityTraitTwoLevel = energyLevel[energyLevelNumber];
             personalityTwoArrayLength = energyLevel.Length;
+            personalityTwoLevel = energyLevelNumber;
             // Debug.Log("energetic two");
         }
         if (currentPersonalityTraitTwo == "kind")
@@ -227,6 +235,7 @@ public class CustomerOrderGenerator : MonoBehaviour
             currentPersonalityTraitTwoLevel = kindLevel[kindLevelNumber];
             personalityTwoArrayLength = kindLevel.Length;
             //  Debug.Log("kind two");
+            personalityTwoLevel = kindLevelNumber;
         }
         if (currentPersonalityTraitTwo == "openminded")
         {
@@ -234,6 +243,7 @@ public class CustomerOrderGenerator : MonoBehaviour
             currentPersonalityTraitTwoLevel = openmindedLevel[openmindedLevelNumber];
             personalityTwoArrayLength = openmindedLevel.Length;
             // Debug.Log("openminded two");
+            personalityTwoLevel = openmindedLevelNumber;
         }
         if (currentPersonalityTraitTwo == "extroversion")
         {
@@ -242,6 +252,7 @@ public class CustomerOrderGenerator : MonoBehaviour
             personalityTwoArrayLength = extroversionLevel.Length;
 
             //Debug.Log("extroversion two");
+            personalityTwoLevel = extroversionLevelNumber;
         }
     }
 

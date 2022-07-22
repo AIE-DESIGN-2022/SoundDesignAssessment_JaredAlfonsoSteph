@@ -64,11 +64,11 @@ public class Order : MonoBehaviour
         orderHairColour = orderGenerator.currentHairColour;
 
         orderPersonalityOne = orderGenerator.currentPersonalityTraitOne;
-        orderPersonalityOneNumber = orderGenerator.personalityTraitOneNumber;
+        orderPersonalityOneNumber = orderGenerator.personalityOneLevel;
         //orderPersonalityOneAmount = orderGenerator.
 
         orderPersonalityTwo = orderGenerator.currentPersonalityTraitTwo;
-        orderPersonalityTwoNumber = orderGenerator.personalityTraitTwoNumber;
+        orderPersonalityTwoNumber = orderGenerator.personalityTwoLevel;
 
         orderPersonalityOneLevel = orderGenerator.currentPersonalityTraitOneLevel;
         orderPersonalityTwoLevel = orderGenerator.currentPersonalityTraitTwoLevel;

@@ -227,10 +227,11 @@ public class CustomerOrderManager : MonoBehaviour
 
             HeightPercentageWanted(order.orderHeightNumber, orderGenerator.heights.Length);
             PersonalityOnePercentageWanted(order.orderPersonalityOneNumber, orderGenerator.personalityOneArrayLength);
-            PersonalityTwoPercentageWanted(order.orderPersonalityOneNumber, orderGenerator.personalityTwoArrayLength);
+            PersonalityTwoPercentageWanted(order.orderPersonalityTwoNumber, orderGenerator.personalityTwoArrayLength);
 
 
-            
+            //Debug.Log(order.orderPersonalityOneNumber);
+
 
 
 
@@ -440,7 +441,6 @@ public class CustomerOrderManager : MonoBehaviour
                 personalityOneAmountWanted = 10f;
             }
         }
- 
 
         if (arrayLength == 4)
         {

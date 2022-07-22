@@ -21,7 +21,7 @@ public class BrownHair : MonoBehaviour
 
     void OnMouseDown()
     {
-        hairButtonManager.GetComponent<HairButtonManager>().hairSelection = "brown";
+        hairButtonManager.GetComponent<HairButtonManager>().hairSelection = "dirty";
         hairButtonManager.GetComponent<HairButtonManager>().lockHairSection = false;
         animator.SetTrigger("cauldron");
         randomiser.PlayRandomised();

@@ -22,7 +22,7 @@ public class BlondeHair : MonoBehaviour
 
     void OnMouseDown()
     {
-        hairButtonManager.GetComponent<HairButtonManager>().hairSelection = "blonde";
+        hairButtonManager.GetComponent<HairButtonManager>().hairSelection = "wheat-like";
         hairButtonManager.GetComponent<HairButtonManager>().lockHairSection = false;
         animator.SetTrigger("cauldron");
         randomiser.PlayRandomised();

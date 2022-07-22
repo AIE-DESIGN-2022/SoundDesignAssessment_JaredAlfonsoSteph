@@ -21,7 +21,7 @@ public class BlueEye : MonoBehaviour
     }
     void OnMouseDown()
     {
-        buttonManager.GetComponent<ButtonManager>().eyeSelection = "blue";
+        buttonManager.GetComponent<ButtonManager>().eyeSelection = "ocean-y";
         buttonManager.GetComponent<ButtonManager>().lockEyeSection = false;
         animator.SetTrigger("cauldron");
 

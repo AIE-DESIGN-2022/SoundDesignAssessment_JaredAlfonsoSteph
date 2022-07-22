@@ -21,7 +21,7 @@ public class BrownEye : MonoBehaviour
     }
     void OnMouseDown()
     {
-        buttonManager.GetComponent<ButtonManager>().eyeSelection = "brown";
+        buttonManager.GetComponent<ButtonManager>().eyeSelection = "dirty";
         buttonManager.GetComponent<ButtonManager>().lockEyeSection = false;
         animator.SetTrigger("cauldron");
         Debug.Log("numba fou");

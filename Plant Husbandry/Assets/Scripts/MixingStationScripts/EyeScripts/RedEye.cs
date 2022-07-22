@@ -22,7 +22,7 @@ public class RedEye : MonoBehaviour
     }
     void OnMouseDown()
     {
-        buttonManager.GetComponent<ButtonManager>().eyeSelection = "red";
+        buttonManager.GetComponent<ButtonManager>().eyeSelection = "firey";
         buttonManager.GetComponent<ButtonManager>().lockEyeSection = false;
         animator.SetTrigger("cauldron");
         Debug.Log("numba one");
