@@ -444,49 +444,49 @@ public class PlantGrowTimer : MonoBehaviour
 
     public void SetHairEyeColour()
     {
-        if (customerOrderManager.eyeColourAdded == "brown")
+        if (customerOrderManager.eyeColourAdded == "dirty")
         {
             plantCharacterEye1.material = brownEyeMaterial;
             plantCharacterEye2.material = brownEyeMaterial;
         }
-        if (customerOrderManager.eyeColourAdded == "green")
+        if (customerOrderManager.eyeColourAdded == "grassy")
         {
             plantCharacterEye1.material = greenEyeMaterial;
             plantCharacterEye2.material = greenEyeMaterial;
         }
-        if (customerOrderManager.eyeColourAdded == "blue")
+        if (customerOrderManager.eyeColourAdded == "ocean-y")
         {
             plantCharacterEye1.material = blueEyeMaterial;
             plantCharacterEye2.material = blueEyeMaterial;
         }
-        if (customerOrderManager.eyeColourAdded == "yellow")
+        if (customerOrderManager.eyeColourAdded == "citrus-y")
         {
             plantCharacterEye1.material = yellowEyeMaterial;
             plantCharacterEye2.material = yellowEyeMaterial;
         }
-        if (customerOrderManager.eyeColourAdded == "red")
+        if (customerOrderManager.eyeColourAdded == "firey")
         {
             plantCharacterEye1.material = redEyeMaterial;
             plantCharacterEye2.material = redEyeMaterial;
         }
 
-        if (customerOrderManager.hairColourAdded == "brown")
+        if (customerOrderManager.hairColourAdded == "dirty")
         {
             plantCharacterHair.material = brownHairMaterial;
         }
-        if (customerOrderManager.hairColourAdded == "black")
+        if (customerOrderManager.hairColourAdded == "voidy")
         {
             plantCharacterHair.material = blackHairMaterial;
         }
-        if (customerOrderManager.hairColourAdded == "blonde")
+        if (customerOrderManager.hairColourAdded == "wheat-like")
         {
             plantCharacterHair.material = blondeHairMaterial;
         }
-        if (customerOrderManager.hairColourAdded == "orange")
+        if (customerOrderManager.hairColourAdded == "pumpkin-y")
         {
             plantCharacterHair.material = orangeHairMaterial;
         }
-        if (customerOrderManager.hairColourAdded == "blue")
+        if (customerOrderManager.hairColourAdded == "sapphire")
         {
             plantCharacterHair.material = blueHairMaterial;
         }

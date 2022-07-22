@@ -141,49 +141,49 @@ public class DateManager : MonoBehaviour
 
     public void SetHairEyeColourDate()
     {
-        if (thisEyeColour == "brown")
+        if (thisEyeColour == "dirty")
         {
             plantCharacterEye1.material = brownEyeMaterial;
             plantCharacterEye2.material = brownEyeMaterial;
         }
-        if (thisEyeColour == "green")
+        if (thisEyeColour == "grassy")
         {
             plantCharacterEye1.material = greenEyeMaterial;
             plantCharacterEye2.material = greenEyeMaterial;
         }
-        if (thisEyeColour == "blue")
+        if (thisEyeColour == "ocean-y")
         {
             plantCharacterEye1.material = blueEyeMaterial;
             plantCharacterEye2.material = blueEyeMaterial;
         }
-        if (thisEyeColour == "yellow")
+        if (thisEyeColour == "citrus-y")
         {
             plantCharacterEye1.material = yellowEyeMaterial;
             plantCharacterEye2.material = yellowEyeMaterial;
         }
-        if (thisEyeColour == "red")
+        if (thisEyeColour == "firey")
         {
             plantCharacterEye1.material = redEyeMaterial;
             plantCharacterEye2.material = redEyeMaterial;
         }
 
-        if (thisHairColour == "brown")
+        if (thisHairColour == "dirty")
         {
             plantCharacterHair.material = brownHairMaterial;
         }
-        if (thisHairColour == "black")
+        if (thisHairColour == "voidy")
         {
             plantCharacterHair.material = blackHairMaterial;
         }
-        if (thisHairColour == "blonde")
+        if (thisHairColour == "wheat-like")
         {
             plantCharacterHair.material = blondeHairMaterial;
         }
-        if (thisHairColour == "orange")
+        if (thisHairColour == "pumpkin-y")
         {
             plantCharacterHair.material = orangeHairMaterial;
         }
-        if (thisHairColour == "blue")
+        if (thisHairColour == "sapphire")
         {
             plantCharacterHair.material = blueHairMaterial;
         }
