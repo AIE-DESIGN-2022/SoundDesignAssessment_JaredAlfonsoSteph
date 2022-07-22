@@ -7580,6 +7580,7 @@ MonoBehaviour:
   personalityTwoAmount: 0
   orderAcceptance: {fileID: 0}
   potAudio: {fileID: 7369461320905787212}
+  maxPayment: 500
 --- !u!1 &9170409983151781171
 GameObject:
   m_ObjectHideFlags: 0

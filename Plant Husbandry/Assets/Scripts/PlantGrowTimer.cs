@@ -109,6 +109,8 @@ public class PlantGrowTimer : MonoBehaviour
     private bool stageTwoSoundPlayed;
     private bool stageThreeSoundPlayed;
     private bool plantReadySoundPlayed;
+
+    public int maxPayment;
     
 
     // Start is called before the first frame update
@@ -621,6 +623,8 @@ public class PlantGrowTimer : MonoBehaviour
 
     public void CalculateReward()
     {
-        customerFinalPayment = dateQuality * 10;
+        //customerFinalPayment = dateQuality * 10;
+
+        customerFinalPayment = (maxPayment / 100)  * dateQuality;
     }
 }

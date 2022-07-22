@@ -64,7 +64,7 @@ public class OrderTicketManager : MonoBehaviour
         eyeColourText.text = "- " + order.orderEyeColour + " eyes";
         personalityOneText.text = "- " + order.orderPersonalityOneLevel;
         personalityTwoText.text = "- " + order.orderPersonalityTwoLevel;
-        maxPaymentText.text = "$1000";
+        maxPaymentText.text = "$500";
     }
    
     public void NoOrdersAvailable()
