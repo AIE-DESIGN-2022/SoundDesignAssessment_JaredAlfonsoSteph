@@ -544,7 +544,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5172
+  m_Name: pb_Mesh-27858
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -750,7 +750,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1842
+  m_Name: pb_Mesh-24528
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -949,7 +949,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1968, y: 487}
+  m_AnchoredPosition: {x: -1978, y: 485}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.2, y: 2}
 --- !u!114 &227442253
@@ -1085,7 +1085,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1854
+  m_Name: pb_Mesh-24540
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1695,7 +1695,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3568
+  m_Name: pb_Mesh-26254
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4553,7 +4553,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1866
+  m_Name: pb_Mesh-24552
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8094,7 +8094,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3580
+  m_Name: pb_Mesh-26266
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8951,7 +8951,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-3592
+  m_Name: pb_Mesh-26278
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10739,7 +10739,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5184
+  m_Name: pb_Mesh-27870
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13604,7 +13604,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-5160
+  m_Name: pb_Mesh-27846
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13955,10 +13955,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 975892792}
     m_Modifications:
-    - target: {fileID: 2065576755360078727, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: m_Volume
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: popUpUI
       value: 
@@ -13968,10 +13964,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7308110192786551191}
     - target: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: orderManager
-      value: 
-      objectReference: {fileID: 870327011}
-    - target: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: orderManagerGO
       value: 
       objectReference: {fileID: 870327011}
@@ -13979,10 +13971,6 @@ PrefabInstance:
       propertyPath: customerWaiting
       value: 
       objectReference: {fileID: 209208592}
-    - target: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: newOrderWaitTime
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 2401476028357593538, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: customerOrderText
       value: 
@@ -14044,38 +14032,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: order
-      value: 
-      objectReference: {fileID: 3764541092377912786, guid: 12a2891b0f03da344af8e1197cdf70ce, type: 3}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: heightText
-      value: 
-      objectReference: {fileID: 7308110193420648056}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: orderNumber
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: customerOrder
-      value: 
-      objectReference: {fileID: 7946918927550432184, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: eyeColourText
-      value: 
-      objectReference: {fileID: 7308110194241063536}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: hairColourText
-      value: 
-      objectReference: {fileID: 7308110193332521173}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: orderNumberText
-      value: 
-      objectReference: {fileID: 334351065}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: customerNameText
-      value: 
-      objectReference: {fileID: 5047115467167413712}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: customerOrderText
       value: 
       objectReference: {fileID: 7308110194253507676}
@@ -14084,37 +14040,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1600518823}
     - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: personalityOneText
-      value: 
-      objectReference: {fileID: 7308110193465600141}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: personalityTwoText
-      value: 
-      objectReference: {fileID: 7308110193455838008}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: customerOrderManager
-      value: 
-      objectReference: {fileID: 359388161}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: customerOrderNameText
-      value: 
-      objectReference: {fileID: 7308110193930710380}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: heights.Array.data[1]
-      value: above average height
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: heights.Array.data[3]
-      value: below average height
-      objectReference: {fileID: 0}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
       propertyPath: speechCustomerNameText
       value: 
       objectReference: {fileID: 7308110193930710380}
-    - target: {fileID: 7946918927550432191, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
-      propertyPath: customerOrderTicketNameText
-      value: 
-      objectReference: {fileID: 5047115467167413712}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4972dcd7ba7c9a14cbff08f52dee1311, type: 3}
 --- !u!4 &1984149816 stripped

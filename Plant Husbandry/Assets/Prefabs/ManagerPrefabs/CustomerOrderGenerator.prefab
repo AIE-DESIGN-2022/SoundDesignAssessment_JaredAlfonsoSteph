@@ -48,25 +48,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heights:
   - really tall
-  - a little tall
+  - above average height
   - average height
-  - a little short
+  - below average height
   - really short
   currentHeight: 
   heightNumber: 0
   hairColour:
-  - brown
-  - black
-  - blonde
-  - orange
-  - blue
+  - dirty
+  - voidy
+  - wheat-like
+  - pumpkin-y
+  - sapphire
   currentHairColour: 
   eyeColour:
-  - brown
-  - green
-  - blue
-  - yellow
-  - red
+  - dirty
+  - grassy
+  - ocean-y
+  - citrus-y
+  - firey
   currentEyeColour: 
   personalityTraits:
   - energetic
@@ -108,7 +108,7 @@ MonoBehaviour:
   personalityOneArrayLength: 0
   personalityTwoArrayLength: 0
   customerOrderText: {fileID: 0}
-  orderNumber: 1
+  orderNumber: 0
   speechCustomerNameText: {fileID: 0}
   firstNames:
   - Kelly
@@ -269,7 +269,7 @@ MonoBehaviour:
   - Elm
   plantName: 
   plantNameNumber: 0
-  order: {fileID: 0}
+  order: {fileID: 3764541092377912786, guid: 12a2891b0f03da344af8e1197cdf70ce, type: 3}
   orderTicketManager: {fileID: 0}
 --- !u!114 &2401476028357593538
 MonoBehaviour:
@@ -291,7 +291,7 @@ MonoBehaviour:
   customerOrderGenerator: {fileID: 7946918927550432191}
   orderTicketManager: {fileID: 0}
   orderManagerGO: {fileID: 0}
-  newOrderWaitTime: 0
+  newOrderWaitTime: 10
   newCustomerOrderBell: {fileID: 2065576755360078727}
   orderTicketWriteAudio: {fileID: 7251967326247678016}
 --- !u!82 &2065576755360078727
@@ -306,7 +306,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 5059214466671014301, guid: 6db0dfefcb5c3794da9d446ef25fb976, type: 2}
   m_audioClip: {fileID: 8300000, guid: e4f769101743e044d87541ac47d51a0d, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
